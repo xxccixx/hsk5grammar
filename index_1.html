@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="HSK 5 语法笔记：HSK 标准教程 5（上·下）第1–36课 词语例释与词语辨析，例句附印尼语翻译。">
+<title>HSK 5 语法笔记</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap">
+<style>
+/* Layout: calm neutral page, maroon only as accent; sticky lesson rail (1–18), single reading column of grammar cards; practice + 辨析 live inside each lesson */
+:root{
+  --camel:#C9A876;
+  --bg:#F7F6F3; --surface:#FFFFFF; --ink:#26221F; --muted:#6B645E; --line:#E5E0D8;
+  --accent:#7A2A20; --accent-soft:#F5EFE6; --chip:#FFFFFF; --strong:#7A2A20; --on-strong:#FFFFFF; --head:#F1EBE1;
+  --ok:#2F6B3A; --ok-soft:#E3EFD9; --no:#A33A2C; --no-soft:#F9E3DD;
+  --f-ui:"Poppins",system-ui,sans-serif;
+  --f-zh:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17171A; --surface:#202024; --ink:#ECE8E2; --muted:#A39C94; --line:#323238;
+  --accent:#E2C08F; --accent-soft:#2A2825; --chip:#202024; --strong:#C9A876; --on-strong:#1A1715; --head:#29272A;
+  --ok:#9FD39A; --ok-soft:#1E3320; --no:#F0A08F; --no-soft:#3A2220; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17171A; --surface:#202024; --ink:#ECE8E2; --muted:#A39C94; --line:#323238;
+  --accent:#E2C08F; --accent-soft:#2A2825; --chip:#202024; --strong:#C9A876; --on-strong:#1A1715; --head:#29272A;
+  --ok:#9FD39A; --ok-soft:#1E3320; --no:#F0A08F; --no-soft:#3A2220; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.7}
+.zh,.use,h3,.lt,.q-text,.ans,td,th,.qs{font-family:var(--f-zh)}
+.mast{background:var(--bg);color:var(--ink);padding:30px 16px 20px}
+.mast .in{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:4px}
+.mast .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.mast h1{font-family:var(--f-zh);font-weight:900;font-size:clamp(30px,7vw,44px);line-height:1.15;margin:0;letter-spacing:.02em;color:var(--accent)}
+.mast p{margin:6px 0 0;font-size:13.5px;color:var(--muted);max-width:52ch}
+.rail{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.rail .in{max-width:780px;margin:0 auto;padding:10px 16px;display:flex;flex-direction:column;gap:8px}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.chip{flex:0 0 auto;min-width:38px;height:34px;border-radius:17px;border:1px solid var(--line);background:var(--chip);color:var(--ink);font-family:var(--f-ui);font-weight:600;font-size:13px;cursor:pointer;font-variant-numeric:tabular-nums}
+.book{flex:0 0 auto;align-self:center;font-family:var(--f-zh);font-size:12px;font-weight:700;color:var(--muted);padding:0 4px 0 6px}
+.chip[aria-selected="true"]{background:var(--strong);border-color:var(--strong);color:var(--on-strong)}
+.rail-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.toggle{font-size:12.5px;display:flex;gap:6px;align-items:center;color:var(--muted);cursor:pointer;user-select:none}
+.toggle input{accent-color:var(--strong)}
+.nav-btns{display:flex;gap:6px}
+.nav-btns button{font-family:var(--f-ui);font-size:12.5px;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:8px;padding:3px 10px;cursor:pointer}
+.nav-btns button:disabled{opacity:.4;cursor:default}
+button:focus-visible,input:focus-visible,textarea:focus-visible,.ex li:focus-visible{outline:2px solid var(--camel);outline-offset:2px}
+main{max-width:780px;margin:0 auto;padding:0 16px 80px}
+.lesson-head{display:flex;align-items:flex-end;gap:14px;padding:26px 0 4px}
+.lesson-head .num{font-family:var(--f-ui);font-weight:700;font-size:64px;line-height:.9;color:var(--accent);font-variant-numeric:tabular-nums}
+.lesson-head .lt{font-size:24px;font-weight:700;margin:0;line-height:1.3;text-wrap:balance}
+.lesson-head .sub{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.idx{display:flex;flex-wrap:wrap;gap:6px 14px;padding:10px 0 4px;border-bottom:1px dashed var(--line)}
+.idx a{color:var(--accent);text-decoration:none;font-family:var(--f-zh);font-size:14px}
+.idx a:hover{text-decoration:underline}
+.sec{font-family:var(--f-zh);font-weight:700;color:var(--muted);font-size:13px;letter-spacing:.2em;margin:28px 0 10px}
+.point{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px clamp(16px,4vw,28px);margin-bottom:16px}
+.point h3{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:0 0 6px;font-size:28px;font-weight:700;color:var(--accent)}
+.n{font-family:var(--f-ui);font-size:12px;font-weight:600;background:var(--strong);color:var(--on-strong);border-radius:6px;padding:2px 9px;font-variant-numeric:tabular-nums}
+.pos{font-size:12.5px;font-weight:500;color:var(--ink);background:var(--accent-soft);border:1px solid var(--line);padding:0 8px;border-radius:5px}
+.use{margin:16px 0 4px;font-size:15.5px}
+.pattern{font-weight:700;color:var(--accent);background:var(--accent-soft);padding:0 6px;border-radius:4px}
+ol.ex{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-direction:column;gap:2px}
+.ex li{padding:8px 10px;border-radius:9px;cursor:pointer;display:grid;grid-template-columns:auto 1fr;gap:0 10px}
+.ex li:hover{background:var(--bg)}
+.ex .k{font-size:12px;color:var(--muted);padding-top:4px;font-variant-numeric:tabular-nums}
+.ex .zh{font-size:17px;min-width:0}
+.ex b,.eg b{color:var(--accent);font-weight:700;border-bottom:2px solid var(--camel)}
+.ex .id{grid-column:2;font-size:13.5px;color:var(--muted);line-height:1.55;padding-top:3px;font-style:italic}
+.ex .hint{grid-column:2;font-size:11.5px;color:var(--camel)}
+.ex .hint,.hide-id .ex li.open .hint{display:none}
+.hide-id .ex li:not(.open) .id,.hide-id .eg:not(.open) .id{display:none}
+.hide-id .ex li:not(.open) .hint{display:block}
+/* practice */
+.practice{margin-top:18px;border-top:1px dashed var(--line);padding-top:14px}
+.ph{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.ph b{font-family:var(--f-zh);color:var(--accent);font-size:15px}
+.ph span{font-family:var(--f-zh);color:var(--muted);font-size:13.5px}
+.items{display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none}
+.item{display:grid;grid-template-columns:auto 1fr;gap:6px 10px}
+.item .k{font-size:12px;color:var(--muted);padding-top:3px}
+.q-text{font-size:15.5px;white-space:pre-line;min-width:0}
+.blank{display:inline-block;min-width:4.5em;border-bottom:1.5px solid var(--camel);height:1.1em;vertical-align:-2px;margin:0 2px}
+.item textarea{grid-column:2;width:100%;min-height:42px;resize:vertical;font-family:var(--f-zh);font-size:15px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:8px 10px;line-height:1.5}
+.item textarea::placeholder{color:var(--muted);opacity:.7;font-family:var(--f-ui);font-size:13px}
+.item .act{grid-column:2;display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.reveal{font-family:var(--f-ui);font-size:12.5px;font-weight:500;border:1px solid var(--camel);background:transparent;color:var(--accent);border-radius:8px;padding:3px 12px;cursor:pointer}
+.reveal[aria-expanded="true"]{background:var(--accent-soft)}
+.ans{flex:1 1 240px;min-width:0;font-size:15px;color:var(--ink);background:var(--accent-soft);border-radius:8px;padding:4px 10px;white-space:pre-line}
+.ans::before{content:"参考答案　";color:var(--muted);font-size:12.5px}
+/* 辨析 */
+.tip{font-size:12px;color:var(--muted);margin:6px 2px 0}
+.hide-id .tip{display:block}.tip{display:none}
+.vs{color:var(--camel);font-weight:500}
+.cmp{overflow-x:auto;margin-top:8px;border-radius:10px;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:9px 12px;vertical-align:top;text-align:left}
+tr>*:last-child{border-right:0} tbody tr:last-child>*{border-bottom:0}
+thead th{background:var(--head);color:var(--accent);font-size:17px;text-align:center;font-weight:700}
+thead th:first-child{background:var(--head)}
+tbody th{background:var(--accent-soft);font-weight:500;color:var(--muted);width:2.4em;min-width:2.4em;text-align:center;vertical-align:middle;font-size:13px;line-height:1.35;word-break:break-all;padding:8px 6px}
+.eg{display:block;margin-top:6px;color:var(--ink);cursor:pointer}
+.eg .id{display:block;font-family:var(--f-ui);font-size:12.5px;color:var(--muted);font-style:italic}
+.quiz{margin-top:6px;display:flex;flex-direction:column;gap:8px}
+.q{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.q .qs{flex:1 1 280px;min-width:0;font-size:15px}
+.q .opts{display:flex;gap:6px;flex-wrap:wrap}
+.q button{font-family:var(--f-zh);font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:7px;padding:3px 12px;cursor:pointer}
+.q button.ok{background:var(--ok-soft);border-color:var(--ok);color:var(--ok)}
+.q button.no{background:var(--no-soft);border-color:var(--no);color:var(--no);text-decoration:line-through}
+.q .fb{width:100%;font-size:12.5px;color:var(--muted)}
+footer{max-width:780px;margin:0 auto;padding:0 16px 40px;font-size:12.5px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.ex li,.chip{transition:background .15s,color .15s}}
+@media (max-width:480px){.lesson-head .num{font-size:52px}.point h3{font-size:24px}}
+</style>
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<header class="mast"><div class="in">
+  <span class="eyebrow">HSK 标准教程 5（上·下）· 注释</span>
+  <h1>HSK 5 语法笔记</h1>
+  <p>词语例释 + 词语辨析，第1–36课。Ketuk contoh kalimat buat lihat artinya, isi latihan, lalu cek jawabannya satu per satu.</p>
+</div></header>
+
+<nav class="rail" aria-label="Pilih pelajaran"><div class="in">
+  <div class="chips" role="tablist" id="chips"></div>
+  <div class="rail-row">
+    <label class="toggle" for="showId"><input type="checkbox" id="showId"> Tampilkan semua arti</label>
+    <div class="nav-btns"><button id="prev">← 上一课</button><button id="next">下一课 →</button></div>
+  </div>
+</div></nav>
+
+<main id="app" class="hide-id"></main>
+<footer>Sumber: HSK 标准教程 5（上）dan 5（下）bagian 注释. 参考答案 untuk 练一练 adalah contoh jawaban, bukan satu-satunya jawaban benar. Jawaban yang kamu ketik tersimpan di browser ini.</footer>
+
+<script>
+const DATA = [
+{no:1,title:"爱的细节",points:[
+ {w:"如何",pos:"代词",uses:[
+  {t:"“如何”，代词，用来询问方式。",ex:[
+   ["我们明天举行会议，讨论这个问题该**如何**解决。","Besok kita rapat, bahas masalah ini enaknya diberesin gimana."],
+   ["评委叫第一对夫妻说说他俩是**如何**恩爱的。","Juri nyuruh pasangan pertama cerita gimana caranya mereka bisa semesra itu."]]},
+  {t:"“如何”也常用于句末，用来征求意见或询问状况。",ex:[
+   ["我们希望由你来负责解决这个问题，**如何**？","Kita pengen kamu yang pegang buat beresin masalah ini, gimana? Oke gak?"],
+   ["“80后”们月收入情况**如何**？","Anak-anak kelahiran 80-an gajinya sebulan kayak gimana sih?"]]}],
+  pr:[["请你说一说，__。（如何）","请你说一说，你是如何学好汉语的。"],
+   ["A：__？（如何）\nB：他们相敬如宾，关系很好。","A：他们夫妻俩的关系如何？"],
+   ["A：你能不能简单地叙述一下那部电影的内容？\nB：__。（如何）","B：电影讲的是一个年轻人如何实现自己梦想的故事。"]]},
+ {w:"靠",pos:"动词",uses:[
+  {t:"“靠”，动词，常见格式为<p>靠着/在……</p>，把身体的部分重量让别人或物体支撑。",ex:[
+   ["王老师喜欢**靠**着桌子讲课。","Pak Wang suka ngajar sambil nyender ke meja."],
+   ["……男人的头**靠**在女人的肩膀上，睡着了。","…si cowok nyenderin kepalanya di bahu si cewek, terus ketiduran."]]},
+  {t:"“靠”，也表示依靠，得益于。",ex:[
+   ["“在家**靠**父母，出门**靠**朋友”，有什么事情我能帮忙的，你们尽管开口。","“Di rumah andelin ortu, di luar andelin temen.” Ada yang bisa aku bantu, bilang aja ya, santai."],
+   ["没有一个人可以完全不**靠**别人而生活。","Gak ada orang yang bisa hidup tanpa ngandelin orang lain sama sekali."]]},
+  {t:"“靠”，还表示接近。",ex:[
+   ["我的座位是17号，是**靠**窗的座位。","Kursiku nomor 17, yang deket jendela."],
+   ["以后我一定要买一个**靠**海的房子，这样我每天都能听到大海的声音。","Nanti aku harus banget beli rumah deket pantai, biar tiap hari bisa denger suara ombak."]]}],
+  pr:[["快要到站了，你别__，不安全。（靠）","快要到站了，你别靠在车门上，不安全。"],
+   ["A：下个星期的考试，你需要我帮忙吗？\nB：__。（靠）","B：不用了，这次我想靠自己。"],
+   ["A：您好，请给我登机牌。\nB：好的，__。（靠）","B：好的，我想要一个靠窗的座位。"]]},
+ {w:"居然",pos:"副词",uses:[
+  {t:"“居然”，副词，表示没想到、出乎意料。",ex:[
+   ["这么简单的题，你**居然**也不会做？上课时都干什么去了？","Soal segampang ini kamu gak bisa?? Pas kelas ngapain aja sih?"],
+   ["没想到**居然**在这儿碰到你！你也去上海？","Gak nyangka banget ketemu kamu di sini! Kamu juga mau ke Shanghai?"],
+   ["……这个女人为了不影响丈夫睡觉，**居然**放弃这次机会！","…cewek ini demi gak ganggu tidur suaminya, malah rela ngelepas kesempatan ini!"]]}],
+  pr:[["我快被气死了！__。（居然）","我快被气死了！他居然又忘了我的生日。"],
+   ["A：你听说了吗？小王和小李离婚了！\nB：__。（居然）","B：真的吗？他们居然离婚了，以前关系那么好。"],
+   ["A：__。（居然）\nB：是啊，比赛之前我以为他肯定会赢呢。","A：没想到他居然输了。"]]}],
+ cmp:{a:"如何",b:"怎么",same:["都是代词，都可用于询问方式。",["只有知道**如何**/**怎么**停止的人，才知道**如何**/**怎么**高速前进。","Cuma orang yang tau caranya berhenti, yang tau caranya ngebut."]],
+  diff:[["多用于书面语。",["该**如何**爱护我们的地球？","Kita harus gimana sih buat jagain bumi kita?"],"可用于口语。",["你今天是**怎么**来的？","Hari ini kamu ke sini naik apa?"]],
+   ["不能用于询问原因。",null,"可用于询问原因。",["今天**怎么**这么冷？","Kok hari ini dingin banget sih?"]],
+   ["可用于句末表示询问状况或征求意见。",["最近身体**如何**？","Gimana kabar badan akhir-akhir ini, sehat?"],"可用于句首表示惊讶。",["**怎么**，你不认识我了？！","Lho, kok kamu udah gak kenal aku?!"]]],
+  quiz:[["他向经理叙述了自己是____解决这个问题的。","ab","Dua-duanya bisa: nanya cara (方式)."],
+   ["你____这么不耐烦？","b","Nanya alasan (原因) → cuma 怎么."],
+   ["谁知道他们是____吵起来的？","ab","Nanya cara/proses → dua-duanya bisa."],
+   ["听说你去电台工作了？情况____？","a","Di akhir kalimat, nanya keadaan → 如何."]]}},
+
+{no:2,title:"留串钥匙给父母",points:[
+ {w:"以来",pos:"名词",uses:[
+  {t:"名词，<p>……以来</p>表示从过去某时到现在的一段时间。",ex:[
+   ["改革开放**以来**，中国发生了巨大的变化。","Sejak reformasi dan keterbukaan, China berubah gede-gedean."],
+   ["因此长年**以来**，父母很少离开老屋……","Makanya udah bertahun-tahun ortu jarang banget ninggalin rumah lama…"],
+   ["一直**以来**，“80后”这个词儿都含有年轻的味道。","Dari dulu, kata “generasi 80-an” tuh selalu identik sama vibe anak muda."]]}],
+  pr:[["到中国以来，__。","到中国以来，我的汉语水平提高了很多。"],
+   ["A：他们夫妻俩的关系怎么样？\nB：__。（以来）","B：结婚以来，他们从来没吵过架。"],
+   ["A：最近这几年空气污染比较严重。\nB：__。（以来）","B：是啊，入冬以来，雾霾天越来越多了。"]]},
+ {w:"临",pos:"动词 / 介词",uses:[
+  {t:"“临”，动词，表示靠近、对着。",ex:[
+   ["我想买一套不**临**街的房子，这样不会太吵。","Aku pengen beli rumah yang gak ngadep jalan raya, biar gak berisik."],
+   ["**临**江新修了一条路，晚饭后很多人都去那儿散步。","Di pinggir sungai baru dibangun jalan, abis makan malam banyak yang jalan-jalan ke sana."]]},
+  {t:"“临”，也可以做介词，<p>临……（时/前）</p>表示快到某一行为发生的时间。",ex:[
+   ["这是我**临**离开北京的时候买的。","Ini aku beli pas udah mau cabut dari Beijing."],
+   ["**临**走那天，父亲从老家赶来送我们。","Pas hari mau berangkat, bokap buru-buru dateng dari kampung buat nganterin kita."]]}],
+  pr:[["A：你觉得这套房子怎么样？\nB：__。（临）","B：房子不错，就是临街，有点儿吵。"],
+   ["A：你一个人来中国，你的爸爸妈妈放心吗？\nB：__。（临）","B：临走前，妈妈嘱咐了我好多遍，还是不太放心。"],
+   ["A：你卧室里的新被子真漂亮，哪儿买的？\nB：__。（临）","B：这是我临来中国前，妈妈给我买的。"]]},
+ {w:"立刻",pos:"副词",uses:[
+  {t:"“立刻”，副词，<p>立刻 + 动词</p>表示马上，强调一个动作紧接着前一个动作发生。",ex:[
+   ["上了楼，开门的竟是微笑着的父母，温暖的气息**立刻**扑面而来……","Naik ke atas, eh yang bukain pintu ternyata ortu sambil senyum. Hangatnya langsung kerasa banget…"],
+   ["原来父母要我留下串钥匙，只是为了让我们回来时，能**立刻**感受到家的温暖！","Ternyata ortu minta kita ninggalin kunci cuma biar pas pulang bisa langsung ngerasain hangatnya rumah!"],
+   ["那两只羊一见到青草，就**立刻**去吃草了，哪还有心思打架呢？","Dua kambing itu begitu liat rumput langsung nyosor makan, mana sempet mikirin berantem?"]]}],
+  pr:[["一下课，__。（立刻）","一下课，学生们就立刻跑出了教室。"],
+   ["我快被气死了！__。（立刻）","我快被气死了！你立刻给我出去！"],
+   ["A：你能帮我通知他这件事吗？\nB：__。（立刻）","B：没问题，我立刻给他打电话。"]]}],
+ cmp:{a:"悄悄",b:"偷偷",same:["都是副词，都有做事不让人发现的意思。",["他**悄悄**/**偷偷**地走了出去。","Dia keluar diem-diem."]],
+  diff:[["强调声音很小。",["父亲**悄悄**把我拉到一边说话。","Bokap pelan-pelan narik aku ke pinggir buat ngobrol."],"强调行为不愿被人知道。",["他谁也没告诉，**偷偷**去旅行了。","Dia gak bilang siapa-siapa, diem-diem cabut liburan."]]],
+  quiz:[["晚饭前姑姑就一个人____地走了。","ab","Dua-duanya bisa (buku kasih ✓✓)."],
+   ["考试已经开始了，他才____走进来。","ab","Dua-duanya bisa: 悄悄 = pelan biar gak ganggu, 偷偷 = biar gak ketahuan."],
+   ["孩子睡着了，爸爸在妈妈耳边____说了几句话。","a","Fokusnya suara pelan → 悄悄."],
+   ["别人都不知道，她只是____地把这件事告诉了我。","b","Fokusnya rahasia, gak mau orang lain tau → 偷偷."]]}},
+
+{no:3,title:"人生有选择，一切可改变",points:[
+ {w:"包括",pos:"动词",uses:[
+  {t:"“包括”，动词，表示包含各部分。",ex:[
+   ["汉语技能教学**包括**听、说、读、写四个方面。","Belajar skill bahasa Mandarin tuh ada empat: dengar, ngomong, baca, nulis."],
+   ["“学习”，其实**包括**“学”与“习”两层意思。学，就是学习知识；习，就是实践、练习。","“学习” sebenernya punya dua makna: 学 = nyerap ilmu, 习 = praktik dan latihan."]]},
+  {t:"“包括”还可以强调某一部分，有举例、补充、解释等作用。",ex:[
+   ["然而，**包括**翟峰的父母，所有人都觉得，翟峰“疯了”。","Tapi semua orang, termasuk ortunya Zhai Feng sendiri, mikir dia udah “gila”."],
+   ["我们班所有人，**包括**最不爱运动的刘方，也都参加了这次运动会。","Satu kelas ikut lomba olahraga, termasuk Liu Fang yang paling mager olahraga."]]}],
+  pr:[["世界上使用筷子的国家主要__。（包括）","世界上使用筷子的国家主要包括中国、日本、韩国和越南。"],
+   ["这个节目全家人都喜欢，__，也很爱看。（包括）","这个节目全家人都喜欢，包括八十岁的奶奶，也很爱看。"],
+   ["A：听说你们的班主任王老师生病住院了？\nB：__。（包括）","B：是啊，包括班长在内，全班同学都去医院看她了。"]]},
+ {w:"各自",pos:"代词",uses:[
+  {t:"“各自”，代词，指各人自己或各个方面中自己的一方，常和所指的对象一起做主语、定语。",ex:[
+   ["中场休息时间到了，比赛双方队员**各自**回场外休息。","Udah waktunya istirahat babak pertama, pemain dua tim balik ke pinggir lapangan masing-masing."],
+   ["刘经理认真看了三家广告公司**各自**提交的计划。","Pak Liu baca serius proposal yang dikirim masing-masing dari tiga agensi iklan."],
+   ["以前陆地上的夜晚，他们在**各自**的房间，一家人没有更多的交流。","Dulu pas masih tinggal di darat, malem-malem mereka di kamar masing-masing, sekeluarga jarang ngobrol."]]}],
+  pr:[["快要毕业了，同学们__。（各自）","快要毕业了，同学们都在为各自的未来做准备。"],
+   ["虽然他们都同意这么办，但其实__。（各自）","虽然他们都同意这么办，但其实各自都有自己的想法。"],
+   ["A：__。（各自）\nB：任务我们都清楚了，您就放心吧。","A：明天的活动，大家各自负责好自己的部分。"]]},
+ {w:"勿",pos:"副词",uses:[
+  {t:"“勿”，副词，表示禁止或劝阻，书面语，相当于“不要”。",ex:[
+   ["非工作人员，请**勿**入内。","Selain staf, dilarang masuk ya."],
+   ["网上购票者须注意网站的安全性，切**勿**上当受骗。","Yang beli tiket online, cek dulu webnya aman gak. Jangan sampe ketipu!"],
+   ["中国有句老话：可上山，**勿**下海。","Ada pepatah lama China: boleh naik gunung, jangan turun ke laut."]]}],
+  type:"用所学词语改写句子",
+  pr:[["大多数宾馆房间的门上都挂着一块牌子，提醒服务员不要打扰客人休息。\n→ 大多数宾馆房间的门上都挂着一块“__”的牌子。（勿）","大多数宾馆房间的门上都挂着一块“请勿打扰”的牌子。"],
+   ["为了他人的健康，请不要在公共场所抽烟。\n→ 为了他人的健康，__。（勿）","为了他人的健康，请勿在公共场所抽烟。"]]},
+ {w:"时刻",pos:"名词 / 副词",uses:[
+  {t:"“时刻”，名词，表示某一时间点或时间段。",ex:[
+   ["在最后**时刻**，他为本队踢进了赢得比赛的关键一球。","Di detik-detik terakhir, dia nyetak gol penentu buat timnya."],
+   ["美好的**时刻**过去后是一个个紧张的夜晚。","Abis momen-momen indah, yang dateng malah malam-malam yang tegang."]]},
+  {t:"“时刻”，也可以做副词，表示每时每刻、经常等意思，能重叠为“时时刻刻”。",ex:[
+   ["我们非常需要你这样的人才，只要你愿意，公司的大门**时刻**都为你开着。","Kita butuh banget orang kayak kamu. Kalau kamu mau, pintu kantor selalu kebuka buat kamu."],
+   ["工作中，他**时时刻刻**提醒自己：乘客的安全是最重要的。","Pas kerja, dia terus-terusan ngingetin diri sendiri: keselamatan penumpang nomor satu."]]}],
+  pr:[["任何时候都不要看轻自己，__。（时刻）","任何时候都不要看轻自己，要时刻相信自己能行。"],
+   ["因为工作的需要，我__。（时刻）","因为工作的需要，我得时刻带着手机。"],
+   ["A：你为什么这么感谢他？\nB：__。（时刻）","B：在我最困难的时刻，是他帮助了我。"]]}],
+ cmp:{a:"舒适",b:"舒服",same:["都是形容词，都表示轻松愉快。",["饭店为入住的客人准备了**舒适**/**舒服**的房间。","Hotelnya nyiapin kamar yang nyaman buat tamu yang nginep."]],
+  diff:[["多用于书面语。",["这款车内部空间宽大，乘坐**舒适**。","Mobil ini kabinnya luas, enak banget dinaikin."],"多用于口语。",["他靠在沙发上**舒舒服服**地看电视。","Dia nyender di sofa, nonton TV sambil santai banget."]],
+   ["侧重环境给人的整体感受。",["我们都需要一个轻松**舒适**的生活环境。","Kita semua butuh lingkungan hidup yang santai dan nyaman."],"侧重人身体、精神上的主观的、具体的感受。",["听了他的话，我心里很不**舒服**。","Denger omongannya, hatiku gak enak banget."]],
+   ["一般极少重叠使用。",null,"可重叠为AABB。还可活用作动词，重叠形式为ABAB。",["踢完球了？洗个热水澡**舒服舒服**吧。","Udah kelar main bola? Mandi air anget dulu biar seger."]]],
+  quiz:[["早晨收拾完房间后，妈妈喜欢____地坐在那把躺椅上休息一下。","b","Buku: 舒服 ✓, 舒适 ×. Perasaan badan, gaya lisan."],
+   ["这家餐厅装修精美、环境____。","a","Kesan keseluruhan dari lingkungan → 舒适."],
+   ["我今天脖子有点儿不____，左右转动时有点儿疼。","b","Rasa di badan sendiri → 舒服."],
+   ["这艘客船就像高级宾馆一样，除了有____的客舱外，还有餐厅、电影院、商店、舞厅、游泳池等。","a","Kabin/fasilitas, bahasa tulis → 舒适."]]}},
+
+{no:4,title:"子路背米",points:[
+ {w:"至今",pos:"副词",uses:[
+  {t:"“至今”，副词，直到现在，常用于小句句首或动词前。也可与一些词语搭配形成固定结构，如“从古至今”“流传至今”等。",ex:[
+   ["我在北京出生、长大，**至今**还没离开过呢。","Aku lahir dan gede di Beijing, sampe sekarang belum pernah pergi dari sini."],
+   ["**至今**，很多国家并没有规定什么才是健康食品。","Sampai sekarang, banyak negara belum punya aturan soal apa itu makanan sehat."],
+   ["流传**至今**的“百里背米”讲的就是他孝敬父母的故事。","Cerita “Manggul beras seratus li” yang masih diceritain sampe sekarang tuh soal baktinya ke ortu."]]}],
+  pr:[["虽然我们已经认识多年，__。（至今）","虽然我们已经认识多年，但我至今还不知道他的生日。"],
+   ["A：你到中国已经一年了，能不能给我们介绍一下长城？\nB：__。（至今）","B：不好意思，我至今还没去过长城呢。"],
+   ["到底什么是幸福，__。（至今）","到底什么是幸福，至今也没有一个统一的答案。"]]},
+ {w:"顶",pos:"名词 / 动词 / 量词",uses:[
+  {t:"“顶”，名词，表示人体或物体的最高部分。",ex:[
+   ["请把手举过头**顶**。","Angkat tangan sampe lewatin kepala ya."],
+   ["父亲的朋友画了张画儿送我，画上是一座山，山**顶**有一个人往下看，山下有一个人往上看。","Temen bokap ngasih aku lukisan gunung: ada orang di puncak lagi liat ke bawah, ada orang di bawah lagi liat ke atas."]]},
+  {t:"“顶”，还可以做动词，表示头部的动作。",ex:[
+   ["他能用头**顶**起20斤重的东西。","Dia bisa ngangkat barang 10 kilo pake kepala."],
+   ["院子里有两只羊正在打架，它们头**顶**着头，角对着角，就像两个小孩儿一样，谁也不愿让谁。","Di halaman ada dua kambing lagi berantem, adu kepala adu tanduk, kayak dua bocil yang gak ada yang mau ngalah."]]},
+  {t:"“顶”做动词时还表示迎着、抵挡。",ex:[
+   ["天气非常寒冷，子路**顶**着大雪往前走。","Cuacanya dingin parah, tapi Zilu tetep jalan nembus salju."],
+   ["您为什么要**顶**着压力来做这件事呢？","Kenapa sih Bapak rela nahan tekanan cuma buat ngerjain ini?"]]},
+  {t:"“顶”，还可以做量词，用于帽子、较大的伞或伞状的东西。",ex:[
+   ["我这**顶**新帽子怎么样？","Topi baruku ini gimana?"],
+   ["这项计划将成为儿童健康的一**顶**保护伞。","Program ini bakal jadi “payung pelindung” buat kesehatan anak-anak."]]}],
+  pr:[["A：昨天爬山你去了吗？\nB：__。（顶-名词）","B：去了，我第一个爬到了山顶。"],
+   ["虽然昨天刮大风，__。（顶-动词）","虽然昨天刮大风，他还是顶着风去上班了。"],
+   ["A：__。（顶-量词）\nB：是吗？那好吧，那我就买它了。","A：这顶帽子很适合你，戴上显得特别年轻。"]]},
+ {w:"……得 + 不行",pos:"结构",uses:[
+  {t:"<p>……+ 得 + 不行</p>，表示程度，还可以用“……+ 得 + 很/不得了”等。",ex:[
+   ["他顶着大雪往前走，扶着米袋的双手冻**得不行**，就停下来暖暖，再继续赶路。","Dia jalan nembus salju, tangannya yang megangin karung beras beku parah, jadi berhenti bentar ngangetin tangan, terus lanjut jalan."],
+   ["这个地方这么热闹，孩子们高兴**得不得了**！","Tempatnya rame banget, bocah-bocah pada seneng kebangetan!"],
+   ["他心里烦**得很**，自言自语地抱怨：“怎么还有那么远啊！”","Dia kesel banget, ngedumel sendiri: “Kok masih jauh banget sih!”"]]}],
+  pr:[["A：你们俩这次出去旅行了大半年，家里一直没人收拾。昨天回来，家里怎么样？\nB：__。（……得不行）","B：家里脏得不行，我们收拾了一整天。"],
+   ["学了一年多的汉语了，__。（……得很）","学了一年多的汉语了，我现在说得很流利。"],
+   ["A：听说他的父母突然去世了？\nB：__。（……得不得了）","B：是啊，他难过得不得了。"]]},
+ {w:"反而",pos:"副词",uses:[
+  {t:"“反而”，副词，用在两个分句之间，表示跟原来预期的相反。",ex:[
+   ["这样不但不能提高他们的阅读能力，**反而**有可能降低他们的阅读兴趣和热情。","Cara gini bukannya bikin kemampuan baca mereka naik, malah bisa bikin mereka males baca."],
+   ["大城市的生活虽然很精彩，但一辈子生活在农村的父母**反而**会不适应。","Hidup di kota besar emang seru, tapi ortu yang seumur hidup di desa malah bisa gak betah."],
+   ["但他并没有因为物质条件好而感到欢喜，**反而**常常诚恳地说：“多么希望父母能和我一起过好日子！……”","Tapi dia gak jadi seneng gara-gara hidupnya udah enak, malah sering bilang tulus: “Pengen banget ortu bisa ikut ngerasain hidup enak bareng aku!…”"]]}],
+  pr:[["他不但不孝顺父母，__。（反而）","他不但不孝顺父母，反而经常跟他们要钱。"],
+   ["他是个很有本领的人，可是，__。（反而）","他是个很有本领的人，可是，他反而一直找不到合适的工作。"],
+   ["A：你跟你同屋关系不是很好吗？怎么今天吵架了？\nB：__。（反而）","B：我好心帮他打扫房间，他反而怪我乱动他的东西。"]]}],
+ cmp:{a:"满足",b:"满意",same:["都是动词，都有感到够了、愿望实现的意思。",["我对现在的生活感到非常**满足**/**满意**。","Aku ngerasa puas banget sama hidupku sekarang."]],
+  diff:[["强调没有更多的要求了。",["只要能饱饱地吃上一顿米饭，也就**满足**啦！","Asal bisa makan nasi sampe kenyang, udah cukup deh!"],"强调符合自己的心意。",["老师说她对我这次的作业非常**满意**。","Guru bilang dia puas banget sama PR-ku kali ini."]],
+   ["一般不能做定语或状语。",null,"可做定语或状语。",["他找到了一份**满意**的工作。","Dia dapet kerjaan yang sesuai harapan."]],
+   ["可与“需要、要求、条件、愿望”等词搭配。",["这个我不想要，它不能**满足**我们的需要。","Yang ini aku gak mau, gak bisa menuhin kebutuhan kita."],"不常搭配直接宾语。",null]],
+  quiz:[["我对新公司的工作条件感到很____。","b","Buku: 满足 ×, 满意 ✓. Sesuai harapan sama kondisi kerja."],
+   ["父母总是会想办法____孩子的要求。","a","Ada objek “要求” → 满足."],
+   ["听到这个消息，他____地笑了。","b","Jadi keterangan (状语) → cuma 满意."],
+   ["你不能仅仅通过考试就____了，要努力取得最好的成绩。","a","Maksudnya “jangan udah merasa cukup” → 满足."]]}},
+
+{no:5,title:"济南的泉水",points:[
+ {w:"从而",pos:"连词",uses:[
+  {t:"“从而”，连词，用在两个分句之间，前句表示原因、方法等，后句表示结果、目的等。",ex:[
+   ["比赛前做好思想准备可以减少运动员的压力，**从而**取得比赛的成功。","Siapin mental sebelum tanding bisa ngurangin tekanan atlet, jadinya bisa menang."],
+   ["在学习过程中及时复习，可以尽早发现和解决问题，加深理解，**从而**取得更好的成绩。","Rajin review pas belajar bikin masalah cepet ketauan dan kelar, paham makin dalem, hasilnya nilai makin bagus."],
+   ["而济南的老百姓住在泉边，喝着这甜美的泉水，自然对它充满感激之情，**从而**也产生了许多关于泉水的美丽传说。","Warga Jinan tinggal di pinggir mata air dan minum airnya yang seger, wajar kalau mereka bersyukur banget, makanya muncul banyak legenda indah soal mata air itu."]]}],
+  pr:[["玩游戏可以锻炼人的脑、眼和手，__。（从而）","玩游戏可以锻炼人的脑、眼和手，从而提高人的反应能力。"],
+   ["公司通过引进新技术，加强管理，提高了产品质量，__。（从而）","……，从而赢得了更多顾客的信任。"],
+   ["A：时间这么紧，你们是怎么完成任务的？\nB：__。（从而）","B：我们分工合作，每个人负责一部分，从而节省了很多时间。"]]},
+ {w:"于",pos:"介词",uses:[
+  {t:"“于”，介词，相当于“在、从、对、向、比”等。",ex:[
+   ["这家公司成立**于**1997年。（表示时间）","Perusahaan ini berdiri tahun 1997."],
+   ["这种药主要用**于**感冒的治疗。（表示范围）","Obat ini utamanya buat ngobatin flu."],
+   ["济南的泉水，来自**于**济南市以南的广大山区，……（表示处所）","Mata air Jinan asalnya dari daerah pegunungan luas di selatan kota…"],
+   ["运动有助**于**健康。（表示对象）","Olahraga bagus buat kesehatan."],
+   ["李明半年没找到工作了，没办法，只好求助**于**当经理的老同学王峰了。（表示对象）","Li Ming udah setengah tahun nganggur, mau gak mau minta tolong ke temen lamanya, Wang Feng, yang jadi manajer."],
+   ["队员们都认为对方的水平远远高**于**自己。（表示比较）","Para pemain ngerasa level lawan jauh di atas mereka."]]}],
+  type:"用所学词语改写句子",
+  pr:[["乒乓球运动是在19世纪末产生的，说起来还有一段有趣的故事呢。\n→ 乒乓球运动__。（于）","乒乓球运动产生于19世纪末，说起来还有一段有趣的故事呢。"],
+   ["工作上，对已取得的成功，他从不满足，而是给自己提出更高的要求。\n→ __，而是给自己提出更高的要求。（于）","工作上，他从不满足于已取得的成功，而是给自己提出更高的要求。"]]},
+ {w:"为（wéi）",pos:"动词",uses:[
+  {t:"“为”，动词，有“成、成为”的意思。",ex:[
+   ["而济南市区的地下岩石变**为**了火成岩，……","Batuan di bawah kota Jinan berubah jadi batuan beku…"],
+   ["每个人都会遇到各种压力，可是，压力也可以变**为**动力。","Semua orang pasti kena tekanan, tapi tekanan juga bisa diubah jadi motivasi."]]},
+  {t:"“为”，也表示“作为、算作”等意思。",ex:[
+   ["找工作时，很多人会以收入多少**为**第一标准，这种想法我不能接受。","Pas nyari kerja, banyak orang jadiin gaji patokan nomor satu. Aku sih gak setuju."],
+   ["在他看来，没有工作的生活就不能称其**为**生活。","Buat dia, hidup tanpa kerjaan gak bisa disebut hidup."]]}],
+  type:"用所学词语改写句子",
+  pr:[["在影视作品中，常常把鲨鱼描写成可怕的海洋杀手。\n→ 在影视作品中，__。（为）","在影视作品中，鲨鱼常常被描写为可怕的海洋杀手。"],
+   ["为了方便同学们报名，办公室改变了报名时间，从本月一日到十日，周六、日不休。\n→ 为了方便同学们报名，__。（为）","为了方便同学们报名，办公室把报名时间改为本月一日到十日，周六、日不休。"]]},
+ {w:"起来",pos:"动词",uses:[
+  {t:"“起来”，动词，<p>动词 + 起来</p>表示由分散到集中。",ex:[
+   ["……地下水流到这里，碰到火成岩挡住了路，就积蓄**起来**，越积越多。","…air tanah ngalir ke sini, ketahan batuan beku, jadi numpuk, makin lama makin banyak."],
+   ["渔夫想，这网一收**起来**，鱼一定可以装满整条船。","Si nelayan mikir, begitu jaringnya ditarik, ikannya pasti bisa menuhin satu kapal."]]},
+  {t:"<p>动词 + 起来</p>也可表示由显露到隐藏。",ex:[
+   ["刘丽知道自己做得不对，躲**起来**不敢见我。","Liu Li tau dia salah, jadi ngumpet gak berani ketemu aku."],
+   ["为了不被坏人抢走，他把壶埋入地下藏了**起来**，……","Biar gak dirampok orang jahat, dia ngubur teko itu di tanah buat disembunyiin…"]]}],
+  pr:[["刘方喜欢把旅游时买的门票__。（起来）","刘方喜欢把旅游时买的门票收藏起来。"],
+   ["你刚工作，别太着急，经验__。（起来）","你刚工作，别太着急，经验是慢慢积累起来的。"],
+   ["A：儿子，是你把爸爸的烟放在这鞋盒子里的吗？\nB：__。（起来）","B：是我，我想把烟藏起来，让您少抽点儿。"]]}],
+ cmp:{a:"美丽",b:"优美",same:["都是形容词，都可以形容风景、环境等。",["济南是一座风景**美丽**/**优美**的城市。","Jinan tuh kota yang pemandangannya cakep banget."]],
+  diff:[["多用于形容长相、样子、打扮等好看。",["她有一双**美丽**的大眼睛。","Matanya gede dan cantik banget."],"侧重形容动作、形象等给人美好的感受。",["演员们的动作十分**优美**。","Gerakan para pemainnya anggun banget."]],
+   ["一般多形容视觉的感受。",["雨后天空中出现了一道**美丽**的彩虹。","Abis hujan, di langit muncul pelangi yang cantik."],"还可形容非视觉的感受。",["一进院子就听到了丽丽那**优美**的歌声。","Baru masuk halaman udah kedengeran suara nyanyian Lili yang merdu."]],
+   ["有修辞的用法，有美好、高尚的意思。",["她有一颗**美丽**善良的心。","Hatinya cantik dan baik banget."],"没有这种用法。",null]],
+  quiz:[["这篇文章的语言生动____。","b","Buku: 美丽 ×, 优美 ✓. Bahasa = bukan visual → 优美."],
+   ["心也像窗户一样，如果不打开，就看不到外面的____和热闹。","a","Dipake kayak kata benda “keindahan” → 美丽."],
+   ["这里流传着许多____的传说。","a","Legenda yang indah (makna kiasan) → 美丽."],
+   ["当地____的自然风景吸引了很多中外游客。","ab","Pemandangan → dua-duanya bisa."]]}},
+
+{no:6,title:"除夕的由来",points:[
+ {w:"替",pos:"动词 / 介词",uses:[
+  {t:"“替”，动词，意思是“代替”。",ex:[
+   ["见了外公，你**替**我向他问好。","Kalau ketemu kakek, salamin dari aku ya."],
+   ["刘老师今天有点儿事来不了，你能**替**替他吗？","Pak Liu hari ini ada urusan, gak bisa dateng. Kamu bisa gantiin dia bentar?"]]},
+  {t:"“替”，也可以做介词，表示“给、为”。",ex:[
+   ["七郎暗暗下定决心一定要杀死“夕”，**替**百姓除掉这个制造灾害的东西。","Qilang diem-diem bertekad buat bunuh si “Xi”, ngebasmi makhluk pembawa bencana itu demi rakyat."],
+   ["李阳要去留学了，我们都**替**他高兴。","Li Yang mau kuliah ke luar negeri, kita semua ikut seneng buat dia."]]}],
+  pr:[["你放心吧，他借的钱__。（替）","你放心吧，他借的钱我替他还。"],
+   ["后天就要考试了，小明的病还没好，__。（替）","后天就要考试了，小明的病还没好，大家都替他着急。"],
+   ["A：明天我去上海出差，要带点儿什么东西吗？\nB：__。（替）","B：你能替我买几盒上海的点心吗？"]]},
+ {w:"说不定",pos:"动词 / 副词",uses:[
+  {t:"“说不定”，动词，意思是“不能说得很清楚、肯定”。",ex:[
+   ["这事儿经理已经同意了，只是出发的时间还**说不定**。","Manajer udah setuju, cuma jam berangkatnya belum pasti."],
+   ["咱俩到底谁赢谁输还真**说不定**呢。","Kita berdua siapa yang menang siapa yang kalah, belum ketauan loh."]]},
+  {t:"“说不定”，也可以做副词，表示估计，可能性很大。",ex:[
+   ["周末他起得晚，这会儿**说不定**还在睡觉呢。","Weekend dia bangunnya siang, jam segini kayaknya masih molor."],
+   ["别随随便便就说放弃，**说不定**下次就成功了。","Jangan gampang nyerah, siapa tau next time berhasil."]]}],
+  pr:[["你再去图书馆或书店转转，__。（说不定）","你再去图书馆或书店转转，说不定能找到那本书。"],
+   ["A：今年的优秀毕业生定了吗？李阳有希望吗？\nB：__。（说不定）","B：还说不定呢，下周才公布。"],
+   ["A：要想达到他那样的成就，我这辈子是不敢想了。\nB：__。（说不定）","B：别这么说，只要努力，说不定你比他还厉害呢。"]]},
+ {w:"似的",pos:"助词",uses:[
+  {t:"“似的”，助词，<p>像/跟/好像……似的</p>表示跟某种事物、情况相似。多用于书面语。",ex:[
+   ["消息一出来，询问情况的电话雪片**似的**纷纷打来。","Begitu beritanya keluar, telepon yang nanya-nanya dateng terus kayak hujan salju."],
+   ["我不敢相信这是真的，好像做梦**似的**。","Aku gak percaya ini beneran, rasanya kayak mimpi."]]},
+  {t:"在<p>……得 + 什么似的</p>结构中，“什么似的”代替想表示的情态，有夸张的语气。",ex:[
+   ["刘方背着重重的电脑包挤地铁，下班回到家累得什么**似的**。","Liu Fang desak-desakan di subway sambil gendong tas laptop berat, pulang kerja capeknya minta ampun."],
+   ["“夕”吓得什么**似的**，急忙往外逃。","Si “Xi” ketakutan setengah mati, buru-buru kabur keluar."]]}],
+  pr:[["丽丽爱读书，一天要是不看点儿什么，__。（似的）","丽丽爱读书，一天要是不看点儿什么，就像少了点儿什么似的。"],
+   ["李阳考上了北大，__。（似的）","李阳考上了北大，高兴得什么似的。"],
+   ["A：小刘怎么了？她今天有点儿不太高兴。\nB：__。（似的）","B：好像跟男朋友吵架了似的。"]]},
+ {w:"纷纷",pos:"形容词 / 副词",uses:[
+  {t:"“纷纷”，形容词，<p>动词/形容词 + 纷纷</p>形容（言论、落下的东西）多而乱。",ex:[
+   ["秋风刮起，落叶**纷纷**。","Angin musim gugur bertiup, daun-daun pada berguguran."],
+   ["他救起了妻子，孩子却被大水冲走了。事后，人们议论**纷纷**。","Dia nyelametin istrinya, tapi anaknya kebawa banjir. Abis itu orang-orang pada ribut ngomongin."]]},
+  {t:"“纷纷”，也可以做副词，后面接动词，表示（许多人或事物）接二连三地。",ex:[
+   ["除掉“夕”以后，百姓**纷纷**对七郎表达谢意。","Abis “Xi” dibasmi, rakyat satu per satu dateng ngucapin makasih ke Qilang."],
+   ["要下雨了，路上的人**纷纷**往家里跑。","Mau hujan, orang-orang di jalan pada lari pulang."]]}],
+  pr:[["新年快到了，各大商场、购物中心__。（纷纷）","新年快到了，各大商场、购物中心纷纷开始打折。"],
+   ["见到熊猫的游客们非常兴奋，__。（纷纷）","见到熊猫的游客们非常兴奋，纷纷拿出手机拍照。"],
+   ["A：听说了吗？小刘的妻子生了个女儿。\nB：__。（纷纷）","B：听说了，同事们纷纷去医院看她们了。"]]}],
+ cmp:{a:"打听",b:"询问",same:["都是动词，都有“问”的意思。",["他**打听**/**询问**了老人的身体和生活情况。","Dia nanya-nanya soal kesehatan dan kehidupan si kakek."]],
+  diff:[["多用于口语。",["我跟您**打听**一下，附近有邮局吗？","Permisi, mau nanya, deket sini ada kantor pos gak?"],"多用于书面语。",["他仔细地**询问**了公司近年来的发展情况。","Dia nanya detail soal perkembangan perusahaan beberapa tahun ini."]],
+   ["一般用于寻找、了解有关信息，后可跟结果补语“到”。",["我到处**打听**也没**打听**到这家公司。","Aku udah nanya ke mana-mana, tetep gak nemu info perusahaan ini."],"后面一般不能带结果补语“到”；另外，还有“征求意见”的意思。",["他打电话**询问**刘教授对论文的意见。","Dia nelpon Prof. Liu buat minta pendapat soal skripsinya."]],
+   ["没有这种用法。",null,"后面可跟动作的对象，还可活用为名词。",["警察**询问**了当天见过他的邻居。他详细地回答了病人的**询问**。","Polisi nanyain tetangga yang liat dia hari itu. / Dia jawab detail pertanyaan pasiennya."]]],
+  quiz:[["A：打扰一下，向您____件事。你知道王老板有什么兴趣爱好吗？","a","Buku: 打听 ✓, 询问 ×. Lisan, nyari info."],
+   ["她____到北京有位医生能治这个病，就带着孩子来了。","a","Ada “到” → cuma 打听."],
+   ["我____了一下，附近像这样的房子，差不多都得一百万。","a","Nyari info, gaya lisan → 打听."],
+   ["我____了几个修过机器的顾客，他们对小刘的服务都很满意。","b","Langsung diikuti orang yang ditanya → 询问."]]}},
+
+{no:7,title:"成语故事两则",points:[
+ {w:"瞎",pos:"动词 / 副词",uses:[
+  {t:"“瞎”，动词，意思是“眼睛看不见”。",ex:[
+   ["聪明人用双手挡住了马的双眼，对那个人说：“要是这马真是你的，你一定知道马的哪只眼睛是**瞎**的。”","Si orang pinter nutup dua mata kuda pake tangan, terus bilang: “Kalau kuda ini beneran punyamu, pasti kamu tau mata mana yang buta.”"],
+   ["一天，他让士兵们去找一头大象和一些出生时眼睛就**瞎**了的人回来。","Suatu hari dia nyuruh prajurit nyari seekor gajah dan beberapa orang yang buta dari lahir."]]},
+  {t:"“瞎”，也可以做副词，表示没有理由、没有根据或没有效果地做某事。",ex:[
+   ["别听他**瞎**说！不用害怕，我们不会这么倒霉的。","Jangan dengerin omongan ngawurnya! Santai, kita gak bakal sesial itu."],
+   ["他自己的问题，他会想办法的，你就别替他**瞎**担心了。","Itu masalah dia, dia bakal cari jalan sendiri. Kamu gak usah khawatir gak jelas gitu."]]}],
+  pr:[["__，但她的脸上总是有美丽的微笑。（瞎）","她的眼睛瞎了，但她的脸上总是有美丽的微笑。"],
+   ["A：刚才的考试你考得怎么样？我有好几个题不会做。\nB：__。（瞎）","B：我也是，好几个题都是瞎写的。"],
+   ["你少跟他打交道，__。（瞎）","你少跟他打交道，他总是瞎说。"]]},
+ {w:"分别",pos:"动词 / 副词 / 名词",uses:[
+  {t:"“分别”，动词，意思是“离别”。",ex:[
+   ["**分别**是暂时的，我们以后一定会再见。","Pisahnya cuma sementara, nanti kita pasti ketemu lagi."],
+   ["从毕业到现在，我们已经**分别**20年了，一直都没有联系。","Dari lulus sampe sekarang udah 20 tahun kita pisah, gak pernah kontakan sama sekali."]]},
+  {t:"“分别”，也可以做副词，表示分头、各自。",ex:[
+   ["我**分别**找两个人打听了这件事，他们的说法都是一样的。","Aku nanya soal ini ke dua orang secara terpisah, jawaban mereka sama."],
+   ["士兵们**分别**去不同地方寻找，把找到的大象和盲人带到他面前。","Para prajurit nyebar nyari ke tempat beda-beda, terus bawa gajah dan orang-orang buta yang ketemu ke depan dia."]]},
+  {t:"“分别”做副词时也表示细数每一个。",ex:[
+   ["一张桌子上放着三瓶饮料，**分别**是茶、可乐和咖啡。","Di meja ada tiga botol minuman: teh, cola, sama kopi."],
+   ["谈到对目前工作最不满意的地方，39.1%的被调查者认为休息时间太少，发展慢、工资太低**分别**占20.3%和20%。","Soal yang paling bikin gak puas di kerjaan: 39,1% responden bilang waktu istirahat kurang, sementara “karier lambat” dan “gaji kecil” masing-masing 20,3% dan 20%."]]},
+  {t:"“分别”还可以做名词，意思是“区别”“不同的地方”。",ex:[
+   ["我不知道这两种做法有什么**分别**。","Aku gak tau dua cara ini bedanya apa."],
+   ["这两张照片的**分别**是一眼就看得出来的。","Beda dua foto ini keliatan sekali liat."]]}],
+  pr:[["时间过得真快，__。（分别-动词）","时间过得真快，我们分别已经五年了。"],
+   ["A：快放寒假了，你们假期有什么打算？\nB：__。（分别-副词）","B：我和姐姐分别去上海和北京旅游。"],
+   ["A：我们有三年没见面了吧？\nB：__。（分别-名词）","B：是啊，可你跟以前没什么分别，还是那么年轻。"]]},
+ {w:"根",pos:"名词 / 量词",uses:[
+  {t:"“根”，名词，意思是“植物在土里向下生长的部分”。",ex:[
+   ["这棵树的**根**又粗又长。","Akar pohon ini gede dan panjang."],
+   ["这种植物的**根**下雨时会大量吸水，从而满足自身的需要。","Akar tanaman ini nyerap banyak air pas hujan, jadi kebutuhannya kepenuhin."]]},
+  {t:"“根”做名词时也表示事物的基础。",ex:[
+   ["你这颗牙连牙**根**都坏了，平时难道不疼吗？","Gigi kamu ini sampe akarnya rusak, emang biasanya gak sakit?"],
+   ["这件事还是得从**根**上解决，只解决表面问题是不行的。","Masalah ini harus diberesin dari akarnya, kalau cuma permukaan doang ya gak bakal kelar."]]},
+  {t:"“根”，也可以做量词，常用于细长的东西。",ex:[
+   ["摸到尾巴的盲人说大象像一**根**绳子。","Orang buta yang megang ekornya bilang gajah tuh kayak seutas tali."],
+   ["可是，这次他连续换了几**根**箭，都没能再射进去，……","Tapi kali ini dia udah ganti beberapa anak panah, tetep gak ada yang bisa nancep…"]]}],
+  pr:[["植物靠__。（根-名词）","植物靠根从土里吸收水分。"],
+   ["第一次用筷子的时候，__。（根-量词）","第一次用筷子的时候，两根筷子总是拿不好。"],
+   ["A：你今天去超市主要想买什么？\nB：__。（根-量词）","B：买几根香蕉和一根黄瓜。"]]},
+ {w:"便",pos:"副词",uses:[
+  {t:"“便”，副词，意思是“就”，常用于书面语。",ex:[
+   ["楼上新买了一架钢琴，我们家**便**多了一些不安静。","Tetangga atas baru beli piano, rumah kita jadi agak berisik."],
+   ["很多时候，仅仅是换一种心情，换一个角度，**便**可以从困境中走出来。","Sering kali, cukup ganti mood dan sudut pandang, kita udah bisa keluar dari masalah."],
+   ["“精诚所至，金石为开”这一成语也**便**由此流传下来。","Idiom “kalau tulus banget, batu pun bisa kebuka” pun diwarisin dari cerita ini."]]}],
+  type:"用所学词语改写句子",
+  pr:[["他刚出门，发现没带钥匙，就转身回去拿。\n→ 他刚出门，发现没带钥匙，__。（便）","他刚出门，发现没带钥匙，便转身回去拿。"],
+   ["朋友不停地给她介绍男朋友，但是每次不是她不喜欢别人，就是别人不喜欢她。\n→ 朋友不停地给她介绍男朋友，但是每次__。（便）","……但是每次不是她不喜欢别人，便是别人不喜欢她。"],
+   ["如果我们坚持原来的想法，这个工作是不可能完成的。\n→ 如果我们坚持原来的想法，__。（便）","如果我们坚持原来的想法，这个工作便不可能完成。"]]}],
+ cmp:{a:"忽然",b:"突然",same:["都可用在动词前，表示很快发生、没想到的意思。",["我们正在上课，他**忽然**/**突然**站了起来。","Pas lagi kelas, dia tiba-tiba berdiri."]],
+  diff:[["是副词，只能用在动词或小句前（可以替换成“突然”）。",["一天傍晚，他正带着士兵们在山中打猎，**忽然**发现远处的草丛中蹲着一只大老虎。","Suatu sore, pas lagi berburu di gunung bareng prajurit, tiba-tiba dia liat ada macan gede jongkok di semak-semak."],"是形容词，可做谓语、补语、定语。",["这件事太**突然**了！（谓语）这件事发生得太**突然**了！（补语）这**突然**的一声喊叫吓了我一跳。（定语）","Ini mendadak banget! / Kejadiannya mendadak banget! / Teriakan tiba-tiba itu bikin aku kaget."]]],
+  quiz:[["他抱着小狗走到门口，____想起妈妈不允许他在家里养小动物。","ab","Di depan kata kerja → dua-duanya bisa."],
+   ["消息来得太____了，我完全没有准备。","b","Jadi pelengkap (补语) → cuma 突然."],
+   ["这是一个____的变化，我们谁也没想到。","b","Jadi atributif (定语) → cuma 突然."],
+   ["有个铁路工人就____辞了职，买帆船出海了，你听说了吗？","ab","Di depan kata kerja → dua-duanya bisa."]]}},
+
+{no:8,title:"“朝三暮四”的古今义",points:[
+ {w:"倒",pos:"副词",uses:[
+  {t:"“倒”，副词，表示跟一般情况相反。",ex:[
+   ["在其他粮食不足的情况下，用橡子喂猴子**倒**是个办法。","Pas makanan lain lagi kurang, ngasih makan monyet pake biji ek justru bisa jadi solusi."],
+   ["少年不解地问：“怎么勇敢反**倒**成为缺点了？”","Si anak muda bingung: “Kok berani malah jadi kekurangan?”"]]},
+  {t:"“倒”，表示没有想到。",ex:[
+   ["有这样的人？我**倒**要认识认识。","Ada orang kayak gitu? Wah, aku malah pengen kenalan."],
+   ["小刘租的房子虽然很小，不过收拾得**倒**还干净。","Kos Xiao Liu emang kecil, tapi ternyata rapi juga."]]},
+  {t:"“倒”，可以表示让步，先用“倒”肯定，再说其他方面。",ex:[
+   ["质量**倒**是挺好，就是价格太贵了。","Kualitasnya sih oke, cuma harganya kemahalan."],
+   ["我**倒**是很愿意参加这次活动，就是暂时无法确定是否有时间。","Aku sih mau banget ikut acara ini, cuma belum bisa mastiin ada waktu atau gak."]]},
+  {t:"“倒”，还可以表示不耐烦地问或催。",ex:[
+   ["你究竟去还是不去？**倒**是说句话呀！","Jadi kamu ikut gak sih? Ngomong dong!"],
+   ["你**倒**是说说看，这件事你不负责谁负责？","Coba deh kamu jelasin, kalau bukan kamu yang tanggung jawab, siapa lagi?"]]}],
+  pr:[["A：你觉得这套房子装修得怎么样？\nB：__。（倒）","B：装修倒是挺漂亮的，就是面积小了点儿。"],
+   ["__，做起来可就难了。（倒）","这个计划说起来倒容易，做起来可就难了。"],
+   ["A：__。（倒）\nB：着什么急啊？再等两分钟，马上就好了。","A：你倒是快点儿啊，电影都要开始了！"]]},
+ {w:"……来……去",pos:"结构",uses:[
+  {t:"<p>……来……去</p>，表示动作的多次重复，用在“来”和“去”前的两个动词通常是同一个词或者近义词。",ex:[
+   ["小狗追着自己的尾巴，在草地上跑**来**跑**去**。","Anak anjingnya ngejar ekornya sendiri, lari-larian bolak-balik di rumput."],
+   ["猴子们似乎只弄懂了主人前面说的一个“三”，觉得自己吃了亏，一个个立起身子跳**来**跳**去**，对着老人大喊大叫地发脾气。","Monyet-monyet kayaknya cuma nangkep kata “tiga” di depan, ngerasa dirugiin, terus pada berdiri lompat-lompat sambil teriak-teriak ngamuk ke si kakek."],
+   ["他们研究**来**讨论**去**，还是没找出原因。","Mereka udah riset dan diskusi bolak-balik, tetep gak nemu penyebabnya."]]}],
+  pr:[["他的手机不见了，很着急，__。（……来……去）","他的手机不见了，很着急，在房间里找来找去。"],
+   ["公园里，__。（……来……去）","公园里，孩子们跑来跑去，玩儿得很开心。"],
+   ["A：怎么帮他把丢掉的手机找回来，你有办法了吗？\nB：__。（……来……去）","B：我想来想去，还是没想出好办法。"]]},
+ {w:"要不",pos:"连词",uses:[
+  {t:"“要不”，连词，意思跟“要不然”相同，表示如果不这样，就会出现下面的结果。“要不/要不然”常放在后一分句的主语前。",ex:[
+   ["老太太说：“4块，**要不**我不买。”","Nenek itu bilang: “Empat yuan, kalau gak, aku gak jadi beli.”"],
+   ["还好碰见你了，**要不然**我今天肯定要迟到了。","Untung ketemu kamu, kalau gak hari ini aku pasti telat."]]},
+  {t:"“要不/要不然”还可以表示还有另外一种选择。",ex:[
+   ["今天太晚了，**要不**你明天再走吧。","Udah kemaleman, gimana kalau kamu pulangnya besok aja?"],
+   ["**要不**这样吧，既然你们觉得少，那就改成每天早上四颗，晚上三颗，这样总够了吧？","Gini aja deh, kalau kalian ngerasa kurang, jadi pagi empat biji, malem tiga biji. Udah cukup kan?"]]}],
+  pr:[["谢谢你昨晚给我发了个短信，__。（要不）","谢谢你昨晚给我发了个短信，要不我就忘了今天开会的事了。"],
+   ["A：后天我们打算去中国朋友家过除夕，你有什么计划？\nB：__。（要不）","B：还没想好，要不我跟你们一起去吧？"],
+   ["A：__。（要不）\nB：我都行，看你什么时候方便吧。","A：今天太忙了，要不我们改天再见面吧？"]]}],
+ cmp:{a:"彼此",b:"互相",same:["都有表示双方有同样行为的意思。",["我们**彼此**/**互相**都很了解对方。","Kita udah saling kenal banget satu sama lain."]],
+  diff:[["代词，可以用在动词前做主语。",["相处久了，**彼此**居然可以从表情、声音和行为举止中了解对方的意思。","Udah lama bareng, ternyata bisa saling ngerti maksud dari ekspresi, suara, dan gerak-gerik."],"副词，用在动词前时前面还要加主语。",["好朋友应该**互相**帮助。","Sahabat tuh harus saling bantu."]],
+   ["还可做宾语、定语。",["我们是最好的朋友，了解**彼此**。（宾语）我们**彼此**的爱好相同。（定语）","Kita sahabat, saling ngerti. / Hobi kita sama."],"不能做宾语、定语。",null],
+   ["可以重叠，表示双方差不多。",["咱俩**彼此彼此**，我画得比你好不了多少。","Kita sebelas dua belas lah, gambarku juga gak jauh lebih bagus dari kamu."],"不能重叠。",null]],
+  quiz:[["你们是姐妹，应该____照顾。","ab","Di depan kata kerja → dua-duanya bisa."],
+   ["对同一个问题，____的认识不同，是很正常的事情。","a","Jadi atributif (……的) → cuma 彼此."],
+   ["我们是夫妻，各自除了孝顺自己的父母，也应该孝顺____的父母。","a","Jadi atributif → 彼此."],
+   ["现在是我们公司最困难的时候，大家应该____支持，____帮助。","b","Subjek 大家 + adverbia sebelum kata kerja → 互相 paling pas."]]}},
+
+{no:9,title:"别样鲁迅",points:[
+ {w:"算",pos:"动词",uses:[
+  {t:"“算”，动词，意思是“认作，当作”。",ex:[
+   ["例如著名的文学家鲁迅，在吃喝这件事上，就**算**是个地道的行家。","Contohnya sastrawan terkenal Lu Xun, soal makan-minum dia bisa dibilang ahli beneran."],
+   ["这钱就**算**我借给你的，将来你有了的时候再还我。","Anggep aja duit ini aku pinjemin, nanti kalau kamu udah ada, balikin."]]},
+  {t:"“算”后面可以跟“了”，表示“作罢、不再计较”的意思。",ex:[
+   ["不就是一个空瓶子吗？扔掉**算了**。","Cuma botol kosong doang kan? Buang aja lah."],
+   ["**算了**吧，你跑得再快，也追不上会飞的鸟啊。","Udahlah, mau lari secepet apa juga gak bakal ngejar burung yang bisa terbang."]]}],
+  pr:[["从我家去公司，坐几站地铁就到了，__。（算）","从我家去公司，坐几站地铁就到了，算是比较方便的。"],
+   ["A：后天是孩子的生日，你打算怎么表示一下呀？\nB：__。（算）","B：我给他买了一个新书包，就算是生日礼物吧。"],
+   ["A：电影几点开始？吃完饭再去，时间是不是有点儿紧张啊？\nB：__。（算了）","B：要不电影我们就别看了，算了。"]]},
+ {w:"作为",pos:"动词 / 介词",uses:[
+  {t:"“作为”，动词，意思是“看作，认为是……”。",ex:[
+   ["北海公园离家最近，所以我把那儿**作为**每晚散步的去处。","Taman Beihai paling deket dari rumah, jadi aku jadiin tempat jalan-jalan tiap malem."],
+   ["经理要请我去吃顿饭，说是**作为**我加班的表扬。","Manajer mau traktir aku makan, katanya sebagai apresiasi karena aku lembur."]]},
+  {t:"“作为”，可以做介词，用于引出人的身份或事物性质。",ex:[
+   ["**作为**大作家、大学问家，鲁迅对吃很讲究，吃的内容在他的日记里占了很大一部分。","Sebagai penulis dan cendekiawan besar, Lu Xun pilih-pilih soal makanan, sampe urusan makan ngisi sebagian besar buku hariannya."],
+   ["西红柿是世界上种植非常普遍的蔬菜，中国**作为**主要生产国之一也在扩大它的种植面积。","Tomat tuh sayur yang ditanem di mana-mana. China, sebagai salah satu produsen utama, juga lagi nambah luas lahannya."]]}],
+  pr:[["__，治病救人是我们的职责。（作为）","作为医生，治病救人是我们的职责。"],
+   ["A：你做的面包比外边卖的都好吃，你真应该开个店。\nB：我喜欢现在的工作。__。（作为）","B：……做面包只是作为我的业余爱好。"],
+   ["A：小明每天从早忙到晚，又是学游泳，又是弹钢琴，可学习成绩下降了很多。\nB：__。（作为）","B：作为学生，还是应该把学习放在第一位。"]]},
+ {w:"曾经",pos:"副词",uses:[
+  {t:"“曾经”，副词，表示从前有过某种行为或出现过某种情况。",ex:[
+   ["郁达夫在1933年**曾经**作诗形容他：“醉眼蒙眬上酒楼，彷徨呐喊两悠悠”，描写得十分形象。","Tahun 1933, Yu Dafu pernah nulis puisi buat ngegambarin dia, dan gambarannya hidup banget."],
+   ["鲁迅**曾经**说他是将别人喝牛奶、咖啡的时间用来学习。","Lu Xun pernah bilang, waktu orang lain dipake buat minum susu dan kopi, dia pake buat belajar."],
+   ["孔子**曾经**带着学生周游各国14年，传播他的思想。","Konfusius pernah keliling berbagai negara bareng murid-muridnya selama 14 tahun buat nyebarin ajarannya."]]}],
+  pr:[["A：你和李阳好像很熟啊，你们以前就认识？\nB：对，__。（曾经）","B：对，我们曾经是大学同学。"],
+   ["A：你来北京才半年，汉语怎么说得这么好？\nB：哦，是这样的，__。（曾经）","B：……我曾经在上海学过两年汉语。"],
+   ["A：__。（曾经）\nB：真的吗？我最近也迷上了摄影，以后遇到问题可以请教他了。","A：我哥哥曾经当过摄影师。"]]}],
+ cmp:{a:"亲自",b:"自己",same:["都有表示本人的意思。",["（鲁迅）不但会吃，还会**亲自**/**自己**动手做。","(Lu Xun) bukan cuma jago makan, tapi juga turun tangan sendiri buat masak."]],
+  diff:[["副词，常用于主语和动词之间。",["老人总是**亲自**喂养他的猴子。","Si kakek selalu kasih makan monyetnya langsung pake tangannya sendiri."],"代词，可做主语、宾语、定语等。",["请大家带好**自己**的资料。","Tolong semua bawa berkas masing-masing ya."]],
+   ["一般用于身份地位较高的人，或平时不常做的事。",["这份礼物是市长**亲自**为生病的小女孩儿做的。","Hadiah ini dibikin langsung sama Pak Wali Kota buat anak cewek yang lagi sakit."],"强调动作的完成者是本人，不是别人。",["你应该**自己**努力学习，不能总是靠别人。","Kamu harus usaha belajar sendiri, jangan ngandelin orang terus."]]],
+  quiz:[["这是你____的事，应该____做。","b","Buku: 亲自 ×, 自己 ✓. Atributif + yang ngerjain diri sendiri."],
+   ["今年我的业绩全公司第一，新年晚会上，总裁____给我发了奖金。","a","Orang berstatus tinggi turun langsung → 亲自."],
+   ["希望您能____来参加这次活动。","a","Sopan, minta orang penting dateng langsung → 亲自."],
+   ["每个学生都有____的性格特点和兴趣爱好，因此老师在教育学生时应该注意选择合适的方法。","b","Atributif (……的) → cuma 自己."]]}}
+];
+
+DATA.push(
+{no:10,title:"争论的奇迹",points:[
+ {w:"毕竟",pos:"副词",uses:[
+  {t:"“毕竟”，副词，意思是“到底，终于”。",ex:[
+   ["虽然我们遇到了很多困难，但**毕竟**完成了任务。","Walaupun banyak banget halangan, akhirnya tugasnya kelar juga."],
+   ["不过摄影师**毕竟**是摄影师，主意还是有的。","Tapi namanya juga fotografer, pasti ada aja idenya."]]},
+  {t:"“毕竟”也用于指出最重要或正确的部分，常与表示“（不管怎样）结论就是这样”的句子一起使用。",ex:[
+   ["生活中总有无法解决的问题，**毕竟**不是所有的对错都能讲清楚，甚至可能根本就没有真正的对与错。","Dalam hidup pasti ada masalah yang gak bisa diberesin. Toh gak semua benar-salah bisa dijelasin, bahkan bisa jadi gak ada benar-salah yang sebenernya."],
+   ["他不高兴是正常的，**毕竟**没有人能在摔得头破血流的时候，还高兴得起来。","Wajar dia bete. Ya gimana, gak ada orang yang bisa happy pas abis jatuh sampe kepala bocor."]]}],
+  pr:[["你们毕竟是好朋友，__。","你们毕竟是好朋友，有什么误会说开就好了。"],
+   ["A：这孩子真是太淘气了！我快被他烦死了！\nB：__。（毕竟）","B：别生气了，他毕竟还是个孩子。"],
+   ["A：他最近脾气真是太差了，一点儿小事就发火！\nB：__。（毕竟）","B：理解一下吧，他最近压力很大，毕竟刚换了工作。"]]},
+ {w:"逐渐",pos:"副词",uses:[
+  {t:"“逐渐”，副词，表示程度或数量一点点增加或减少。",ex:[
+   ["食物越来越少，老人不得不**逐渐**限制猴子的食量。","Makanan makin sedikit, si kakek terpaksa pelan-pelan ngurangin jatah makan monyetnya."],
+   ["这项运动首先在亚太地区流行，并**逐渐**受到世界各地人们的欢迎。","Olahraga ini awalnya ngetren di Asia-Pasifik, terus lama-lama disukain orang di seluruh dunia."],
+   ["经过艰苦的试验，电影拍摄技术**逐渐**改进、成熟。","Lewat percobaan yang berat, teknik syuting film pelan-pelan makin bagus dan matang."]]}],
+  pr:[["A：刚来北京的时候，你习惯吗？\nB：__。（逐渐）","B：一开始不太习惯，后来逐渐就习惯了。"],
+   ["茶首先在中国出现，__。（逐渐）","茶首先在中国出现，后来逐渐传到了世界各地。"],
+   ["A：__。（逐渐）\nB：我觉得你说得对，就这么办吧。","A：我们可以先找几个人试一试，再逐渐扩大范围。"]]},
+ {w:"或许",pos:"副词",uses:[
+  {t:"“或许”，副词，意思是“也许，有可能”。",ex:[
+   ["虽然以前她不支持你，但**或许**这次会有变化。","Dulu dia emang gak dukung kamu, tapi siapa tau kali ini beda."],
+   ["**或许**正是因为这一点一滴的努力，你就会走在别人的前面。","Bisa jadi justru karena usaha sedikit-sedikit itu, kamu bakal selangkah di depan orang lain."],
+   ["留心生活的每一瞬间，并为之争论，适时请求帮助、认真研究，**或许**重大发现就在你的眼前。","Perhatiin tiap momen dalam hidup, debatin, minta bantuan pas perlu, riset serius, siapa tau penemuan besar ada di depan mata."]]}],
+  pr:[["他的妻子前几年病了，__。（或许）","他的妻子前几年病了，或许这就是他最近很少出来的原因。"],
+   ["A：你猜这场比赛的结果会怎么样？\nB：__。（或许）","B：两个队水平差不多，或许会打平吧。"],
+   ["A：__。（或许）\nB：希望是这样，那我们再等五分钟。","A：他或许是路上堵车了，马上就到。"]]}],
+ cmp:{a:"显示",b:"显得",same:["都是动词，都有表现出、让人看出的意思，但一般不能换用。",null],
+  diff:[["指表现出某种态度、能力或情况。",["相片**显示**：马奔跑时始终有一蹄着地。","Fotonya nunjukin: pas kuda lari, selalu ada satu kaki yang napak tanah."],"指表现出某种特性。",["几年不见，他**显得**成熟多了。","Beberapa tahun gak ketemu, dia keliatan jauh lebih dewasa."]],
+   ["一般与名词或小句搭配。",["这次活动的组织**显示**出了他的才能。","Cara dia ngatur acara ini nunjukin bakatnya."],"一般与形容词搭配。",["中秋节那天，月亮**显得**格外明亮。","Pas malam Festival Kue Bulan, bulannya keliatan terang banget."]]],
+  quiz:[["他最近怎么了？总是____不太高兴。","b","Buku: 显示 ×, 显得 ✓. Diikuti kata sifat → 显得."],
+   ["调查____，只有37%的人愿意回到没有手机的时代。","a","Diikuti klausa/data → 显示."],
+   ["节日的北京____更加美丽。","b","Diikuti kata sifat → 显得."],
+   ["你得____出自己的本领，公司才会愿意用你。","a","Nunjukin kemampuan (kata benda) → 显示."]]}},
+
+{no:11,title:"闹钟的危害",points:[
+ {w:"来 / 过来",pos:"趋向动词",uses:[
+  {t:"“来/过来”，趋向动词，常见格式为<p>动词 + 来/过来</p>，用在动词“醒”后，表示由睡眠向清醒的过渡。",ex:[
+   ["……人逐渐从熟睡过渡到浅睡，直到醒**来**。","…orang pelan-pelan dari tidur nyenyak pindah ke tidur ringan, sampe akhirnya bangun."],
+   ["早晨醒**来**，我发现窗外正下着大雪。","Pagi-pagi bangun, ternyata di luar lagi hujan salju deres."]]},
+  {t:"“过来”，用在动词后，表示回到原来的、正常的状态。",ex:[
+   ["我被一阵吵闹声突然惊醒，过了半天，脑子才清醒**过来**。","Aku kebangun kaget gara-gara suara ribut, lama banget baru otakku bener-bener sadar."],
+   ["你刚回来，这事等你休息**过来**再说。","Kamu baru pulang, urusan ini nanti aja abis kamu istirahat."]]},
+  {t:"<p>动词 + 得/不 + 过来</p>，表示能力可以（或不够）做某事，一般多用否定形式。",ex:[
+   ["天上的星星那么多，谁数得**过来**呀？","Bintang di langit sebanyak itu, siapa yang bisa ngitung semuanya?"],
+   ["最近手头的工作太多了，我都忙不**过来**了。","Kerjaanku lagi numpuk banget, sampe kewalahan."]]}],
+  pr:[["这棵树有上百年的树龄了，树干很粗，__。（过来）","……树干很粗，我一个人都抱不过来。"],
+   ["老师说我文章里的错别字比较多，__。（过来）","……让我回去都改过来。"],
+   ["A：刘阿姨帮着照顾孙子就够累的了，下个月她女儿的孩子又要出生了。\nB：是啊！__。（过来）","B：是啊！两个孩子，她一个人怎么照顾得过来啊。"]]},
+ {w:"所",pos:"助词 / 量词",uses:[
+  {t:"“所”，助词，用在动词前，指称事物。常用在主谓结构中动词的前面，做定语、主语等。",ex:[
+   ["山水画**所**表现的是人与自然的关系。","Yang digambarin lukisan pemandangan tuh hubungan manusia sama alam."],
+   ["……人们对自然醒与被闹钟铃声叫醒**所**产生的反应是很不相同的。","…reaksi orang pas bangun sendiri sama pas dibangunin alarm tuh beda banget."]]},
+  {t:"<p>有/无 + 所 + 动词</p>，“所”与后接动词构成短语，做“有、无”的宾语。",ex:[
+   ["调查显示，随着年龄的增大，女性的职场幸福感有**所**提高。","Survei nunjukin, makin nambah umur, rasa bahagia cewek di tempat kerja agak naik."],
+   ["我和李阳是无**所**不谈的好朋友。","Aku sama Li Yang sahabatan yang ngobrolin apa aja."]]},
+  {t:"“所”，还可以做量词，用于住所、机构等。",ex:[
+   ["来自北京一**所**大学的学生做了关于这个问题的实验。","Mahasiswa dari salah satu kampus di Beijing bikin eksperimen soal ini."],
+   ["学校附近就有一**所**幼儿园，你可以把孩子送到那儿去。","Deket sekolah ada TK, kamu bisa masukin anakmu ke sana."]]}],
+  type:"用所学词语改写句子",
+  pr:[["我有一个建议要送给你，希望它能帮助你。\n→ 我有一个建议要送给你，__。（所）","我有一个建议要送给你，希望对你有所帮助。"],
+   ["自己过去说过的话你都忘记了吗？\n→ 你忘记__了？（所）","你忘记自己过去所说的话了？"],
+   ["他在北京住了五十年，我了解的情况是他非常热爱北京。\n→ 他在北京住了五十年，__。（所）","他在北京住了五十年，据我所知，他非常热爱北京。"]]},
+ {w:"相当",pos:"动词 / 副词",uses:[
+  {t:"“相当”，动词，表示（数量、条件、情况等）两方面差不多。",ex:[
+   ["……这些能力最多为正常状态的65%，与醉酒者**相当**。","…kemampuan ini paling banter cuma 65% dari kondisi normal, setara sama orang mabok."],
+   ["这种鸟一天所食的害虫**相当**于自己的体重。","Burung ini sehari makan hama sebanyak berat badannya sendiri."]]},
+  {t:"“相当”还可以做副词，表示程度较高。",ex:[
+   ["菜的味道好极了，服务也挺周到，我**相当**满意。","Makanannya enak parah, pelayanannya juga oke, aku puas banget."],
+   ["如果要问人们选择职业时主要考虑的是什么，有**相当**一部分人会以收入多少作为标准。","Kalau ditanya apa pertimbangan utama pas milih kerja, lumayan banyak orang bakal jawab gaji."]]}],
+  pr:[["在最后的比赛中，__。（相当）","在最后的比赛中，两个队的水平相当，最后打平了。"],
+   ["A：平常也不见你运动锻炼，可身体还这么好。\nB：我每天上下班都爬楼梯，__。（相当）","B：……这相当于每天锻炼半个小时。"],
+   ["A：公司让我去上班了，你觉得我该不该接受这份工作呢？\nB：这家公司这么有名，__，你还等什么？（相当）","B：……工资也相当高，你还等什么？"]]},
+ {w:"数",pos:"动词 / 数词",uses:[
+  {t:"“数（shǔ）”，动词，表示查点（数目）或一个个说出（数目）。",ex:[
+   ["我大概**数**了一下，车上有32个学生。","Aku kira-kira ngitung, di bus ada 32 murid."],
+   ["先生，这是找您的钱，58块6，您**数数**。","Pak, ini kembaliannya, 58,6 yuan, silakan dihitung."]]},
+  {t:"<p>数（最）……的（要/就）数……</p>，表示计算或比较起来（最……）。",ex:[
+   ["我觉得北京最美、最有名气的公园要**数**颐和园了。","Menurutku taman paling cakep dan paling terkenal di Beijing ya Istana Musim Panas."],
+   ["要说我们班跑得最快的，那就**数**李阳了。","Kalau ngomongin yang larinya paling kenceng di kelas kita, ya jelas Li Yang."]]},
+  {t:"“数（shù）”，数词，意思是“几、几个”，多用于书面语。",ex:[
+   ["这里夏季的雷阵雨一般可持续**数**小时或者更久的时间。","Hujan petir musim panas di sini biasanya bisa beberapa jam atau lebih."],
+   ["这种状态如果持续**数**天、**数**周、**数**月，将导致高血压、失眠和一些精神问题等。","Kalau kondisi ini lanjut berhari-hari, berminggu-minggu, sampe berbulan-bulan, bisa bikin darah tinggi, insomnia, dan masalah mental."]]}],
+  type:"用所学词语改写句子",
+  pr:[["经过几年的努力，他终于拿到了博士学位。\n→ __，他终于拿到了博士学位。（数）","经过数年的努力，他终于拿到了博士学位。"],
+   ["据说，四川的峨眉山是中国雾天最多的地方。\n→ __。（数）","据说，中国雾天最多的地方要数四川的峨眉山了。"],
+   ["它的听力非常好，水下几公里外的声音它都能清楚地听到。\n→ 它的听力非常好，__。（数）","它的听力非常好，水下数公里外的声音它都能清楚地听到。"]]}],
+ cmp:{a:"持续",b:"继续",same:["都是动词，都有延续不断的意思，但语义相差较大，不能替换。",null],
+  diff:[["表示动作连续不断，中间没有停顿。",["这场雨**持续**下了两个多小时。","Hujannya turun nonstop lebih dari dua jam."],"动作中间可以有停顿。",["对不起！打扰了，你们**继续**学习吧。","Maaf ganggu ya! Lanjut aja belajarnya."]],
+   ["能做定语。",["**持续**的高温让许多老人感到不适。","Panas yang gak abis-abis bikin banyak lansia gak enak badan."],"不能做定语。",null],
+   ["能带时量补语。",["小明发烧**持续**三天了，家里人都很着急。","Xiao Ming udah demam tiga hari, keluarganya panik."],"一般不能带时量补语。",null]],
+  quiz:[["真希望刘老师能____给我们上课。","b","Buku: 持续 ×, 继续 ✓. Lanjut lagi (ada jeda) → 继续."],
+   ["这次的宣传活动将____到9月底。","a","Nonstop sampai batas waktu → 持续."],
+   ["不管你是快乐还是难过，生活总要____下去。","b","Hidup tetap lanjut → 继续."],
+   ["朋友是在你失败时，鼓励你____前进的人。","b","Lanjut maju setelah gagal → 继续."]]}},
+
+{no:12,title:"海外用户玩儿微信",points:[
+ {w:"以及",pos:"连词",uses:[
+  {t:"“以及”，连词，用来连接并列关系的词或词组，连接成分一般有主次或先后的分别。",ex:[
+   ["吃饭时不要用筷子敲打碗、杯子**以及**桌面。","Pas makan jangan ketok-ketok mangkok, gelas, apalagi meja pake sumpit."],
+   ["学校的领导、教师**以及**一些学生代表观看了演出。","Pimpinan sekolah, guru-guru, dan beberapa perwakilan murid nonton pertunjukannya."],
+   ["……由于中国互联网的用户数量**以及**市场成熟程度等都低于发达国家，在产品创新上难有领导地位，……","…karena jumlah pengguna internet dan kematangan pasar China masih di bawah negara maju, susah buat jadi pemimpin inovasi produk…"]]}],
+  pr:[["A：你认为学中文的重要性有哪些？\nB：__。（以及）","B：可以了解中国文化，找到更好的工作，以及交到更多中国朋友。"],
+   ["妈妈在电话里问了我很多问题，如北京的天气怎么样，吃饭习惯不习惯，__。（以及）","……以及有没有交到新朋友。"],
+   ["A：送人礼物的时候要注意些什么？\nB：__。（以及）","B：要注意对方的爱好、礼物的价格以及送礼的时间。"]]},
+ {w:"程度",pos:"名词",uses:[
+  {t:"“程度”，名词，指某方面达到的水平或层次。",ex:[
+   ["……由于中国互联网的用户数量以及市场成熟**程度**等都低于发达国家，在产品创新上难有领导地位，……","…karena jumlah pengguna dan tingkat kematangan pasar internet China masih di bawah negara maju…"],
+   ["问题已经发展到了十分严重的**程度**。","Masalahnya udah sampe tahap parah banget."],
+   ["在很大**程度**上，一个人的未来取决于他所受的教育。","Sebagian besar masa depan seseorang ditentuin sama pendidikan yang dia dapet."]]}],
+  pr:[["__，你应该马上去看医生。（程度）","你咳嗽得已经到了这种程度，你应该马上去看医生。"],
+   ["A：__。（程度）\nB：我还不能完全理解。","A：你对这篇文章的理解达到什么程度了？"],
+   ["A：对他提出的意见，你有什么看法？\nB：__。（程度）","B：我在一定程度上同意他的看法。"]]}],
+ cmp:{a:"发达",b:"发展",same:["意思有关联，但一般不能换用。",null],
+  diff:[["形容词。",["这个城市的经济不太**发达**。","Ekonomi kota ini belum terlalu maju."],"动词。",["这个城市正在大力**发展**经济。","Kota ini lagi gencar ngembangin ekonominya."]],
+   ["形容发展水平很高。",["由于中国互联网的用户数量以及市场成熟程度等都低于**发达**国家，在产品创新上难有领导地位。","Karena jumlah pengguna internet dan kematangan pasar China masih di bawah negara maju, susah memimpin inovasi produk."],"指事物的变化。",["中国还是一个**发展**中国家。","China masih termasuk negara berkembang."]]],
+  quiz:[["四川是茶馆文化最____的地区之一。","a","Buku: 发达 ✓, 发展 ×. Level tinggi (kata sifat) → 发达."],
+   ["人们常说这种动物不聪明，其实它的大脑很____。","a","很 + kata sifat → 发达."],
+   ["方便的交通是____经济的基础。","b","Ada objek 经济 (kata kerja) → 发展."],
+   ["她的病情____得比我们想象的还要快。","b","Perubahan/perkembangan → 发展."]]}},
+
+{no:13,title:"锯掉生活的“筐底”",points:[
+ {w:"何况",pos:"连词",uses:[
+  {t:"“何况”，连词，用反问的语气表示更进一层，或根据前句的表述，后句的结论是显而易见的，有“不用说”的意味。",ex:[
+   ["……缺少了激烈紧张的气氛，连运动员都不满意，更**何况**看比赛的球迷呢？","…tanpa suasana yang seru dan tegang, atletnya aja gak puas, apalagi fans yang nonton?"],
+   ["北京的发展变化太快，我这个土生土长的老北京还常迷路呢，**何况**你一个外地人。","Beijing berubahnya cepet banget, aku yang asli Beijing aja sering nyasar, apalagi kamu yang orang luar."]]},
+  {t:"“何况”还可表示补充另一种理由。",ex:[
+   ["这辆车外观漂亮，安全性高，又**何况**价钱也就比上次看的那辆贵了几千块，小王有点儿动心了。","Mobil ini cakep, aman, belum lagi harganya cuma beda beberapa ribu dari yang kemarin diliat. Xiao Wang mulai kepincut."],
+   ["上海冬天没有暖气，屋子里冷得让人伸不出手，**何况**李阳还是病人，自然是受不了的。","Shanghai pas musim dingin gak ada pemanas, di dalem rumah dingin parah, apalagi Li Yang lagi sakit, ya jelas gak kuat."]]}],
+  pr:[["这段山路比较危险，__，还是让我来开吧。（何况）","这段山路比较危险，何况你昨天晚上没睡好，还是让我来开吧。"],
+   ["A：这烤鸭不是你最爱吃的吗？今天怎么一口都不吃？\nB：我正在减肥，连__，__呢？（何况）","B：我正在减肥，连米饭都不敢吃，何况烤鸭呢？"],
+   ["A：你原来不是很爱逛商场的吗？现在怎么都在网上买衣服了？\nB：__？（何况）","B：网上买又便宜又方便，何况我最近工作这么忙，哪有时间逛商场？"]]},
+ {w:"何必",pos:"副词",uses:[
+  {t:"“何必”，副词，用反问的语气表示不需要，不必。",ex:[
+   ["**何必**这么麻烦呢？把篮筐的底去掉不就行了吗？","Ngapain ribet gitu sih? Bolongin aja dasar keranjangnya, beres kan?"],
+   ["食堂楼下就有个小超市，**何必**去学校外边呢？","Di bawah kantin ada minimarket, ngapain jauh-jauh ke luar kampus?"],
+   ["你**何必**亲自送一趟呢？叫个快递不就行了？","Ngapain kamu nganter sendiri? Pake kurir aja kan bisa?"]]}],
+  pr:[["早知道你就有这本书，__？（何必）","早知道你就有这本书，我何必再去买呢？"],
+   ["既然她已经拒绝了你，你__呢？（何必）","既然她已经拒绝了你，你何必还这么难过呢？"],
+   ["A：你回家等我吧，我先去超市买点儿肉、蔬菜什么的。\nB：__。（何必）","B：何必去超市呢？楼下的菜市场就有。"]]},
+ {w:"多亏",pos:"动词",uses:[
+  {t:"“多亏”，动词，由于别人的帮助或某种有利因素，避免了不幸或得到了好处。",ex:[
+   ["**多亏**了他这句话，人们如梦初醒。","Untung ada omongannya itu, orang-orang langsung pada sadar."],
+   ["赵老师，谢谢您，**多亏**您给我那瓶药，很管用。","Bu Zhao, makasih banget ya, untung Ibu kasih obat itu, ampuh banget."],
+   ["今天搬家**多亏**有你在，你可帮我大忙了。","Pindahan hari ini untung ada kamu, kamu bantu banyak banget."]]}],
+  pr:[["__，要不今天的飞机我准赶不上了。（多亏）","多亏你开车送我，要不今天的飞机我准赶不上了。"],
+   ["A：星期五晚上你不是和朋友约好了见面吗？\nB：哎呀！__。（多亏）","B：哎呀！多亏你提醒我，我差点儿忘了。"],
+   ["A：__。（多亏）\nB：是啊，医生说再过一个星期妈妈就能出院了。","A：多亏发现得早，你妈妈的病好得很快。"]]}],
+ cmp:{a:"激烈",b:"强烈",same:["都是形容词，都有势猛、厉害的意思。",["我不顾父母的**激烈**/**强烈**反对，偷偷地报考了表演专业。","Aku cuek sama penolakan keras ortu, diem-diem daftar jurusan akting."]],
+  diff:[["词义侧重尖锐紧张。",["人类最早什么时候开始用火，一直是学者**激烈**争论的问题。","Kapan manusia pertama kali pake api, dari dulu jadi bahan debat panas para ilmuwan."],"词义侧重强劲有力。",["文章发表以后立刻引起了读者的**强烈**反响。","Begitu artikelnya terbit, langsung dapet respon gede dari pembaca."]],
+   ["多用于形容言论、情绪或比赛、斗争等。",["人在**激烈**运动时，会出很多汗。","Pas olahraga berat, badan keluar keringet banyak banget."],"多用于形容光线、电流、色彩、气味或人的感情、思想、要求等。",["这里夏天尽管阳光的照射很**强烈**，但白天气温很少超过35℃。","Di sini pas musim panas mataharinya terik banget, tapi suhu siang jarang lewat 35°C."]]],
+  quiz:[["这种蔬菜有____的香味，它既可以生吃，又可以熟食。","b","Buku: 激烈 ×, 强烈 ✓. Aroma → 强烈."],
+   ["明天我去一家公司面试，听说竞争很____。","a","Persaingan → 激烈."],
+   ["当晚的比赛紧张、____，两队都打出了很高的水平。","a","Pertandingan → 激烈."],
+   ["学生们____要求重新安排考试。","b","Tuntutan/permintaan → 强烈."]]}},
+
+{no:14,title:"北京的四合院",points:[
+ {w:"所谓",pos:"形容词",uses:[
+  {t:"“所谓”，形容词，表示通常所说的，多用于提出需要解释的词语。",ex:[
+   ["很多时候，烦恼是自己找来的，这就是**所谓**的“自寻烦恼”。","Sering kali masalah tuh kita cari sendiri. Itulah yang disebut “nyari-nyari masalah”."],
+   ["**所谓**四合，“四”指东、西、南、北四面，“合”就是四面房屋围在一起，中间形成一个方形的院子。","Yang dimaksud 四合: “四” itu empat sisi timur-barat-selatan-utara, “合” itu bangunan empat sisi ngelilingin halaman kotak di tengah."]]},
+  {t:"“所谓”还指某些人所说的，多表示不同意、不承认。",ex:[
+   ["他**所谓**的“新闻”，其实我们早就知道了！","“Berita” yang dia bilang itu, kita mah udah tau dari kapan tau!"],
+   ["现在市场上**所谓**的“健康食品”其实没有统一的标准。","“Makanan sehat” yang katanya-katanya di pasaran tuh sebenernya gak ada standar bakunya."]]}],
+  pr:[["四面房屋围在一起，中间形成一个方形的院子，__。（所谓）","……这就是所谓的“四合院”。"],
+   ["A：这么长时间没回家了，回去后感觉怎么样？\nB：__。（所谓）","B：这就是所谓的“近乡情更怯”吧，又高兴又紧张。"],
+   ["这次考试怎么又这么差？__！（所谓）","这次考试怎么又这么差？这就是你所谓的“认真复习”吗！"]]},
+ {w:"则",pos:"量词 / 连词",uses:[
+  {t:"“则”，量词，用于成篇或成条的短小文字。",ex:[
+   ["在第七课，我们学习了两**则**成语故事。","Di pelajaran 7, kita belajar dua cerita idiom."],
+   ["今天的报纸上有一**则**非常重要的新闻。","Di koran hari ini ada satu berita penting banget."]]},
+  {t:"“则”，连词，常见结构为<p>A……，（而）B则……</p>，表示前后两项的对比。",ex:[
+   ["猫享受独处的快乐，而狗**则**是希望和别人分享快乐。","Kucing seneng menyendiri, sedangkan anjing pengennya bagi kebahagiaan bareng orang lain."],
+   ["有的人家喜欢种草、养花、种竹子，有的人家**则**喜欢用大盆养金鱼。","Ada keluarga yang suka nanem rumput, bunga, bambu; ada juga yang lebih suka melihara ikan mas di baskom gede."]]},
+  {t:"“则”还表示因果关系，常用于书面语，相当于口语中的“就”。",ex:[
+   ["北京的冬天，有风**则**寒，无风**则**暖。","Musim dingin di Beijing: kalau berangin ya dingin, kalau gak ada angin ya anget."],
+   ["“欲速**则**不达”，人生不能总是要求“快”，其实，“慢”也是一种生活的艺术。","“Buru-buru malah gak nyampe.” Hidup jangan maunya cepet terus, pelan-pelan juga seni hidup."]]}],
+  pr:[["A：最近你读了什么有意思的书吗？\nB：__。（则-量词）","B：我读了一本书，里面有几则小故事特别有意思。"],
+   ["A：你知道中国北方人和南方人吃饭的习惯有什么不同吗？\nB：__。（则-连词）","B：北方人爱吃面食，南方人则爱吃米饭。"],
+   ["一项调查显示，只有37%的人愿意回到没有手机的时代，__。（则-连词）","……其余63%的人则表示不愿意。"]]},
+ {w:"为……所……",pos:"固定结构",uses:[
+  {t:"<p>为……所……</p>，固定结构，多用于书面语，此处“为”表示“被”的意思。",ex:[
+   ["认识他的人，没有人不**为**他认真的工作态度**所**感动。","Semua yang kenal dia pasti tersentuh sama keseriusannya kerja."],
+   ["有了科学，大自然就可以更好地**为**人**所**用。","Dengan sains, alam bisa dimanfaatin manusia dengan lebih baik."],
+   ["院子不仅拉近了人与自然的关系，也让家里人在此得到了感情的交流，对创造生活情趣起了很大作用，因而最**为**人们**所**喜爱。","Halaman bikin manusia lebih deket sama alam, keluarga juga bisa ngobrol dan deket di situ, bikin hidup lebih seru. Makanya paling disukain orang."]]}],
+  pr:[["这个老师__，__。（为……所……）","这个老师上课很有意思，深为学生所喜爱。"],
+   ["在这座小城，她__，因为她把这里的每一位老人都当成家人来照顾。（为……所……）","在这座小城，她为大家所熟知，……"],
+   ["A：你知道梅西这个人吗？\nB：__。（为……所……）","B：当然知道，他是为全世界球迷所喜爱的足球明星。"]]},
+ {w:"起",pos:"动词",uses:[
+  {t:"“起”，动词，<p>动词 + 起</p>表示连接、结合和固定。",ex:[
+   ["拉**起**手，我们就是好朋友。","Gandengan tangan, kita sahabatan."],
+   ["只要关闭**起**大门，四合院内便形成一个封闭式的小环境。","Begitu pintu gerbang ditutup, di dalem siheyuan jadi kayak dunia kecil yang tertutup."],
+   ["对公司来说，最重要的是建立**起**一套行之有效的制度。","Buat perusahaan, yang paling penting tuh bangun sistem yang beneran jalan."]]}],
+  type:"完成句子",
+  pr:[["他拉起我的手，__。","他拉起我的手，带我走进了教室。"],
+   ["我们两国__。（动词+起）","我们两国已经建立起了友好的关系。"],
+   ["这是我们自己家的事，应该__。（动词+起）","这是我们自己家的事，应该关起门来自己解决。"]]}],
+ cmp:{a:"通常",b:"常常",same:["都表示经常发生同样的动作行为，在有些句子里可以换用，但强调的意思不同。",["我**通常**/**常常**在学校外面那个超市买东西。","Aku biasanya/sering belanja di supermarket depan kampus."]],
+  diff:[["强调动作行为有规律。",["有钱人家的，**通常**是由好几座四合院并列组成的。","Rumah orang kaya biasanya terdiri dari beberapa siheyuan yang berjejer."],"强调动作行为多次出现。",["他成绩很好，**常常**受到表扬。","Nilainya bagus, sering dapet pujian."]],
+   ["形容词，可以做定语。",["我们**通常**的做法都是这样的。","Cara kita biasanya ya gini."],"副词，不可以做定语或修饰小句。",["他**常常**去上海出差，对上海很熟悉。","Dia sering dinas ke Shanghai, jadi hafal banget Shanghai."]]],
+  quiz:[["她____在家帮妈妈干活儿。","b","Buku: 通常 ×, 常常 ✓. Sering terjadi → 常常."],
+   ["____除夕晚上都要放鞭炮、吃饺子。","a","Ngawalin klausa, kebiasaan teratur → 通常."],
+   ["在____情况下，火车是不会晚点的。","a","Jadi atributif → cuma 通常."],
+   ["周末他____去父母家过。","ab","Dua-duanya bisa: 通常 = rutin, 常常 = sering."]]}},
+
+{no:15,title:"纸上谈兵",points:[
+ {w:"过",pos:"趋向动词",uses:[
+  {t:"“过”，趋向动词，读guo，常用格式为<p>动词 + 得/不 + 过</p>，做补语，表示胜过的意思。",ex:[
+   ["……跟别人谈论起军事来，没有人说得**过**他，……","…kalau udah ngomongin soal militer, gak ada yang bisa ngalahin dia debat…"],
+   ["年轻人记忆力好，这一点我比不**过**你们。","Anak muda ingetannya bagus, soal ini aku kalah sama kalian."],
+   ["我们的原材料贵，人工费用高，产品在价格上肯定竞争不**过**他们。","Bahan baku kita mahal, ongkos tenaga kerja tinggi, soal harga jelas kalah saing sama mereka."]]}],
+  pr:[["李阳受过专业训练，__。（过）","李阳受过专业训练，跑步我们谁也跑不过他。"],
+   ["老张尽管是五十多岁的人了，可干起活儿来__。（过）","……可干起活儿来，年轻人都比不过他。"],
+   ["A：__。（过）\nB：你是哥哥，妹妹还小，不懂事，你得让着她点儿。","A：妹妹总是跟我抢东西，我又说不过她。"]]},
+ {w:"迟早",pos:"副词",uses:[
+  {t:"“迟早”，副词，后边常跟动词，表示某种动作或事情早晚会发生。",ex:[
+   ["如果让他当了大将，**迟早**会害了赵国。","Kalau dia dijadiin jenderal, cepat atau lambat bakal ngancurin negara Zhao."],
+   ["随着网络技术的发展，这些问题**迟早**都会得到解决。","Seiring berkembangnya teknologi internet, masalah-masalah ini cepat atau lambat bakal beres."],
+   ["如果不重视技术研究和产品开发，我们**迟早**会被别人挤出市场。","Kalau gak serius riset teknologi dan ngembangin produk, cepat atau lambat kita bakal kegeser dari pasar."]]}],
+  pr:[["王教练可严格了，你这种不认真的态度__。（迟早）","……你这种不认真的态度，迟早会被他批评的。"],
+   ["A：你说刘方为什么就不能原谅我呢？\nB：你别难过，__。（迟早）","B：你别难过，她迟早会原谅你的。"],
+   ["A：怎么，签证被拒签的事你还没告诉她吗？\nB：__。（迟早）","B：还没有，不过她迟早会知道的。"]]},
+ {w:"再三",pos:"副词",uses:[
+  {t:"“再三”，副词，意思是“一次又一次”。后边常跟动词，有时还可用在不带宾语的动词后面。",ex:[
+   ["赵括的母亲**再三**阻止赵王任命儿子为大将，……","Ibunya Zhao Kuo berkali-kali nyegah raja ngangkat anaknya jadi jenderal…"],
+   ["我最近这段时间特别忙，实在没时间参加小王的活动，可他**再三**邀请，出于礼貌，我只好答应了。","Aku lagi sibuk parah, gak ada waktu ikut acaranya Xiao Wang, tapi dia ngajak terus, ya demi sopan santun akhirnya aku iyain."],
+   ["朋友请他做公司的总经理，他考虑**再三**，最后还是客气地拒绝了。","Temennya minta dia jadi direktur, dia mikir berkali-kali, akhirnya nolak dengan sopan."]]}],
+  pr:[["__，他只好答应周末带她去玩儿。（再三）","女儿再三请求，他只好答应周末带她去玩儿。"],
+   ["__，决定自己亲自跑一趟。（再三）","经理考虑再三，决定自己亲自跑一趟。"],
+   ["A：这么有名的大专家居然也让你们校长请来了？\nB：__。（再三）","B：是啊，我们校长再三邀请，他才答应来的。"]]}],
+ cmp:{a:"胜利",b:"成功",same:["都是动词，都表示达到预想的目的。",["北京**胜利**/**成功**地举办了2008年夏季奥运会。","Beijing sukses jadi tuan rumah Olimpiade Musim Panas 2008."]],
+  diff:[["表示工作等达到预想的目的时，一般做状语。",["经过一年多的努力，我们**胜利**地完成了调查工作。","Setelah usaha lebih dari setahun, kita berhasil nyelesaiin survei."],"不仅用于工作、事业方面，还可用于其他方面。可以做状语，也可以做谓语。",["经过艰苦的努力，实验终于**成功**了。","Setelah kerja keras, eksperimennya akhirnya berhasil."]],
+   ["还有在战争或比赛中打败对方的意思。",["谁坚持到最后，谁就是这场比赛的**胜利**者。","Siapa yang bertahan sampe akhir, dia pemenangnya."],"没有打败对方的意思。",null],
+   ["没有让人满意的意思，不能做补语。",null,"是形容词，有让人满意的意思，可做补语。",["这部电视剧拍得很**成功**，在全国播出后，受到观众的喜爱。","Drama ini digarap sukses banget, abis tayang nasional langsung disukain penonton."]]],
+  quiz:[["这项实验如果研究____，将给成千上万的病人带来希望。","b","Buku: 胜利 ×, 成功 ✓. Eksperimen berhasil → 成功."],
+   ["得民心者才会赢得这场战争的____。","a","Kemenangan dalam perang → 胜利."],
+   ["她____地说服丈夫放弃了搬家的打算。","b","Bukan soal ngalahin lawan → 成功."],
+   ["座谈会开得很____，大家交换了意见，增进了理解。","b","Jadi pelengkap, artinya memuaskan → 成功."]]}},
+
+{no:16,title:"体重与节食",points:[
+ {w:"即",pos:"动词 / 副词",uses:[
+  {t:"“即”，动词，书面语，意思是“就是”。",ex:[
+   ["“旦”是象形字，**即**太阳从地平线上升起。","“旦” itu karakter piktograf, artinya matahari terbit dari garis cakrawala."],
+   ["这些人的体重变化表现出清晰的模式，**即**周末之后体重升高，在工作日体重减轻（周五达到最低点）。","Perubahan berat badan mereka punya pola jelas: naik abis weekend, turun pas hari kerja (paling rendah hari Jumat)."]]},
+  {t:"“即”，还可以做副词，意思是“就”“便”。",ex:[
+   ["不懂**即**问是他最大的优点，也是他成功的主要原因。","Gak ngerti langsung nanya, itu kelebihan terbesarnya dan alasan utama dia sukses."],
+   ["在办公司这件事上，两人早都有打算，这次的机会让他俩一拍**即**合。","Soal bikin perusahaan, mereka berdua udah lama kepikiran, jadi pas ada kesempatan langsung klop."]]}],
+  type:"用所学词语改写句子",
+  pr:[["他可聪明了，什么东西一学就会。\n→ 他可聪明了，__。（即）","他可聪明了，什么东西一学即会。"],
+   ["汉字“宇”代表上下四方，意思是所有的空间。\n→ 汉字“宇”代表上下四方，__。（即）","汉字“宇”代表上下四方，即所有的空间。"],
+   ["在鸟爸爸、鸟妈妈的精心照顾下，小鸟30~35天便可独立生活。\n→ 在鸟爸爸、鸟妈妈的精心照顾下，__。（即）","……小鸟30~35天即可独立生活。"]]},
+ {w:"个别",pos:"形容词",uses:[
+  {t:"“个别”，形容词，意思是“单个、各个”。",ex:[
+   ["他经常采取**个别**谈话的方式了解情况和解决问题。","Dia sering ngobrol empat mata buat ngerti situasi dan nyelesaiin masalah."],
+   ["教练针对他的技术特点进行了**个别**训练，达到了比较好的效果。","Pelatih ngasih latihan khusus sesuai karakter tekniknya, hasilnya lumayan bagus."]]},
+  {t:"“个别”还表示极少数、少有。",ex:[
+   ["……除了**个别**人以外，多数人体重的增加会从周六开始，……","…kecuali segelintir orang, kebanyakan berat badannya mulai naik dari hari Sabtu…"],
+   ["天气预报说今晚有小到中雨，**个别**地区可能有大雨。","Ramalan cuaca bilang malam ini hujan ringan sampai sedang, beberapa daerah mungkin hujan deres."]]}],
+  pr:[["旅行团里有几个小朋友，__。（个别）","旅行团里有几个小朋友，个别孩子还不到五岁。"],
+   ["A：装修用的材料都准备好了吗？\nB：__。（个别）","B：差不多了，只有个别材料还没买。"],
+   ["A：看课文时你有没有遇到不懂的地方或不认识的汉字？\nB：__。（个别）","B：有个别汉字不认识，查了词典就明白了。"]]},
+ {w:"非",pos:"前缀 / 动词 / 副词",uses:[
+  {t:"“非”，前缀，用在名词性成分前，表示不属于这一范围。",ex:[
+   ["在**非**语言的交流中，眼睛起着重要的作用。","Dalam komunikasi non-verbal, mata punya peran penting."],
+   ["我们公司的技术部门都是专业人员，工资高，**非**专业人员做服务工作，工资不高。","Di divisi teknis kantor kita semuanya tenaga ahli, gajinya gede. Yang non-ahli kerja di bagian layanan, gajinya gak gede."]]},
+  {t:"“非”，可以做动词，意思是“不是”。",ex:[
+   ["……工作日和周末体重的临时变化应该被视为正常现象，而**非**真正的体重增加。","…naik-turun berat badan antara hari kerja dan weekend itu normal, bukan beneran nambah berat."],
+   ["成功有时候并**非**想象中那么难。","Sukses kadang gak sesusah yang dibayangin."]]},
+  {t:"“非”做副词时还表示主观上故意坚持、偏要做某事。有时，还可用于反问，表示否定这么做的必要。“非”也可以跟动词结合，形成常用格式<p>非 + 动词 + 不可</p>，意思是“必须”。",ex:[
+   ["他**非**要离婚，我们谁拦也拦不住。","Dia ngotot mau cerai, gak ada yang bisa nahan."],
+   ["我本不想提这件事，你又何必**非**要我说出来呢？","Aku sebenernya gak mau bahas, ngapain sih kamu maksa aku ngomong?"],
+   ["有些家长已经习惯了这种竞争，**非**让自家的孩子考第一名**不可**。","Ada ortu yang udah kebiasaan sama persaingan ini, anaknya harus ranking satu, gak boleh nggak."],
+   ["补办学生证的事**非**你本人去**不可**。","Ngurus kartu pelajar baru harus kamu sendiri yang dateng."]]}],
+  type:"用所学词语改写句子",
+  pr:[["门口的牌子上写着：不是工作人员请勿入内。\n→ 门口的牌子上写着：__。（非）","门口的牌子上写着：非工作人员请勿入内。"],
+   ["世界上并不是只有人类才会骗人，动物也会。\n→ __，动物也会。（非）","世界上并非只有人类才会骗人，动物也会。"],
+   ["听说你住院了，他一定要来看看你。\n→ __。（非……不可）","听说你住院了，他非来看看你不可。"]]}],
+ cmp:{a:"临时",b:"暂时",same:["都有“短时间内”的意思。",["没找到满意的房子前，我**临时**/**暂时**借住在朋友家里。","Sebelum nemu rumah yang cocok, aku numpang sementara di rumah temen."]],
+  diff:[["表示“临到事情发生的时候”。",["早到了30分钟，所以我**临时**决定去旁边的书店看看。","Dateng 30 menit lebih awal, jadi aku dadakan mutusin mampir ke toko buku sebelah."],"没有这个意思。",null],
+   ["没有这个意思。",null,"表示不确指的较近的一段时间。",["这套房子我很喜欢，**暂时**还不打算卖掉。","Aku suka banget rumah ini, untuk sekarang belum ada rencana jual."]],
+   ["还可以做属性词，表示短期的、非正式的。",["麻烦你春节后帮刘方的女儿找份**临时**工作。","Tolong bantu cariin kerjaan sementara buat anaknya Liu Fang abis Imlek ya."],"没有这种用法。",null]],
+  quiz:[["我们租下了一所房子作为____的家。","a","Buku: 临时 ✓, 暂时 ×. Atributif, sifatnya sementara → 临时."],
+   ["演出结束，我想____休息一段时间，考虑一下明年的工作。","b","Untuk sementara waktu → 暂时."],
+   ["公司遇到一些____的困难，我们正在积极想办法。","b","Kesulitan yang cuma untuk sementara → 暂时."],
+   ["这件事你____先不要告诉他。","b","Untuk sekarang jangan dulu → 暂时."]]}},
+
+{no:17,title:"在最美好的时刻离开",points:[
+ {w:"以",pos:"介词 / 连词",uses:[
+  {t:"“以”，介词，常用于书面语，意思是“用、拿、凭借”。",ex:[
+   ["同年4月，（微信）**以**英文名WeChat正式进入国际市场。","April tahun itu juga, (Weixin) resmi masuk pasar internasional pake nama Inggris WeChat."],
+   ["……学生分为甲乙两队，**以**足球为比赛工具向篮内投，按得分多少决定输赢。","…murid dibagi jadi tim A dan B, pake bola sepak buat dilempar ke keranjang, menang-kalah ditentuin skor."]]},
+  {t:"“以”，也可以做连词，常用于书面语，表示目的。",ex:[
+   ["虽然我们已经老了，但还要坚持学习，**以**适应社会的发展。","Walaupun udah tua, kita tetep harus belajar biar bisa ngikutin perkembangan zaman."],
+   ["比如说为了一场戏剧演出，我们会投入很多时间，准备服装、化妆、道具、舞台美术，**以**创造良好的效果，……","Misalnya buat satu pentas teater, kita ngabisin banyak waktu nyiapin kostum, makeup, properti, dekorasi panggung, biar hasilnya maksimal…"]]}],
+  pr:[["A：你知道济南的泉水是怎么命名的吗？\nB：__。（以-介词）","B：很多泉水是以它们的样子或传说命名的。"],
+   ["这一个月来，我天天训练，__。（以-连词）","这一个月来，我天天训练，以在比赛中取得好成绩。"],
+   ["虽然他不回信，但我还是坚持给他写，__。（以-连词）","……以表达我对他的关心。"]]},
+ {w:"平常",pos:"形容词 / 名词",uses:[
+  {t:"“平常”，形容词，表示普通的，没什么特别的。",ex:[
+   ["对小王来说，今天是一个不**平常**的日子，因为他今天第一天上班。","Buat Xiao Wang, hari ini bukan hari biasa, soalnya hari pertama dia kerja."],
+   ["一部电影，开始虽然剧情**平平常常**，如果最后半个小时能使我们感动，我们依然会向别人推荐它。","Film yang awalnya biasa-biasa aja, kalau setengah jam terakhirnya bikin terharu, kita tetep bakal rekomendasiin ke orang."]]},
+  {t:"“平常”，也可以做名词，意思是“平时”。",ex:[
+   ["他**平常**总是来得很早，今天却迟到了。","Biasanya dia dateng pagi banget, hari ini malah telat."],
+   ["校长又告诉老师们，对待这些孩子，要像**平常**一样，不要让孩子或家长知道他们是被选出来的。","Kepala sekolah juga bilang ke guru-guru: perlakuin anak-anak ini kayak biasa, jangan sampe anak atau ortunya tau mereka anak pilihan."]]}],
+  pr:[["A：你觉得这本书怎么样？\nB：__。（平常-形容词）","B：内容很平常，没什么特别的。"],
+   ["__，考试前就不用这么紧张了。（平常-名词）","平常多努力一点儿，考试前就不用这么紧张了。"],
+   ["A：__。（平常-名词）\nB：我一般都是自己做饭吃。","A：你平常都在哪儿吃饭？"]]},
+ {w:"宁可",pos:"副词",uses:[
+  {t:"“宁可”，副词，表示经过比较以后，选择相对有利的一方。",ex:[
+   ["作为母亲，她**宁可**自己累一点儿，也不想委屈了孩子。","Sebagai ibu, dia mending capek sendiri daripada anaknya susah."],
+   ["为什么大家**宁可**挤成一团，也不去没人的那边？","Kenapa orang-orang mending desak-desakan daripada ke sisi yang kosong?"],
+   ["……做节目时，与开幕式相比，我们**宁可**把更多的精力集中在闭幕式上，……","…pas bikin acara, dibanding pembukaan, kita lebih milih fokusin tenaga ke penutupan…"]]}],
+  pr:[["我宁可花钱去餐厅吃，__。","我宁可花钱去餐厅吃，也不想自己做饭。"],
+   ["为了把这篇文章写好，__。（宁可）","为了把这篇文章写好，他宁可晚上不睡觉。"],
+   ["A：这次旅行，你觉得我们是坐飞机去好还是坐火车去好？\nB：__。（宁可）","B：我宁可多花点儿钱坐飞机，也不想在火车上坐二十个小时。"]]}],
+ cmp:{a:"忽视",b:"轻视",same:["都表示不注意、不重视，在有些句子里可以换用，但强调的意思不同。",["他只注重理论，**忽视**/**轻视**实践，所以失败了。","Dia cuma fokus teori, nyepelein praktik, makanya gagal."]],
+  diff:[["强调没有考虑到。",["他忙得**忽视**了去医院看病。","Saking sibuknya dia sampe lupa (gak kepikiran) ke dokter."],"强调看不起。",["你可别**轻视**他，他看起来很平常，其实很能干。","Jangan remehin dia, keliatannya biasa aja, padahal jago banget."]],
+   ["态度上可能是无意的，也可能是有意的。",["我们常常**忽视**结束退场时的准备，演出开始时人们认为很有魅力，但是糟糕的结局会给人留下难以忘记的坏印象。","Kita sering lupa nyiapin penutupan. Awal pertunjukan bisa memukau, tapi ending yang jelek ninggalin kesan buruk yang susah dilupain."],"态度上一般是有意的或有选择性的。",["虽然这是一次小考，你也不能**轻视**，要好好复习。","Walaupun cuma kuis, jangan disepelein, belajar yang bener."]]],
+  quiz:[["以前我们____了教育问题，现在要赶上去。","a","Buku: 忽视 ✓, 轻视 ×. Gak kepikiran/gak diperhatiin → 忽视."],
+   ["我们过多地看电视、玩手机，____了家人之间的交流。","a","Tanpa sadar ngabaikan → 忽视."],
+   ["虽然这是一份平常的工作，你也不能____，要认真做好。","b","Sengaja nganggep remeh → 轻视."],
+   ["你不要因为他是小孩子就____他。","b","Ngeremehin orang → 轻视."]]}},
+
+{no:18,title:"抽象艺术美不美",points:[
+ {w:"极其",pos:"副词",uses:[
+  {t:"“极其”，副词，意思是“非常”，多用于书面语，只能修饰双音节或多音节形容词。",ex:[
+   ["在中国，餐桌上放一把刀是**极其**少见的现象。","Di China, naro pisau di meja makan tuh jarang banget."],
+   ["每天说“太累了”“太讨厌了”“真倒霉”的人，遇到的困难也格外多，运气也显得**极其**糟糕。","Orang yang tiap hari bilang “capek banget”, “nyebelin banget”, “sial banget”, masalahnya juga makin banyak, hokinya juga keliatan jelek parah."],
+   ["抽象派画家的作品中经常见到好像随便洒上颜料而形成的画作，在有人看来**极其**神秘甚至丑陋，……","Lukisan abstrak sering keliatan kayak cat yang dicipratin asal-asalan. Buat sebagian orang, itu misterius banget, bahkan jelek…"]]}],
+  pr:[["这个项目是我们用了三年时间才拿下来的，__。（极其）","……对我们来说极其重要。"],
+   ["__，谁也不说话。（极其）","会议室里的气氛极其紧张，谁也不说话。"],
+   ["A：你知道孔子吗？\nB：__。（极其）","B：当然知道，他是中国历史上极其重要的思想家。"]]},
+ {w:"其余",pos:"代词",uses:[
+  {t:"“其余”，代词，表示剩下的、另外的部分。",ex:[
+   ["怎么只有你们两个人？**其余**的同学呢？","Kok cuma kalian berdua? Yang lain pada ke mana?"],
+   ["只有一个房间亮着灯，**其余**窗户都是黑的。","Cuma satu kamar yang lampunya nyala, jendela lainnya gelap semua."],
+   ["其中三分之一的画作作者没有签名，而**其余**的则标明了身份。","Sepertiga lukisan gak ada tanda tangan pelukisnya, sisanya ada keterangan identitasnya."]]}],
+  pr:[["A：这些行李怎么拿？\nB：__。（其余）","B：我拿这个大箱子，其余的你们分着拿吧。"],
+   ["A：你看过哪些中国的传统体育表演？\nB：__。（其余）","B：我只看过太极拳，其余的都没看过。"],
+   ["你们几个负责新产品的宣传，__。（其余）","你们几个负责新产品的宣传，其余的人跟我去准备会场。"]]},
+ {w:"可见",pos:"连词",uses:[
+  {t:"“可见”，连词，常用格式为<p>……，（由此）可见……</p>，表示可以根据上文所说的情况做出判断。",ex:[
+   ["他已经住院好几天了，一直诊断不出是什么问题，**可见**情况不太好。","Dia udah dirawat beberapa hari, tapi belum ketauan sakit apa. Keliatannya kondisinya gak bagus."],
+   ["汉语中有个成语叫“自知之明”，把“自知”称为“明”，**可见**“自知”是一种智慧。","Ada idiom Mandarin “自知之明”: “kenal diri sendiri” disebut “bijak”. Berarti, kenal diri sendiri itu salah satu bentuk kebijaksanaan."],
+   ["由此**可见**，志愿者能够从画作中感知艺术家的用心，哪怕他们不能够解释原因。","Dari sini keliatan, relawan bisa ngerasain niat senimannya dari lukisan, walaupun gak bisa jelasin kenapa."]]}],
+  pr:[["连这么简单的题你都不会，__。（可见）","连这么简单的题你都不会，可见你上课没认真听。"],
+   ["A：你觉得周末的活动他会参加吗？\nB：__。（可见）","B：他到现在还没报名，可见他不太想参加。"],
+   ["A：__。（可见）\nB：是啊，我也觉得他很孝顺父母。","A：他每个周末都回家陪父母，可见他很关心父母。"]]}],
+ cmp:{a:"目前",b:"现在",same:["都是时间名词，指说话的这个时候，常可换用。",["至少**目前**/**现在**可以这么说，没有证据表明黑猩猩或儿童可以这样做。","Setidaknya untuk sekarang bisa dibilang gini: belum ada bukti simpanse atau anak kecil bisa ngelakuin itu."]],
+  diff:[["一般侧重指从之前到现在为止的某段时间。",["到**目前**为止，事情还没有变化。","Sampai sekarang belum ada perubahan."],"可以侧重指某个时间段，也可以指某个时间点，还可以强调与以前的对比。",["我**现在**就去。","Aku berangkat sekarang juga."]],
+   ["不可与具体时间词连用。",null,"可与具体时间词连用。",["**现在**是北京时间上午十点钟。","Sekarang jam 10 pagi waktu Beijing."]]],
+  quiz:[["我们很着急，你能____过来一趟吗？","b","Buku: 目前 ×, 现在 ✓. Titik waktu “sekarang juga” → 现在."],
+   ["选择性失忆____还无法治疗。","ab","Kondisi sampai saat ini → dua-duanya bisa."],
+   ["调查显示，66.9%的女性对____的工作不满意。","ab","Kerjaan saat ini → dua-duanya bisa."],
+   ["____的年轻人，跟我们那时候真不一样！","b","Bandingin sama zaman dulu → 现在."]]}}
+);
+
+DATA.push(
+{no:19,title:"家乡的萝卜饼",points:[
+ {w:"般",pos:"助词",uses:[
+  {t:"“般”，助词，意思是“一样”“似的”，常用在名词后，构成短语做定语或状语。",ex:[
+   ["……煮的像山泉**般**清淡可口。","…yang direbus rasanya seger dan ringan kayak air pegunungan."],
+   ["说起那段往事，她的脸上露出了阳光**般**的笑容。","Pas cerita soal masa lalu itu, mukanya senyum cerah banget kayak matahari."],
+   ["望着妈妈远去的背影，我的眼泪雨点**般**不停地往下掉。","Liat punggung mama yang makin jauh, air mataku jatuh terus kayak hujan."]]}],
+  type:"用所学词语改写句子",
+  pr:[["他在下半场的进球，为球队赢得了一场像金子一样宝贵的胜利。\n→ 他在下半场的进球，__。（般）","……为球队赢得了一场金子般宝贵的胜利。"],
+   ["书法大赛开办以来，全国各地的参赛作品雪片似的飞来。\n→ 书法大赛开办以来，__。（般）","……全国各地的参赛作品雪片般飞来。"],
+   ["这时，从远处传来了孩子们一阵阵仿佛银铃一样清脆的笑声。\n→ 这时，从远处__。（般）","这时，从远处传来了孩子们一阵阵银铃般清脆的笑声。"]]},
+ {w:"闻",pos:"语素 / 动词",uses:[
+  {t:"“闻”做语素时，意思是“听见，听见的事情、消息”。",ex:[
+   ["你们到各地去旅游，一定会增加对中国的了解，老话说：百**闻**不如一见。","Kalian jalan-jalan ke berbagai daerah pasti makin ngerti China. Kata pepatah: denger seratus kali gak sebanding liat sendiri sekali."],
+   ["邻居们**闻**声赶来，纷纷跳入水中救起了落水的小海。","Tetangga denger suaranya langsung dateng, pada nyebur buat nyelametin Xiao Hai yang jatuh ke air."],
+   ["时隔多年再来这里，所到之处、所见所**闻**，无不给人一种新鲜感。","Udah bertahun-tahun baru balik ke sini lagi, semua yang diliat dan didenger kerasa baru banget."],
+   ["假期里，他常带孩子们到世界各地旅行，增长他们的见**闻**。","Pas liburan dia sering ngajak anak-anak keliling dunia biar wawasan mereka makin luas."]]},
+  {t:"“闻”用作动词时，表示用鼻子感知味道。",ex:[
+   ["火最好用文火，等能**闻**到香味时，便可开锅了。","Apinya mending kecil aja, begitu udah kecium wanginya, panci bisa dibuka."],
+   ["他把壶盖儿打开，**闻**了**闻**，原来是酒。","Dia buka tutup tekonya, nyium-nyium, ternyata isinya arak."]]}],
+  type:"判断各句中的“闻”是哪种意思",
+  pr:[["一进村口，我们就闻到了清风送来的浓浓的玫瑰花香。","用鼻子感知味道（动词）"],
+   ["说起她到上海留学的事，还真有一段奇闻趣事呢。","听见的事情、消息（语素）"],
+   ["对人们的种种批评，她采取了听而不闻的态度。","听见（语素）"]]},
+ {w:"趁",pos:"介词",uses:[
+  {t:"“趁”，介词，意思是“利用（时间、机会）”，后面可跟名词、动词短语、形容词和小句。",ex:[
+   ["**趁**着这几天休息，我们去看看房子吧。","Mumpung lagi libur beberapa hari, yuk liat-liat rumah."],
+   ["**趁**电影还没开始，我去买两瓶矿泉水。","Mumpung filmnya belum mulai, aku beli dua botol air mineral dulu."],
+   ["萝卜饼要**趁**热吃，喜欢口味重的，还可以加少许酱油和醋。","Kue lobak harus dimakan pas masih anget. Yang suka rasa kuat bisa tambahin dikit kecap asin sama cuka."]]}],
+  pr:[["李老师退休了，好想__。（趁）","李老师退休了，好想趁这个机会去各地旅游。"],
+   ["天阴了，__。（趁）","天阴了，我们趁还没下雨赶快回家吧。"],
+   ["A：工作这么稳定，你又干得不错，怎么会想到辞职呢？\nB：__，丰富一下自己的经历。（趁）","B：我想趁年轻出去看看，丰富一下自己的经历。"]]}],
+ cmp:{a:"怀念",b:"想念",same:["都是动词，都表示对人或环境不能忘记，有思念的意思。",["每当回忆起小学时代的学习生活，我最**怀念**/**想念**的人就是刘老师。","Tiap inget masa SD, orang yang paling aku kangenin ya Bu Liu."]],
+  diff:[["多用于书面语，语义强调常常想起，不能忘记。",["刘教授非常**怀念**年轻时在国外留学的那段生活。","Prof. Liu kangen banget sama masa kuliahnya di luar negeri waktu muda."],"多用于口语，语义强调希望见到某人。",["女儿告诉我，她很**想念**出差的爸爸。","Anakku bilang dia kangen banget sama papanya yang lagi dinas."]],
+   ["多用于已去世的人或不能再见到的环境。",["从文章中我们读到了先生对去世的母亲的**怀念**。","Dari tulisannya kita bisa ngerasain rindunya dia ke almarhumah ibunya."],"多用于活着的人或能再见到的环境。",["每到春节，我就格外**想念**家乡的一草一木。","Tiap Imlek, aku kangen banget sama kampung halaman, sampe ke rumput-rumputnya."]]],
+  quiz:[["在南方的时候，我总是____北方雪花飘飘的美景。","b","Buku: 怀念 ×, 想念 ✓. Masih bisa diliat lagi → 想念."],
+   ["在国外工作的那段时间，他时时刻刻都在____着家人。","b","Kangen orang yang masih hidup, pengen ketemu → 想念."],
+   ["一阵清风送来桂花的清香，令我____起自己的家乡。","b","Kampung halaman yang masih bisa dikunjungi → 想念."],
+   ["在楼房里住了十多年后，老李却开始____起住在四合院里的生活。","a","Kehidupan yang udah gak bisa balik lagi → 怀念."]]}},
+
+{no:20,title:"小人书摊",points:[
+ {w:"动词 + 得/不 + 起",pos:"结构",uses:[
+  {t:"表示主观上有（没有）实现（或承受）某种动作的能力和条件。",ex:[
+   ["……这对于那些想看又买**不起**书的人来说，只用很少的钱就能看一本，毫无疑问是件大好事。","…buat orang yang pengen baca tapi gak sanggup beli buku, cuma pake duit dikit udah bisa baca satu buku. Jelas ini hal bagus banget."],
+   ["古时候，有个十分好学的年轻人，但他家里很穷，买**不起**灯，一到晚上就不能读书。","Zaman dulu ada anak muda yang rajin banget belajar, tapi keluarganya miskin, gak mampu beli lampu, jadi tiap malem gak bisa baca."],
+   ["只有经**得起**困难和时间考验的朋友才算是真正的朋友。","Cuma temen yang tahan diuji kesulitan dan waktu yang bisa disebut temen sejati."]]}],
+  pr:[["A：寒假去旅游，我们是坐火车还是坐飞机呢？\nB：__。（动词+得/不+起）","B：飞机票太贵了，我们坐不起，还是坐火车吧。"],
+   ["我们应该降低价格，__。（动词+得/不+起）","我们应该降低价格，让更多的人买得起。"],
+   ["A：你们这种新产品的质量怎么样？\nB：__。（动词+得/不+起）","B：放心吧，我们的产品经得起考验。"]]},
+ {w:"支",pos:"动词 / 量词",uses:[
+  {t:"“支”，动词，表示用东西撑着使物体不落下来。",ex:[
+   ["他的两只手放在桌上，**支**着脑袋，正在想事情。","Dua tangannya di meja, nopang kepala, lagi mikirin sesuatu."],
+   ["……我家附近就有个小人书摊，就是一进街口靠墙的一个小棚子，里面用几块砖头**支**着粗糙的木头板子供人们坐着看书。","…deket rumahku ada lapak komik, gubuk kecil nempel tembok di mulut gang. Di dalemnya ada papan kayu kasar diganjel bata buat orang duduk baca."]]},
+  {t:"“支”，也可以做量词，用于音乐作品、队伍或杆状的东西。",ex:[
+   ["他弹第二**支**曲子时引起了牛的注意。","Pas dia main lagu kedua, sapinya mulai merhatiin."],
+   ["给他十**支**枪，他就能拉起一**支**军队来。","Kasih dia sepuluh senapan, dia bisa bikin satu pasukan."]]}],
+  pr:[["快，这张桌子坏了，__。（支-动词）","快，这张桌子坏了，找个东西把它支起来。"],
+   ["A：这是什么曲子啊？这么好听。\nB：__。（支-量词）","B：这是一支很有名的中国民歌。"],
+   ["A：__。（支-量词）\nB：是吗？那我就买这个吧。","A：这支笔写起来特别顺，价格也不贵。"]]},
+ {w:"凭",pos:"动词 / 介词",uses:[
+  {t:"“凭”，动词，依靠。",ex:[
+   ["干工作不能光**凭**经验，还要有创新。","Kerja jangan cuma ngandelin pengalaman, harus ada inovasi juga."],
+   ["印象中似乎没有什么押金，全**凭**信用。","Seingetku kayaknya gak ada deposit, semuanya modal percaya."]]},
+  {t:"“凭”，还可以做介词，常用格式是<p>凭 + 宾语 + 动词</p>，表示根据、凭借。",ex:[
+   ["请旅客们准备好车票，**凭**票进站。","Penumpang harap siapin tiket, masuk stasiun pake tiket."],
+   ["你**凭**什么怀疑我偷了东西？","Atas dasar apa kamu nuduh aku nyuri?"]]}],
+  type:"完成对话",
+  pr:[["A：你以前去过吗？你是怎么找到那个房子的？\nB：__。（凭）","B：没去过，全凭朋友给我画的地图找到的。"],
+   ["A：我以前见过他跟别人吵架，所以我对他印象不太好。\nB：__。（凭）","B：不能只凭一件事就判断一个人。"],
+   ["A：你看这几张照片，很漂亮吧！我们去那儿旅行怎么样？\nB：__。（凭）","B：光凭几张照片可说不好，我们再上网查查吧。"]]}],
+ cmp:{a:"记录",b:"纪录",same:null,
+  diff:[["可做动词，指把听到的话或发生的事记下来。",["我已经把这次会议的内容详细地**记录**下来了。","Isi rapat kali ini udah aku catet detail."],"名词，指一定时期、一定范围内的最好成绩。",["他在本次比赛中打破了世界**纪录**。","Di lomba kali ini dia mecahin rekor dunia."]],
+   ["也可做名词，指记下来的材料或做记录的人。",["第二天还书时再把**记录**一个一个地画掉。小刘，你来做这次会议的**记录**。","Besoknya pas balikin buku, catatannya dicoret satu-satu. / Xiao Liu, kamu yang jadi notulen rapat ya."],"名词，也可指对有新闻价值的事件的记载。",["学校带孩子们看了一部有教育意义的**纪录**片。","Sekolah ngajak anak-anak nonton film dokumenter yang mendidik."]]],
+  quiz:[["他又创造了新的奥运会____。","b","Buku: 记录 ×, 纪录 ✓. Rekor → 纪录."],
+   ["小张呢？不是安排她来做会议____吗？","a","Catatan/notulen rapat → 记录."],
+   ["我很喜欢看新闻____片。","b","Film dokumenter = 纪录片."],
+   ["甲骨文____了3000多年以前的中国历史和社会生活。","a","Kata kerja “mencatat” → 记录."]]}},
+
+{no:21,title:"汉字叔叔：一个美国人的汉字情缘",points:[
+ {w:"硬",pos:"副词",uses:[
+  {t:"“硬”，副词，表示坚决或固执地（做某事）。",ex:[
+   ["在中国历史故事“指鹿为马”中，赵高把鹿**硬**说成马。","Di cerita sejarah China “nunjuk rusa bilang kuda”, Zhao Gao ngotot bilang rusa itu kuda."],
+   ["……但是他感觉汉字很复杂，汉字的一笔一画没有任何逻辑，只能死记**硬**背。","…tapi dia ngerasa Hanzi ribet banget, tiap goresannya gak ada logikanya, jadi cuma bisa hafalan mati."]]},
+  {t:"“硬”做副词时还表示能力不够却仍然尽力（做某事）。",ex:[
+   ["你不知道这一年我是怎么**硬**挺过来的。","Kamu gak tau setahun ini aku maksain diri bertahan kayak gimana."],
+   ["虽然中药汤有点儿苦，但为了治病，他还是**硬**把它喝下去了。","Walaupun jamu China-nya pait, demi sembuh dia tetep maksain minum."]]}],
+  pr:[["明明是他记错了，他__。（硬）","明明是他记错了，他硬说是我告诉他的。"],
+   ["快递员的工作很辛苦，__。（硬）","快递员的工作很辛苦，生病了也常常硬撑着去送快递。"],
+   ["A：谢谢你的好意，饭就不吃了，早点儿回去还要收拾行李呢。\nB：既然你还有事，__。（硬）","B：既然你还有事，我就不硬留你了。"]]},
+ {w:"偶然",pos:"形容词 / 副词",uses:[
+  {t:"“偶然”，形容词，表示事情发生在预料之外的，或按一般规律看不可能发生的。",ex:[
+   ["一个**偶然**的机会，他发现如果了解汉字的来源和演变过程，再学习它就变得轻松、容易。","Dari kesempatan yang gak disengaja, dia sadar kalau ngerti asal-usul dan perubahan Hanzi, belajarnya jadi gampang."],
+   ["虽然桂花**偶然**也能长成18米高的大树，但是绝大多数情况下它们都很矮。","Walaupun pohon osmanthus kadang bisa tumbuh sampe 18 meter, biasanya sih pendek-pendek."]]},
+  {t:"“偶然”也可以做副词，意思是“偶尔，有时候”。",ex:[
+   ["她专心地织着毛衣，**偶然**也会抬眼看一下墙上的挂钟。","Dia fokus ngerajut sweter, sesekali ngelirik jam dinding."],
+   ["那些我生活过的地方，**偶然**也会在我梦中出现，但都不是我的“家”！","Tempat-tempat yang pernah aku tinggalin kadang muncul di mimpi, tapi semuanya bukan “rumah”ku!"]]}],
+  pr:[["__，彻底改变了他的命运。（偶然-形）","一次偶然的机会，彻底改变了他的命运。"],
+   ["A：你是怎么知道那家时装店在招聘的？\nB：__。（偶然-形）","B：我是偶然在网上看到的。"],
+   ["A：你不是不喜欢吃方便面吗？\nB：__。（偶然-副）","B：是不太喜欢，不过太忙的时候偶然也会吃一次。"]]},
+ {w:"尽快",pos:"副词",uses:[
+  {t:"“尽快”，副词，尽量加快。",ex:[
+   ["……我要抓紧时间**尽快**把《说文解字》电脑化。","…aku harus manfaatin waktu buat secepetnya digitalisasi kamus Shuowen Jiezi."],
+   ["新产品出了点儿问题，你和严经理**尽快**商量一下这事。","Produk barunya ada masalah, kamu sama Pak Yan cepet-cepet diskusiin ya."],
+   ["趁这两天天气好，你**尽快**把过季的衣服洗一洗，收起来。","Mumpung dua hari ini cerah, cepetan cuci baju-baju yang udah lewat musimnya terus simpen."]]}],
+  pr:[["下个月就开会讨论计划了，我__。（尽快）","下个月就开会讨论计划了，我得尽快把计划写好。"],
+   ["病人的情况很危险，__。（尽快）","病人的情况很危险，必须尽快送到医院。"],
+   ["A：小刘已经联系好了客人，就等你这边安排酒店了。\nB：__。（尽快）","B：好的，我尽快把酒店订好。"]]}],
+ cmp:{a:"偶然",b:"偶尔",same:["都可以是副词，都有不经常的意思，有时可以互换，但意思稍有不同。",["在校园里，我**偶然**/**偶尔**也会碰到李艳。","Di kampus, kadang aku papasan sama Li Yan."]],
+  diff:[["词义侧重表示有些突然、没想到，跟“必然”相对。",["这本书是她一次逛书市时**偶然**发现的。","Buku ini dia temuin gak sengaja pas jalan-jalan di bazar buku."],"词义侧重强调次数少，跟“经常”相对。",["我平时加班不多，月底**偶尔**有一两天。","Aku jarang lembur, paling akhir bulan sesekali satu-dua hari."]],
+   ["还可以表示事情发生在意料之外的，或按一般规律看不可能发生的。可做定语、谓语，前面可带程度副词。",["李阳的父亲是一位画家，所以，李阳喜欢画画儿并非**偶然**。","Bokapnya Li Yang pelukis, jadi wajar aja Li Yang suka gambar, bukan kebetulan."],"还可以是属性词，只做定语，前面不能加程度副词，也不能做谓语，这种用法不常用。",["他在农村的生活很单调，**偶尔**的聚会还是在村里的老房子里举行，很无聊。","Hidupnya di desa monoton banget, kumpul-kumpul yang jarang itu pun di rumah tua desa, ngebosenin."]]],
+  quiz:[["和刘峰在上海的那次碰面非常____。","a","Buku: 偶然 ✓, 偶尔 ×. 非常 + … jadi predikat → 偶然."],
+   ["在昨天的训练中，他很____地和队友撞在了一起，受了伤。","a","Ada 很 (kata keterangan derajat) + gak disangka → 偶然."],
+   ["她们多半会到丽丽家玩儿，____也会去吃饭看电影。","b","Frekuensi jarang → 偶尔."],
+   ["大家都安静地吃着，只听到筷子碰到碗边儿的声音和____的几声咳嗽。","b","Atributif, “sesekali” → 偶尔."]]}},
+
+{no:22,title:"阅读与思考",points:[
+ {w:"一旦",pos:"副词",uses:[
+  {t:"“一旦”，副词，表示不确定的时间、突然到来的一天或者假如有这么一天。",ex:[
+   ["长大后，我终于明白了这个道理：女人**一旦**做了母亲，就变得矛盾了。","Udah gede aku baru ngerti: begitu cewek jadi ibu, dia jadi penuh dilema."],
+   ["灰姑娘**一旦**进了这个王宫，……应该怎样对待她的继母，应该怎样对待她的两个姐姐？","Begitu Cinderella masuk istana… dia harus gimana sama ibu tirinya, sama dua kakak tirinya?"],
+   ["所谓私人空间，是指我们身体周围的一定的空间，**一旦**有人闯入这个空间，我们就会感觉不舒服、不自在。","Ruang pribadi itu area tertentu di sekitar badan kita. Begitu ada yang masuk ke situ, kita langsung ngerasa gak nyaman."]]}],
+  type:"完成句子",
+  pr:[["这件事，__，那可就麻烦了。（一旦）","这件事一旦让老板知道了，那可就麻烦了。"],
+   ["__，我就立刻通知你。（一旦）","一旦有了消息，我就立刻通知你。"],
+   ["这项技术__，将会大大提高产品的竞争力。（一旦）","这项技术一旦研究成功，将会大大提高产品的竞争力。"]]},
+ {w:"难免",pos:"形容词",uses:[
+  {t:"“难免”，形容词，不容易避免的，避免不了的。",ex:[
+   ["刚开始工作，这样的错误是**难免**的。","Baru mulai kerja, salah kayak gini mah wajar, gak bisa dihindarin."],
+   ["朋友间**难免**会产生矛盾、误会甚至是伤害。","Antar temen pasti ada aja konflik, salah paham, bahkan sakit hati."],
+   ["……作为一个母亲，在自己的亲生女儿和不是亲生的灰姑娘之间，**难免**会更疼爱自己亲生的女儿，很难完全平等地对待她们。","…sebagai ibu, antara anak kandung sama Cinderella yang bukan anak kandung, pasti lebih sayang ke anak sendiri, susah adil sepenuhnya."]]}],
+  pr:[["A：这孩子真是太淘气了！\nB：__。（难免）","B：孩子还小，淘气是难免的。"],
+   ["刚刚退休的老人，__。（难免）","刚刚退休的老人，难免会觉得有点儿寂寞。"],
+   ["A：马上就要考试了，我觉得很紧张。\nB：__。（难免）","B：考试前紧张是难免的，放松点儿就好了。"]]},
+ {w:"自从",pos:"介词",uses:[
+  {t:"“自从”，介词，表示从过去某个时间开始。",ex:[
+   ["**自从**城市出现后，它就成为人类生活的中心。","Sejak kota muncul, kota langsung jadi pusat kehidupan manusia."],
+   ["**自从**有了长大后成为作家这个理想之后，他每天都坚持写作。","Sejak punya cita-cita jadi penulis, dia nulis tiap hari tanpa bolong."],
+   ["**自从**我听说了这件事，就开始思考应该如何阅读，除了阅读还应该做什么。","Sejak denger soal ini, aku mulai mikir harus baca kayak gimana, dan selain baca harus ngapain lagi."]]}],
+  pr:[["自从我来中国以后，__。","自从我来中国以后，我的生活习惯改变了很多。"],
+   ["__，我的观念就转变了。（自从）","自从读了这本书，我的观念就转变了。"],
+   ["A：你跟你同屋现在的关系怎么样？\nB：__。（自从）","B：自从上次一起去旅行以后，我们的关系越来越好了。"]]}],
+ cmp:{a:"平等",b:"公平",same:["都是形容词，意思相近，有时可换用。",["作为一个母亲，在自己的亲生女儿和不是亲生的灰姑娘之间，难免会更疼爱自己亲生的女儿，很难完全**平等**/**公平**地对待她们。","Sebagai ibu, antara anak kandung dan Cinderella, pasti lebih sayang anak sendiri, susah banget adil ke dua-duanya."]],
+  diff:[["强调人和人在社会上得到的权利或待遇一样。",["法律面前人人**平等**。","Di depan hukum semua orang setara."],"强调处理事情合情合理，不偏向于一方。",["我们应当**公平**竞争。","Kita harus bersaing secara fair."]],
+   ["多用于普遍性的、一般的情况。",["现实社会中，女人与男人有时并不**平等**。","Di dunia nyata, cewek dan cowok kadang gak setara."],"可用于具体的人或事。",["我认为公司对这次事情的处理不够**公平**。","Menurutku cara kantor nanganin kasus ini kurang adil."]]],
+  quiz:[["机会对每个人来说都是____的。","a","Buku: 平等 ✓, 公平 ×. Hak/kesempatan yang sama buat semua → 平等."],
+   ["这次比赛很____，没有什么问题。","b","Pertandingan konkret, gak berat sebelah → 公平."],
+   ["作为法官，你做事应该____。","b","Nanganin perkara gak memihak → 公平."],
+   ["人生来是____的，人人都有权追求自由和幸福。","a","Hak semua orang sama → 平等."]]}},
+
+{no:23,title:"放手",points:[
+ {w:"一致",pos:"形容词 / 副词",uses:[
+  {t:"“一致”，形容词，表示没有分歧。",ex:[
+   ["……但文文跟他们的意见不**一致**，她坚持要去美国。","…tapi pendapat Wenwen beda sama mereka, dia ngotot mau ke Amerika."],
+   ["长期共同生活的夫妻在兴趣爱好、心理情绪上也趋于**一致**。","Suami-istri yang udah lama hidup bareng, hobi dan emosinya juga makin mirip."]]},
+  {t:"“一致”也可以做副词，表示一同、一齐。",ex:[
+   ["双方**一致**表示将进一步发展友好合作关系。","Dua pihak sama-sama nyatain bakal ngembangin kerja sama yang lebih erat."],
+   ["专家们**一致**认为这是一种成功的产品，可以放心使用。","Para ahli kompak bilang ini produk sukses, aman dipake."]]}],
+  pr:[["她是一名酒店服务员，工作很勤奋，__。（一致）","……得到了客人们的一致好评。"],
+   ["A：公司开会讨论你做的产品宣传方案了吗？\nB：__。（一致）","B：讨论了，大家一致同意我的方案。"],
+   ["A：广告播出时间还是放在晚八点的时段比较好，你说呢？\nB：__。（一致）","B：我跟你的看法一致，晚八点看电视的人最多。"]]},
+ {w:"某",pos:"指示代词",uses:[
+  {t:"“某”，指示代词，常指一定的人或事物，一般用在姓氏后，表示知道名字而不说出，有时有贬义。",ex:[
+   ["公司业务员李**某**闻之大喜，以为自己碰到了一个大买主。","Sales kantor si Li anu girang denger itu, ngira ketemu pembeli kakap."],
+   ["在公园的墙上写“**某某**到此一游”之类的行为是极不文明的。","Corat-coret “Si Anu pernah ke sini” di tembok taman tuh norak banget."]]},
+  {t:"“某”，也可以指不确定的人或事物。",ex:[
+   ["人们如果长期进行**某**一方面的训练，就可以使大脑在**某**一方面的反应能力提高。","Kalau orang latihan satu bidang tertentu dalam jangka panjang, otaknya jadi lebih cepet respon di bidang itu."],
+   ["在这个陌生的地方，妈妈感到她们好像交换了**某**种身份：自己倒像女儿，而文文倒像妈妈。","Di tempat asing ini, mama ngerasa kayak tukeran peran: dia malah kayak anak, Wenwen malah kayak ibu."]]}],
+  type:"指出下面各句中的“某”是哪种用法",
+  pr:[["一位著名的教授到某大学做演讲，教室被学生挤得满满的，连走道上也坐满了人。","知道名字而不说出（指一定的事物）"],
+   ["两人约定时间于展览馆某入口处相见，一同参观展览。","指一定的地方，知道但不说出"],
+   ["刘主任把所有费用全部公开，连某年某月买了12元的纸都记录得很清楚。","指不确定的时间（任指）"]]},
+ {w:"幸亏",pos:"副词",uses:[
+  {t:"“幸亏”，副词，表示由于某些原因而避免了不希望发生的事情。",ex:[
+   ["**幸亏**你提醒了我，我今天就去报名。","Untung kamu ngingetin, hari ini aku langsung daftar."],
+   ["医生说这个病人是心脏问题，**幸亏**送来得及时。","Dokter bilang pasien ini sakit jantung, untung dibawa ke sini tepat waktu."],
+   ["妈妈忍不住流下了眼泪。她说：“**幸亏**那晚天色很暗。”","Mama gak bisa nahan air mata. Dia bilang: “Untung malam itu gelap.”"]]}],
+  pr:[["__，我们今天才没走错路。（幸亏）","幸亏你带了地图，我们今天才没走错路。"],
+   ["A：你回来啦，我正想去接你呢，这是谁的伞啊？\nB：__。（幸亏）","B：幸亏同事借给我一把伞，要不然我就淋湿了。"],
+   ["A：小莉，你再看看，这几批产品的数量是不是有问题啊？\nB：__。（幸亏）","B：真的少了一箱，幸亏您发现得早。"]]}],
+ cmp:{a:"单独",b:"独自",same:["都可以做副词，有自己一个人的意思。",["你太年轻了，恐怕不能**单独**/**独自**一人完成这个任务。","Kamu masih terlalu muda, kayaknya belum bisa nyelesaiin tugas ini sendirian."]],
+  diff:[["词义侧重不跟别的合在一起。",["你下午有时间吗？我想和你**单独**谈谈。","Sore ada waktu gak? Aku mau ngobrol empat mata sama kamu."],"词义侧重一个人独立做某事。",["孩子饿得等不及爸爸了，就**独自**先吃了起来。","Anaknya udah laper gak sabar nunggu papanya, jadi makan duluan sendiri."]],
+   ["还可以用于事物。",["做这个菜时，鸡蛋要先**单独**炒好备用。","Pas masak ini, telurnya digoreng terpisah dulu terus disisihin."],"不可以用于事物。",null],
+   ["可以做形容词，在句中做定语。",["本科生上课有**单独**的教室。","Mahasiswa S1 punya ruang kelas sendiri."],"不可以做形容词。",null]],
+  quiz:[["这所大学为女生提供了____的考试，引起了激烈争论。","a","Buku: 单独 ✓, 独自 ×. Atributif → 单独."],
+   ["他____一人在体育馆里进行训练。","ab","Satu orang ngelakuin sendiri → dua-duanya bisa (kayak contoh 共同点)."],
+   ["教练为他____安排了训练。","a","Dipisah dari yang lain, bukan dia yang ngelakuin → 单独."],
+   ["我喜欢早起，____去公园散步，顺便考虑一下一天的工作。","b","Sendirian ngelakuin aktivitas → 独自."]]}},
+
+{no:24,title:"支教行动",points:[
+ {w:"行动",pos:"动词 / 名词",uses:[
+  {t:"“行动”，动词，表示行走，活动身体。",ex:[
+   ["他运动时受伤了，**行动**不便。","Dia cedera pas olahraga, jadi susah gerak."],
+   ["有些鸟类喜欢单独**行动**。","Ada burung yang sukanya gerak sendiri-sendiri."]]},
+  {t:"“行动”作为动词，也可以表示为了某种目的而进行某种活动。",ex:[
+   ["做什么事他都喜欢提前**行动**，早做准备。","Ngapain aja dia suka gerak duluan, siap-siap dari awal."],
+   ["有的人总是怀疑计划不够准确而迟迟不能开始**行动**。","Ada orang yang selalu ragu rencananya kurang pas, jadi gak mulai-mulai."]]},
+  {t:"“行动”也可以做名词，表示活动、行为。",ex:[
+   ["郝老师到云南参加支教**行动**。","Pak Hao ke Yunnan ikut program relawan ngajar."],
+   ["我们应该勇敢面对困难，迅速采取**行动**，主动承担责任。","Kita harus berani hadapin kesulitan, cepet ambil tindakan, dan ambil tanggung jawab."]]}],
+  pr:[["A：小赵呢？他今天怎么没来上班？\nB：__。（行动）","B：他昨天把腿摔伤了，行动不方便。"],
+   ["A：好久不见了，你最近在忙什么呢？\nB：__。（行动）","B：我最近在参加一个环保行动。"],
+   ["__，避免不必要的浪费。（行动）","我们应该从现在开始行动起来，避免不必要的浪费。"]]},
+ {w:"义务",pos:"名词 / 形容词",uses:[
+  {t:"“义务”，名词，表示在法律上或道德上应负的责任。",ex:[
+   ["不过，现在我们明白了，建设家乡，人人有责，我们也要承担这个**义务**。","Tapi sekarang kita ngerti, bangun kampung halaman tuh tanggung jawab semua orang, kita juga harus ikut."],
+   ["参与社会事务和促进社会进步是每个人的权利，也是每个人的**义务**和责任。","Ikut urusan sosial dan bantu masyarakat maju itu hak semua orang, sekaligus kewajiban dan tanggung jawab."]]},
+  {t:"“义务”也可以做形容词，表示不收报酬的。",ex:[
+   ["我们每个学期都要至少参加三次**义务**劳动。","Tiap semester kita minimal ikut tiga kali kerja bakti."],
+   ["师范大学组织学生们去给打工子弟小学的孩子做**义务**家教。","Kampus keguruan ngajak mahasiswanya jadi guru les gratis buat anak-anak SD dari keluarga perantau."]]}],
+  pr:[["A：父母对子女有哪些义务？\nB：__。","B：父母有义务照顾和教育自己的子女。"],
+   ["学校有义务__。","学校有义务保证学生的安全。"],
+   ["A：__？（义务-形容词）\nB：对，今天来参加演出的演员都不要钱。","A：这是一场义务演出吗？"]]}],
+ cmp:{a:"发言",b:"发表",same:["都可以做动词，都与表达意见有关。",null],
+  diff:[["指在会议或课堂上说话。",["他上课从不**发言**，很多课不及格，平时也几乎不和同学交往。","Dia gak pernah ngomong di kelas, banyak matkul gak lulus, sehari-hari juga hampir gak gaul sama temen."],"指向集体、社会正式说出自己的意见或在报刊上刊登文章。",["总统**发表**了有关两国关系的讲话。","Presiden nyampein pidato soal hubungan dua negara."]],
+   ["可以做名词，指所发表的意见。",["他今天在会上的**发言**很精彩。","Omongan dia di rapat hari ini keren banget."],"不可以做名词。",null],
+   ["是离合词，中间可插入其他成分，后面不能再接宾语。",["你已经**发**过**言**了吗？","Kamu udah ngomong belum (di rapat)?"],"不是离合词。",["你**发表**过这篇文章吗？","Artikel ini pernah kamu terbitin?"]]],
+  quiz:[["我准备公开____我的意见。","b","Buku: 发言 ×, 发表 ✓. Ada objek 意见 → 发表."],
+   ["明天上课该轮到我____了。","a","Ngomong di kelas → 发言."],
+   ["总裁，这是明天会议的____，请您过目。","a","Kata benda “isi omongan/pidato” → 发言."],
+   ["她年纪虽小，已经在杂志上____过几首诗了。","b","Terbit di majalah → 发表."]]}},
+
+{no:25,title:"给自己加满水",points:[
+ {w:"朝",pos:"动词 / 介词",uses:[
+  {t:"“朝”，动词，表示面对着、向。",ex:[
+   ["我们学校的正门坐西**朝**东。","Gerbang utama sekolah kita ngadep ke timur."],
+   ["我进去时，他正脸**朝**里和李主任商量着什么，没注意到我的到来。","Pas aku masuk, dia lagi ngadep ke dalem ngobrol sama Pak Li, gak sadar aku dateng."]]},
+  {t:"“朝”也可以做介词，表示动作行为所指的方向。与“向”不同，它不能做补语。",ex:[
+   ["……老船长命令水手们立刻打开货舱，使劲儿**朝**里面放水。","…kapten tua nyuruh awak kapal langsung buka palka dan masukin air sebanyak-banyaknya."],
+   ["我仿佛看到胜利正**朝**我们走来。","Rasanya aku bisa liat kemenangan lagi jalan ke arah kita."]]}],
+  pr:[["小林，我进你们家的小区了，你住的5号楼__？（朝）","……你住的5号楼是朝哪个方向走？"],
+   ["__，别跟孩子发脾气。（朝）","有什么不满你朝我来，别跟孩子发脾气。"],
+   ["A：请问，去国家图书馆__？（朝）\nB：没错，大概过两个路口就到了。","A：请问，去国家图书馆是朝这个方向走吗？"]]},
+ {w:"简直",pos:"副词",uses:[
+  {t:"“简直”，副词，表示接近完全是这样但并非完全是这样。带有夸张、强调的语气。",ex:[
+   ["听到刘方离婚的消息时，我**简直**不敢相信自己的耳朵。","Denger Liu Fang cerai, aku bener-bener gak percaya sama kupingku sendiri."],
+   ["这次张小姐变得格外客气、礼貌，与从前相比，**简直**像换了个人。","Kali ini Mbak Zhang sopan dan ramah banget, dibanding dulu, udah kayak orang lain."],
+   ["“船长**简直**是疯了，这样做只会增加船的压力，船就会下沉得更快，这不是找死吗？”","“Kaptennya udah gila kali ya, gini malah nambah beban kapal, tenggelamnya makin cepet. Ini mah cari mati!”"]]}],
+  pr:[["眼前的情景让在场的所有人都惊呆了，__。（简直）","……简直不敢相信自己的眼睛。"],
+   ["返城的车在高速路上排起几公里的长队，__。（简直）","……简直像个大停车场。"],
+   ["A：今天，老板要跟我们商量下半年的计划，我得去一趟。\nB：你病成这样还要去上班，__。（简直）","B：……简直是不要命了！"]]}],
+ cmp:{a:"严肃",b:"严格",same:["都是形容词，都表示认真、不放松，但适用范围相差较大，不能替换。",null],
+  diff:[["强调在作风、态度等方面认真。",["小林这件事影响恶劣，我们对他一定要**严肃**批评。","Kasus Xiao Lin dampaknya parah, kita harus tegur dia dengan serius."],"表示在遵守制度或掌握标准时认真、不放松。",["小华妈妈，平时对孩子教育很**严格**。","Mamanya Xiao Hua tuh ketat banget ngedidik anaknya."]],
+   ["表示神情、气氛等使人感到既尊重又害怕。",["一句幽默的笑话可以让紧张**严肃**的气氛变得轻松愉快。","Satu lelucon lucu bisa bikin suasana tegang dan serius jadi santai."],"没有这种意思。",null]],
+  quiz:[["刘老师虽然看上去很____，但其实对人很友善。","a","Buku: 严肃 ✓, 严格 ×. Raut muka/kesan → 严肃."],
+   ["这是一个决定公司发展的重大问题，我们要高度重视，____对待。","a","Sikap serius → 严肃."],
+   ["实验过程中，温度、水分等条件都要____地控制。","b","Standar/aturan yang ketat → 严格."],
+   ["每次读到这段历史都会让我____地思考。","a","Sikap serius waktu mikir → 严肃."]]}},
+
+{no:26,title:"你属于哪一种“忙”",points:[
+ {w:"来",pos:"助词",uses:[
+  {t:"“来”，助词，用在“十、百、千”等数词或数量词后表示概数。",ex:[
+   ["他雇了20**来**个当地人为他带路和搬运行李。","Dia nyewa sekitar 20-an warga lokal buat jadi penunjuk jalan dan angkut barang."],
+   ["按照老人教的方法，他几乎每天都能钓到5斤**来**重的大鱼。","Pake cara yang diajarin si kakek, hampir tiap hari dia dapet ikan gede kira-kira 2,5 kilo."]]},
+  {t:"“来”还可以用在“一、二、三”等数词后，构成<p>一来……，二来……</p>这样的结构，表示列出理由。",ex:[
+   ["今天是大年三十，我们来看看大家，一**来**是给大家送水果，二**来**是看看大家过节还有什么难处。","Hari ini malam tahun baru Imlek, kita dateng jenguk. Pertama buat nganter buah, kedua liat ada kesulitan apa buat ngerayain."],
+   ["我对上海很有感情，一**来**上大学时在那里住过几年，二**来**我太太也是上海人。","Aku punya ikatan sama Shanghai. Pertama, pernah tinggal di sana pas kuliah. Kedua, istriku juga orang Shanghai."]]}],
+  pr:[["这所学校是小班上课，每个班__。（来）","每个班只有二十来个学生。"],
+   ["四川好玩儿的地方可多了，__去旅游。（来）","……我打算国庆节去十来天。"],
+   ["A：你下班走路回家？为什么不坐车呢？\nB：__。（一来……，二来……）","B：一来可以锻炼身体，二来路上太堵，走路反而更快。"]]},
+ {w:"至于",pos:"动词 / 介词",uses:[
+  {t:"“至于”，动词，表示达到某种程度，多用于反问句。",ex:[
+   ["我只是和你开个玩笑，你**至于**生那么大的气吗？","Aku cuma becanda, perlu ya kamu marah segitunya?"],
+   ["什么？一件衬衫要一千来块钱。哪**至于**那么贵呢？","Hah? Satu kemeja seribuan yuan? Masa sih semahal itu?"]]},
+  {t:"“至于”也可以做介词，用在<p>（A）……，至于（B）……</p>结构中表示另提一事。",ex:[
+   ["……**至于**这部影片的投资人，可是一位大人物，他可不敢得罪。","…kalau soal investor film ini, orangnya penting banget, dia gak berani cari masalah."],
+   ["我只知道他是六班的学生，**至于**住在哪儿，我就不清楚了。","Aku cuma tau dia anak kelas 6, kalau soal tinggal di mana, aku gak tau."]]}],
+  pr:[["我只记得他说过要去买礼物，__。（至于）","……至于买什么礼物，我就不知道了。"],
+   ["我刚毕业，现在最重要的是找到工作，__。（至于）","……至于工资高不高，我不太在乎。"],
+   ["A：听说李阳病了，明天的活动他恐怕参加不了了。\nB：__。（至于）","B：不至于吧，他只是有点儿感冒。"]]},
+ {w:"总算",pos:"副词",uses:[
+  {t:"“总算”，副词，表示经过相当长的时间以后某种愿望终于实现。",ex:[
+   ["经过沟通，大导演**总算**搞明白了。","Abis dijelasin, sutradara besar itu akhirnya ngerti juga."],
+   ["**总算**把活儿干完了，可把我累坏了。","Akhirnya kerjaannya kelar juga, capek parah."]]},
+  {t:"“总算”，还可以表示大体上还过得去。",ex:[
+   ["虽然我对这家宾馆不太满意，但**总算**有个睡觉的地方了。","Walaupun gak terlalu puas sama hotel ini, ya setidaknya ada tempat tidur lah."],
+   ["临走前能和你见上一面，这趟**总算**没有白来！","Bisa ketemu kamu sebelum pergi, perjalanan ini gak sia-sia lah!"]]}],
+  pr:[["__，其实他没回老家，一直在这里打工。（总算）","我总算弄清楚了，其实他没回老家，一直在这里打工。"],
+   ["A：李强的咖啡馆准备了半年，又是装修，又是办各种手续，真不容易。\nB：是啊！__。（总算）","B：是啊！下个月总算可以开业了。"],
+   ["A：琳琳这次化学考了78分，比期中考试提高了10分呢。\nB：化学是她最头疼的科目了，__。（总算）","B：……这次总算有进步了。"]]}],
+ cmp:{a:"总算",b:"终于",same:["都是副词，都有表示经过较长时间的变化或等待以后出现了某种情况的意思。",["这青年后来努力学艺，**总算**/**终于**有了一点儿小名气。","Pemuda ini abis itu rajin belajar, akhirnya mulai agak terkenal."]],
+  diff:[["事情的结果一般都是希望发生的情况。",["到北京的第二年，我**总算**找到了一份比较满意的工作。","Tahun kedua di Beijing, akhirnya aku dapet kerjaan yang lumayan memuaskan."],"事情的结果多是希望发生的情况，但还可以是不如意的情况。",["尽管他也很想去，但他**终于**还是放弃了留学的打算。","Walaupun dia pengen banget, akhirnya dia tetep ngelepas rencana kuliah ke luar negeri."]],
+   ["还可以表示大体上还过得去。",["他才学了半年外语，能说成这样，**总算**不错了。","Baru belajar bahasa asing setengah tahun, bisa ngomong segini udah lumayan lah."],"没有这个意思和用法。",null]],
+  quiz:[["他多次想告诉她，但____没说出口。","b","Buku: 总算 ×, 终于 ✓. Hasil yang gak diharapkan → 终于."],
+   ["可让我担心的事____还是发生了。","b","Yang ditakutin kejadian → cuma 终于."],
+   ["整整一个星期没出门，我____把这几本厚厚的书读完了。","ab","Hasil yang diharapkan → dua-duanya bisa."],
+   ["听了李阳这些话后，妈妈____有点放心了。","ab","Hasil yang diharapkan → dua-duanya bisa."]]}},
+
+{no:27,title:"下棋",points:[
+ {w:"动词 + 下来",pos:"结构",uses:[
+  {t:"<p>动词 + 下来</p>表示完成，有时兼有脱离或固定的意思。",ex:[
+   ["你的论文大概什么时候发表？定**下来**了吗？","Skripsimu kira-kira kapan terbit? Udah pasti belum?"],
+   ["你看，那张纸是从这本书里撕**下来**的。","Liat deh, kertas itu disobek dari buku ini."],
+   ["几局**下来**，基本上都是不到10分钟我就败下阵来。","Abis main beberapa ronde, hampir semuanya aku kalah kurang dari 10 menit."]]}],
+  pr:[["房间里太热了，__。（动词+下来）","房间里太热了，你把外套脱下来吧。"],
+   ["这套房子不错，__。（动词+下来）","这套房子不错，我们把它租下来吧。"],
+   ["A：为什么你跟他们说话的时候要带个录音机呢？\nB：__。（动词+下来）","B：我想把他们说的话都录下来，回去再好好听。"]]},
+ {w:"舍不得",pos:"动词",uses:[
+  {t:"“舍不得”，动词，表示不愿意放弃、花费或使用。肯定式“舍得”常用于问句或回答、比较。",ex:[
+   ["把你最喜欢的玩具送给小朋友，你**舍得**吗？","Mainan favoritmu dikasih ke temen, kamu rela gak?"],
+   ["有些人对于把钱花在为家庭和自己的生活增加乐趣的事情上，总是有些**舍不得**。","Ada orang yang selalu sayang duit kalau buat hal-hal yang bikin hidup keluarga dan dirinya lebih seru."],
+   ["可惜，大部分人都像你这样，开始不考虑得失，等到后来失去得多了，又开始**舍不得**，后果就是屡战屡败。","Sayangnya kebanyakan orang kayak kamu: awalnya gak mikirin untung-rugi, pas udah banyak yang ilang baru gak rela, akhirnya kalah terus."]]}],
+  pr:[["A：这么好的工作，你怎么舍得辞职？\nB：__。（舍不得）","B：我也舍不得，可是我想回老家照顾父母。"],
+   ["买了件新衣服舍不得穿，结果__。","……结果放了两年都过时了。"],
+   ["A：我们真的要花这么多钱去做新产品的推广吗？\nB：__。（舍不得）","B：舍不得花钱推广，新产品怎么卖得出去呢？"]]}],
+ cmp:{a:"损失",b:"失去",same:["都可以做动词，都有原来有而后来没有了的意思。",["每走一步，你事先都应该想清楚：为了赢得什么，你愿意**损失**/**失去**什么，这样才可能赢。","Tiap langkah kamu harus mikir dulu: demi dapet apa, kamu rela kehilangan apa. Gitu baru bisa menang."]],
+  diff:[["表示减少。",["不到三分钟，我的棋子**损失**大半。","Belum tiga menit, bidak caturku udah ilang setengah lebih."],"一般指完全没有。",["战争让他**失去**了家庭。","Perang bikin dia kehilangan keluarganya."]],
+   ["可以做名词。",["公司会赔偿我们的**损失**。","Kantor bakal ganti rugi kerugian kita."],"不可以做名词。",null]],
+  quiz:[["生意失败，他____了很多钱。","a","Buku: 损失 ✓, 失去 ×. Berkurang (rugi duit) → 损失."],
+   ["因为一场病，他____了记忆。","b","Ilang total → 失去."],
+   ["要珍惜时间，因为____的时间永远都不会再回来。","b","Ilang dan gak balik lagi → 失去."],
+   ["这次火灾造成了巨大的____。","a","Kata benda “kerugian” → 损失."]]}}
+);
+
+DATA.push(
+{no:28,title:"最受欢迎的毕业生",points:[
+ {w:"从此",pos:"副词",uses:[
+  {t:"“从此”，副词，表示从这时候或所说的时候起。",ex:[
+   ["李白听了老婆婆的话，很受感动。**从此**他刻苦用功，最后成了一位伟大的诗人。","Li Bai tersentuh denger omongan si nenek. Sejak itu dia belajar mati-matian, akhirnya jadi penyair besar."],
+   ["因为小学六年级的时候，他迷上了公交车，**从此**，他就一直关注公交线路。","Pas kelas 6 SD dia jatuh cinta sama bus, sejak itu dia terus ngikutin rute-rute bus."],
+   ["嫦娥自己吃下了不死药，结果她飞到了月亮上，**从此**与后羿分离。","Chang'e makan sendiri obat keabadian, akhirnya terbang ke bulan, dan sejak itu pisah sama Hou Yi."]]}],
+  pr:[["他是十年前来的中国，__。（从此）","……从此就再也没离开过。"],
+   ["A：你跟原来的同屋还有联系吗？\nB：__。（从此）","B：他毕业后回国了，从此我们就没有联系了。"],
+   ["医生说他体重过重，营养过剩，__。（从此）","……从此他每天早上都去跑步。"]]},
+ {w:"假设",pos:"动词 / 名词",uses:[
+  {t:"“假设”，动词，表示把某种情况当成真的。",ex:[
+   ["**假设**我要从国贸到鼓楼大街，该怎么乘车？","Misalnya aku mau dari Guomao ke Gulou Dajie, naik apa ya?"],
+   ["**假设**汽水两块钱一瓶，两个空瓶可以换一瓶汽水，如果给你6块钱，你最多能喝几瓶汽水？","Misalnya soda dua yuan sebotol, dua botol kosong bisa dituker satu botol soda. Kalau dikasih 6 yuan, maksimal bisa minum berapa botol?"]]},
+  {t:"“假设”也可以做名词，表示设想的情况。",ex:[
+   ["您当年的**假设**已经被证明是对的。","Hipotesis Bapak dulu udah terbukti bener."],
+   ["这是一种大胆的**假设**，但不一定是科学的。","Ini dugaan yang berani, tapi belum tentu ilmiah."]]}],
+  pr:[["假设他说的是真话，__。","假设他说的是真话，那问题就不在他身上了。"],
+   ["A：马上就要毕业了，你有什么想法？\nB：__。（假设-动词）","B：假设能找到合适的工作，我就留在这个城市。"],
+   ["关于这个问题，__。（假设-名词）","关于这个问题，科学家们提出了很多假设。"]]},
+ {w:"堆",pos:"量词 / 动词 / 名词",uses:[
+  {t:"“堆”，量词，用于成堆的东西或人（不能用于所尊敬的人）。",ex:[
+   ["他有问必答，不但准确无误地按顺序报了一大**堆**公交车、地铁站的名字，而且还给一对情侣制订了北京休闲一日游的具体方案。","Ditanya apa aja dijawab. Bukan cuma nyebutin setumpuk nama halte bus dan stasiun subway berurutan tanpa salah, dia juga bikinin pasangan kekasih rencana jalan-jalan sehari di Beijing."],
+   ["一个小师弟结婚才半年，就跑过来找我诉苦，说妻子几乎每天都要挑出他一大**堆**毛病：饭后不洗碗、睡前不洗脚……","Adik kelasku baru nikah setengah tahun udah curhat, katanya istrinya hampir tiap hari nemu seabrek kesalahannya: abis makan gak cuci piring, mau tidur gak cuci kaki…"]]},
+  {t:"“堆”也可以做动词，表示用手或工具把东西聚在一起。",ex:[
+   ["这些零件怎么都**堆**在这儿啊？","Kok onderdil-onderdil ini numpuk di sini semua?"],
+   ["今年真不错！你看这粮食，都**堆**成山了。","Tahun ini mantep! Liat tuh, hasil panennya numpuk kayak gunung."]]},
+  {t:"“堆”还可以做名词，表示堆在一起的东西。",ex:[
+   ["工厂旁边有一个建筑材料**堆**。","Di sebelah pabrik ada tumpukan bahan bangunan."],
+   ["叔叔把手指上的金戒指取了下来，扔到石头**堆**里。","Om nyopot cincin emas dari jarinya, terus dilempar ke tumpukan batu."]]}],
+  pr:[["下雪了，__。（堆-动词）","下雪了，孩子们在院子里堆雪人。"],
+   ["A：你知道我上个星期买的那本书可能放在哪儿了吗？\nB：__。（堆-名词）","B：你去桌子上那堆书里找找吧。"],
+   ["A：那边怎么有一堆人围在那儿？\nB：可能是__。","B：可能是出了什么事，我们去看看吧。"]]}],
+ cmp:{a:"反应",b:"反映",same:["同音，都既可做动词又可做名词。",null],
+  diff:[["动词指受到外界刺激而做出行动或变化；名词指这些行动或变化。",["这时人体精力下降，**反应**减慢，情绪低下，利于人体进入甜美的梦乡。","Pas itu energi badan turun, reaksi melambat, mood turun, jadi gampang masuk ke mimpi indah."],"把情况或意见报告给上级。",["请放心，我会把你的意见**反映**给学校。","Tenang aja, pendapatmu bakal aku sampein ke sekolah."]],
+   ["没有其他意思。",null,"还可以指把事物的本质表现出来。",["谈话可以**反映**一个人的职业特点。","Cara ngobrol bisa nyerminin ciri khas profesi seseorang."]],
+   ["不可搭配宾语。",["他**反应**得非常快，一点儿也不用思考。","Reaksinya cepet banget, gak perlu mikir sama sekali."],"可搭配宾语。",["这个电影**反映**了中国年轻一代的新变化。","Film ini nyerminin perubahan baru generasi muda China."]]],
+  quiz:[["那两只羊看见青草后是什么____？","a","Buku: 反应 ✓, 反映 ×. Reaksi terhadap rangsangan → 反应."],
+   ["他这么做，____出他的思想还不太成熟。","b","Nyerminin sifat/esensi, ada objek → 反映."],
+   ["他脑子____得很快，马上找到了问题的关键。","a","Reaksi otak → 反应."],
+   ["小王，大家____你最近常迟到。家里有什么问题吗？","b","Laporan ke atasan + objek → 反映."]]}},
+
+{no:29,title:"培养对手",points:[
+ {w:"不如",pos:"动词",uses:[
+  {t:"“不如”，动词，表示比不上。",ex:[
+   ["求人**不如**求己。","Minta tolong orang lain gak sebaik ngandelin diri sendiri."],
+   ["……由于受到了建伟书店的影响，这三家书店的经营空间越来越小，三家的营业额加起来还**不如**他一家多。","…gara-gara toko buku Jianwei, ruang gerak tiga toko itu makin sempit, omzet tiga toko digabung aja masih kalah sama dia sendiri."],
+   ["如果找一个棋艺**不如**你或者和你差不多的人下棋，虽然你可能会轻易地战胜对手，但并不能使你的棋艺得到提高。","Kalau main catur sama orang yang skill-nya di bawah atau setara kamu, emang kamu bisa gampang menang, tapi skill-mu gak bakal naik."]]}],
+  pr:[["A：周末咱们去趟长城怎么样？\nB：__。（不如）","B：周末人太多了，不如下个星期一请假去吧。"],
+   ["A：与上学期相比，你这学期的成绩有进步吗？\nB：__。（不如）","B：没有，这学期的成绩还不如上学期呢。"],
+   ["今天阳光真好，__在房间睡觉。（不如）","今天阳光真好，我们不如出去走走，别总在房间睡觉。"]]},
+ {w:"干脆",pos:"形容词 / 副词",uses:[
+  {t:"“干脆”，形容词，形容说话、做事痛快、不犹豫。",ex:[
+   ["他这人很**干脆**，说行就行，说不行就不行。","Orangnya to the point banget, bilang bisa ya bisa, bilang gak ya gak."],
+   ["我求他帮忙，他答应得很**干脆**。","Aku minta tolong, dia langsung iyain tanpa mikir."]]},
+  {t:"“干脆”也可以做副词，表示简单、果断地。",ex:[
+   ["我已经试了六次了，还是不行，我看我**干脆**放弃好了。","Udah nyoba enam kali tetep gagal, mending aku nyerah aja deh."],
+   ["这时，许多亲朋好友便建议他**干脆**把另三家书店挤垮，垄断这个市场。","Banyak kerabat dan temen nyaranin dia sekalian aja bikin tiga toko lain bangkrut, terus monopoli pasar."]]}],
+  pr:[["A：现在这工作真没意思，又累挣得又少！\nB：__。（干脆）","B：那你干脆换个工作吧。"],
+   ["这件事你已经考虑了一个月了，__？（干脆）","……你能不能给我一个干脆的回答？"],
+   ["A：__。（干脆）\nB：行，那我们叫大家明天一起开个会吧。","A：这样讨论来讨论去也没结果，干脆大家开个会决定吧。"]]},
+ {w:"万一",pos:"连词 / 名词",uses:[
+  {t:"“万一”，连词，表示可能性很小，一般用于意外或不利的情况。",ex:[
+   ["……**万一**他们自己跑到其他图书市场去“货比三家”，那我的生意就完了。","…kalau sampe mereka pergi sendiri ke pasar buku lain buat bandingin harga, bisnisku tamat."],
+   ["不要将所有的鸡蛋都放在一个篮子里，因为**万一**不小心，鸡蛋就有可能全部打碎。","Jangan taruh semua telur di satu keranjang, soalnya kalau sampe gak hati-hati, telurnya bisa pecah semua."]]},
+  {t:"“万一”也可以做名词，表示可能性很小的意外情况。经常用在“就怕万一”“以防万一”这样的固定格式中。",ex:[
+   ["不怕一万，就怕**万一**。","Bukan takut yang pasti terjadi, tapi takut yang “gimana kalau…”."],
+   ["她总是带着一把伞，以防**万一**。","Dia selalu bawa payung, jaga-jaga."]]}],
+  pr:[["我们还是早点出发吧，__。（万一）","我们还是早点出发吧，万一路上堵车就麻烦了。"],
+   ["A：今天晚上你回家吃饭吗？\nB：__。（万一）","B：应该回来，万一加班我给你打电话。"],
+   ["A：天气看起来不错，不用带伞了。\nB：__。（万一）","B：还是带上吧，以防万一。"]]}],
+ cmp:{a:"挤",b:"拥挤",same:["都可以做动词和形容词，形容词的意思都是地方小而人或物多。",["这么小的教室里放三十张桌子，太**挤**/**拥挤**了！","Kelas sekecil ini diisi tiga puluh meja, sempit banget!"]],
+  diff:[["动词，强调用力使自己从人群中通过。",["坐车的人太多了，我**挤**了半天才**挤**上车。","Yang naik banyak banget, aku desak-desakan lama baru bisa masuk."],"动词，强调挤在一起。",["请先下后上，不要**拥挤**。","Turun dulu baru naik, jangan dorong-dorongan."]],
+   ["一般做谓语。",["为了买到票，我**挤**得满头大汗！","Demi dapet tiket, aku desak-desakan sampe keringetan!"],"可做主语或宾语。",["交通**拥挤**是个大问题。","Macet tuh masalah besar."]],
+   ["动词，指用力使东西从小孔或小缝中出来。",["牙膏用完了，已经**挤**不出来了。","Odolnya abis, udah gak bisa dipencet lagi."],"没有这个意思。",null],
+   ["动词，指人或物紧紧挨在一起，或事情集中在同一时间段里。",["如果你的生活先被不重要的事**挤**满了，那你就无法再装进更大、更重要的事了。","Kalau hidupmu udah penuh sama hal gak penting, kamu gak bisa masukin hal yang lebih besar dan penting."],"没有这个意思。",null],
+   ["有排挤的意思。",["许多亲朋好友便建议他干脆把另三家书店**挤**垮，垄断这个市场。","Banyak kerabat nyaranin dia sekalian nyingkirin tiga toko lain dan monopoli pasar."],"没有这个意思。",null]],
+  quiz:[["所有的事都____在这一个星期了。","a","Buku: 挤 ✓, 拥挤 ×. Urusan numpuk di satu waktu → 挤."],
+   ["由于人群____，有人受了伤。","ab","Kerumunan padat (kata sifat) → dua-duanya bisa."],
+   ["他假装伤心，____出了两滴眼泪。","a","Meres keluar → 挤."],
+   ["周末这家商场里虽然人很多，但并不____。","ab","Kata sifat “padat” → dua-duanya bisa."]]}},
+
+{no:30,title:"竞争让市场更高效",points:[
+ {w:"无意",pos:"动词 / 副词",uses:[
+  {t:"“无意”，动词，意思是“不愿、没有打算”。",ex:[
+   ["他**无意**伤害任何人。","Dia gak ada niat nyakitin siapa pun."],
+   ["我**无意**打扰您，不过我可以跟您谈一会儿吗？","Saya gak bermaksud ganggu, tapi boleh ngobrol sebentar?"]]},
+  {t:"“无意”，还是副词，意思是“不是故意的”，常说“无意中……”。",ex:[
+   ["后来一位渔民**无意**中发现了一种巧妙而实用的方法……","Terus ada nelayan yang gak sengaja nemu cara yang cerdik dan berguna…"],
+   ["她在收拾花园时，**无意**地找到了这只耳环。","Pas beresin taman, dia gak sengaja nemu anting ini."]]}],
+  pr:[["售货员看他__，就拿出另外一款更便宜的手机。（无意）","售货员看他无意买这款手机，就拿出另外一款更便宜的手机。"],
+   ["真对不起！踩到您的脚了，__。（无意）","真对不起！踩到您的脚了，我真是无意的。"],
+   ["A：你怎么知道他去找了刘经理？\nB：__。（无意）","B：我是无意中听同事说的。"]]},
+ {w:"有利",pos:"形容词",uses:[
+  {t:"“有利”，形容词，意思是“有好处、有帮助”。常用“有利于”表示对某人或某事物有好处。否定的说法是“不利”。",ex:[
+   ["高高的个子、漂亮的外表，都是他的**有利**条件。","Badan tinggi dan muka cakep, semuanya poin plus buat dia."],
+   ["很多研究发现，适度的压力**有利**于我们保持良好的状态，……","Banyak penelitian nemu, tekanan secukupnya bagus buat jaga kondisi kita tetep oke…"],
+   ["笑能促进心肺活动，改善肌肉紧张状况，对睡眠也是**有利**的。","Ketawa bisa bantu kerja jantung-paru, ngendorin otot tegang, dan bagus juga buat tidur."]]}],
+  type:"用所学词语改写句子",
+  pr:[["我听人介绍，苹果是对健康最有好处的水果。\n→ 我听人介绍，__。（有利）","我听人介绍，苹果是最有利于健康的水果。"],
+   ["与电子阅读相比，纸质阅读对保护眼睛更有帮助。\n→ 与电子阅读相比，__。（有利）","与电子阅读相比，纸质阅读更有利于保护眼睛。"],
+   ["考试时，适度的紧张能使考生更好地集中精力完成考试。\n→ 考试时，__。（有利）","考试时，适度的紧张有利于考生集中精力完成考试。"]]},
+ {w:"的确",pos:"副词",uses:[
+  {t:"“的确”，副词，意思是“完全确实，实在”。可以重叠为“的的确确”。",ex:[
+   ["因此，“鲶鱼效应”**的确**对挖掘员工潜力、提高企业活力具有积极的意义。","Makanya “efek ikan lele” emang beneran bagus buat gali potensi karyawan dan bikin perusahaan makin hidup."],
+   ["他**的确**是我所教过的学生中最聪明的。","Dia beneran murid paling pinter yang pernah aku ajar."],
+   ["咱们总裁选择李阳负责**的的确确**有些冒险，因为他太年轻了。","Bos milih Li Yang buat pegang ini emang beneran agak nekat, soalnya dia masih muda banget."]]}],
+  pr:[["丽丽的歌声优美动人，听她唱歌__。（的确）","……听她唱歌的确是一种享受。"],
+   ["A：卧室的窗帘有些日子没洗了吧？\nB：__。（的确）","B：的确很久没洗了，周末洗洗吧。"],
+   ["A：我这次去九寨沟拍的照片你看了吗？\nB：__。（的确）","B：看了，九寨沟的风景的确很美。"]]}],
+ cmp:{a:"接近",b:"靠近",same:["都是动词，都有“彼此间距离近或向一定目标运动，使彼此间距离变小”的意思，有时可以替换。",["这个地方**接近**/**靠近**北极地区，夏季白天很长，天亮得也很早。","Tempat ini deket kutub utara, musim panasnya siang panjang banget, subuhnya juga cepet."]],
+  diff:[["搭配的词语可以表示具体的人、事物、地点，也可用于时间、数量方面。",["**接近**下午一点时，救护车终于赶到了。","Hampir jam satu siang, ambulansnya akhirnya nyampe."],"搭配的词语可以表示具体的人、事物、地点，但一般不能用于时间、数量方面。",["他们挤在**靠近**车窗的地方，脸对脸离得很近。","Mereka desak-desakan deket jendela, muka ketemu muka deket banget."]],
+   ["还可以搭配表示抽象事物的词语。",["经过努力，现在我们已越来越**接近**年初定下的销售目标了。","Abis kerja keras, sekarang kita makin deket ke target penjualan awal tahun."],"一般不能搭配表示抽象事物的词语。",null],
+   ["还可以表示差距不大。",["他们俩的水平非常**接近**，这场比赛真不好说谁会赢。","Level mereka berdua mirip banget, susah ditebak siapa yang menang."],"没有这个意思。",null]],
+  quiz:[["做这个动作时，大腿要尽量____胸部。","b","Buku: 接近 ×, 靠近 ✓. Gerakan fisik mendekat → 靠近."],
+   ["直到天快亮的时候，他的体温才____正常。","a","Angka/kondisi hampir normal → 接近."],
+   ["这项技术已____世界先进水平。","a","Hal abstrak (level) → 接近."],
+   ["对于这个问题，几国的意见很____。","a","Bedanya kecil → 接近."]]}},
+
+{no:31,title:"登门槛效应",points:[
+ {w:"嗯",pos:"叹词",uses:[
+  {t:"“嗯”，叹词。读<p>ńg</p>，表示疑问。",ex:[
+   ["**嗯**？不是28号，难道是我记错了？","Hm? Bukan tanggal 28? Masa aku salah inget?"],
+   ["**嗯**？人都去哪儿了？","Hm? Orang-orang pada ke mana?"]]},
+  {t:"读<p>ňg</p>，表示感觉意外或认为不该是这样。",ex:[
+   ["**嗯**！你的房间为什么这么冷？","Lho! Kok kamarmu dingin banget?"],
+   ["**嗯**！你怎么还没走啊？","Lho! Kok kamu belum pergi?"]]},
+  {t:"读<p>ǹg</p>，表示答应或认同。",ex:[
+   ["**嗯**，如果您心情好，我就说件事；心情不好就改天再说。","Hmm, kalau mood Bapak lagi bagus, aku mau ngomong sesuatu; kalau lagi gak bagus, lain kali aja."],
+   ["**嗯**，没问题，我这就给她送去。","Oke, gak masalah, aku langsung anterin ke dia."]]}],
+  type:"判断“嗯”的意思并填上标点符号",
+  pr:[["嗯（ ）我记住了，明天给你发邮件。","嗯（，）读ǹg，表示答应。"],
+   ["嗯（ ）小明怎么又忘了关灯啦？","嗯（！）读ňg，表示意外。"],
+   ["嗯（ ）我的手机怎么不见了？","嗯（？）读ńg，表示疑问。"]]},
+ {w:"轻易",pos:"形容词 / 副词",uses:[
+  {t:"“轻易”，形容词，意思是“简单容易”。一般做状语。",ex:[
+   ["领导有了兴趣，假，就这样**轻易**地请好了。","Atasan jadi tertarik, jadi izinnya dapet dengan gampang."],
+   ["任何胜利都不是**轻易**得到的，背后都要付出艰辛的努力。","Gak ada kemenangan yang didapet gampang, di baliknya pasti ada kerja keras."]]},
+  {t:"“轻易”还可以是副词，表示人处理事情态度不慎重，随随便便。常用在否定句中构成<p>轻易不……</p>的格式，表示“很少（做……）”的意思。",ex:[
+   ["他这个人的特点，是从不**轻易**决定，也不**轻易**改变。","Ciri khas dia: gak pernah asal mutusin, dan gak gampang berubah pikiran."],
+   ["他为人好强，**轻易**不求人，这次向咱们借钱，一定是遇到什么难事了。","Dia gengsian, jarang minta tolong. Kali ini sampe pinjem duit ke kita, pasti lagi ada masalah berat."]]}],
+  pr:[["这条路改为单行线后，__。（轻易-形）","这条路改为单行线后，车可以轻易地通过了。"],
+   ["A：哎，天这么热，你们怎么不开空调啊？\nB：__。（轻易不……）","B：我们家为了省电，轻易不开空调。"],
+   ["A：现在骗子越来越多，这个星期我都接到两个骗人的电话了。\nB：__。（轻易不……）","B：所以陌生人的电话轻易不要相信。"]]}],
+ cmp:{a:"轻易",b:"容易",same:["做形容词时，都可以表示做起来不费事。",null],
+  diff:[["侧重做事轻松，不费力气。一般做状语。",["她从小学习就好，高考时很**轻易**地考上了名牌大学，接着又读了研究生。","Dari kecil dia pinter, gampang banget masuk kampus top, terus lanjut S2."],"除表示事情简单、不难办外，还可表示事情本身的内容不复杂。可单独做谓语。",["今天的考试特别**容易**，我半个小时就答完了。","Ujian hari ini gampang banget, setengah jam aku udah kelar."]],
+   ["没有这个意思。",null,"还表示发生某种变化的可能性大。",["他最近心情不好，**容易**发脾气。","Mood dia lagi jelek, gampang marah."]],
+   ["还是副词，表示随随便便的意思。",["我爱书，无论走到哪里，我从不**轻易**放过书摊、书店。","Aku cinta buku, ke mana pun pergi, gak pernah ngelewatin lapak buku atau toko buku gitu aja."],"没有这个用法。",null]],
+  quiz:[["据说这位刘先生从不____花钱请人吃饭。","a","Buku: 轻易 ✓, 容易 ×. “从不轻易” = jarang/gak asal → 轻易."],
+   ["看完信后，____不动感情的父亲眼圈都红了。","a","“轻易不…” = jarang → 轻易."],
+   ["你这样做，不了解情况的人很____误会。","b","Kemungkinan besar terjadi → 容易."],
+   ["我们双方都没有____放弃自己的意愿。","a","Gak asal/gak gampang nyerah → 轻易."]]}},
+
+{no:32,title:"身边的环保",points:[
+ {w:"密切",pos:"形容词 / 动词",uses:[
+  {t:"“密切”，形容词，可以表示关系近。",ex:[
+   ["还有一部分污染和我们的日常生活**密切**相关，汽车尾气就是其中之一。","Sebagian polusi juga erat banget kaitannya sama kehidupan sehari-hari, salah satunya asap knalpot."],
+   ["参加了这次环保活动后，两人便有了共同语言，来往也比先前**密切**了。","Abis ikut kegiatan lingkungan ini, mereka jadi nyambung, makin sering kontakan dibanding dulu."]]},
+  {t:"“密切”，还可以表示（对问题等）重视、仔细、周到。",ex:[
+   ["刘医生**密切**地观察着李妈妈病情的发展。","Dokter Liu ngawasin ketat perkembangan penyakit Bu Li."],
+   ["家长应和老师**密切**配合，形成合力，保持教育的一致性。","Ortu harus kerja sama erat sama guru biar pendidikannya sejalan."]]},
+  {t:"“密切”还可以是动词，意思是“使关系近”。",ex:[
+   ["这条铁路的建成，大大**密切**了西南地区与首都的联系。","Rel kereta ini bikin hubungan daerah barat daya sama ibu kota jadi jauh lebih deket."],
+   ["友好城市之间的交往**密切**了两国人民之间的友谊。","Hubungan antar kota kembar bikin persahabatan rakyat dua negara makin erat."]]}],
+  pr:[["这种病传染性很强，__。（密切）","……和病人有过密切接触的人都要做检查。"],
+   ["经济全球化__。（密切）","经济全球化密切了世界各国之间的联系。"],
+   ["A：这两年，李雪来咱们家的次数好像少多了？\nB：__。（密切）","B：是啊，她工作忙了，跟我们的来往不像以前那么密切了。"]]},
+ {w:"尽量",pos:"副词",uses:[
+  {t:"“尽量”，副词，表示努力在一定范围内达到最大限度。",ex:[
+   ["同时，**尽量**多骑自行车，多选择公共交通，少使用私家车。","Selain itu, sebisa mungkin lebih sering naik sepeda dan transportasi umum, kurangin mobil pribadi."],
+   ["老年人要**尽量**少吃油炸食品。","Lansia sebisa mungkin kurangin gorengan."],
+   ["为了节约能源，请大家都**尽量**使用节能电器。","Buat hemat energi, sebisa mungkin semua pake alat elektronik hemat energi ya."]]}],
+  pr:[["为了培养孩子的自理能力，__。（尽量）","……父母应该尽量让孩子自己的事情自己做。"],
+   ["明天单位有个活动，可能不能按时下班，__。（尽量）","……不过我会尽量早点儿回来。"],
+   ["遇到危险情况时，先别慌，__。（尽量）","……尽量保持冷静。"]]},
+ {w:"逐步",pos:"副词",uses:[
+  {t:"“逐步”，表示一步一步地，多用于人为的情况，一般不能修饰形容词性词语。",ex:[
+   ["云计算应用市场规模正在**逐步**扩大。","Pasar cloud computing lagi pelan-pelan makin gede."],
+   ["……调整能源消费结构，**逐步**向可再生能源转变；","…ngatur ulang pola konsumsi energi, pelan-pelan pindah ke energi terbarukan;"],
+   ["记者了解到，现在受灾群众已**逐步**恢复了正常的生产生活。","Wartawan dapet info, warga korban bencana udah mulai pelan-pelan balik ke kehidupan normal."]]}],
+  pr:[["未来两天国内无明显冷空气活动，大部分地区天气晴好，__。（逐步）","……气温将逐步回升。"],
+   ["随着人们生活水平的不断提高，绿色食品__。（逐步）","……绿色食品逐步走进了普通家庭。"],
+   ["A：你知道吗？现在，上网校的人越来越多。\nB：__。（逐步）","B：是啊，网上学习正在逐步成为一种新的学习方式。"]]}],
+ cmp:{a:"鼓励",b:"鼓舞",same:["都是动词，都有使人振作、增强信心的意思。",["这次谈话，使刘洋受到极大的**鼓励**/**鼓舞**。","Obrolan ini bikin Liu Yang semangat banget."]],
+  diff:[["中性词，可用在坏的方面。",["吸烟有害健康，你不阻止他，怎么还**鼓励**呢？","Ngerokok bahaya buat kesehatan, bukannya dicegah kok malah disemangatin?"],"褒义词。",["新产品的研制成功极大地**鼓舞**了科技人员。","Suksesnya produk baru bikin tim teknologi semangat banget."]],
+   ["语义侧重激励对方从事某种活动，主语多是人或组织。常用“鼓励某人做某事”的兼语形式。",["近些年，国家越来越**鼓励**大学生毕业后开办自己的公司。","Beberapa tahun ini, negara makin ngedorong lulusan kuliah buat bikin perusahaan sendiri."],"语义侧重受到某种影响而精神振奋，主语多是事物。",["新的胜利给了全体队员很大的**鼓舞**。","Kemenangan baru ini bikin semua pemain semangat banget."]],
+   ["没有这个意思和用法。",null,"还是形容词，形容兴奋、振作。",["年初制定的目标顺利实现，取得的成绩令人十分**鼓舞**。","Target awal tahun tercapai mulus, hasilnya bikin semangat banget."]]],
+  quiz:[["父母平时应____孩子多参加体育活动。","a","Buku: 鼓励 ✓, 鼓舞 ×. “鼓励 + orang + ngelakuin sesuatu” → 鼓励."],
+   ["在工作中，管理者多____员工，会提高员工的工作积极性。","a","Subjek orang, nyemangatin orang lain → 鼓励."],
+   ["听了他们的发言，我挺受____的，对他们很有信心。","b","Jadi semangat karena pengaruh sesuatu → 鼓舞."],
+   ["感谢大家对我的肯定与____。","a","“Dukungan/dorongan” dari orang → 鼓励."]]}},
+
+{no:33,title:"以堵治堵——缓解交通有妙招",points:[
+ {w:"照常",pos:"动词 / 副词",uses:[
+  {t:"“照常”，动词，意思是“跟平常一样”。",ex:[
+   ["虽然战争临近，但这里的日常生活，一切**照常**。","Walaupun perang udah deket, kehidupan sehari-hari di sini tetep jalan kayak biasa."],
+   ["大火对东区的商业活动没有造成大的影响，区内商业活动**照常**。","Kebakaran gak ngaruh banyak ke bisnis di distrik timur, aktivitas dagang tetep jalan kayak biasa."]]},
+  {t:"“照常”还是副词，表示情况继续不变。",ex:[
+   ["在东方广场的迎新活动**照常**举行。","Acara penyambutan di Lapangan Timur tetep diadain seperti biasa."],
+   ["九月中旬的一天早晨，温森**照常**提前出门赶在早高峰之前去交通部。","Suatu pagi pertengahan September, Wensen kayak biasa berangkat lebih awal biar nyampe ke Kementerian Perhubungan sebelum jam sibuk."]]}],
+  pr:[["刘老师从北京回来后，__。（照常）","刘老师从北京回来后，第二天就照常上课了。"],
+   ["A：王医生，__吗？（照常）\nB：一般来说，手术后三个月就可以参加一般的运动了。","A：王医生，我做完手术以后还能照常运动吗？"],
+   ["A：快过年了，不知道胡同口的那家超市春节还开不开？\nB：__。（照常）","B：我问过了，春节照常营业。"]]},
+ {w:"难怪",pos:"动词 / 副词",uses:[
+  {t:"“难怪”，动词，意思是“不应当批评或抱怨”，带有理解或原谅的语气。",ex:[
+   ["这也**难怪**，他每天那么忙，哪儿有时间操心孩子的事啊！","Ya wajar sih, dia sibuk banget tiap hari, mana sempet ngurusin anak!"],
+   ["这也**难怪**，与其堵在路上浪费时间和汽油，污染环境，倒不如改乘公交出行。","Ya wajar, daripada kejebak macet buang waktu dan bensin plus ngotorin udara, mending naik bus."]]},
+  {t:"“难怪”还是副词，表示明白了原因，对某种情况就不再觉得奇怪了。",ex:[
+   ["你的抽屉真乱，**难怪**总是找不到东西。","Lacimu berantakan banget, pantes aja nyari barang gak pernah ketemu."],
+   ["他都18岁了，还不敢一个人走夜路，**难怪**大家都叫他胆小鬼。","Udah 18 tahun masih gak berani jalan sendiri malem-malem, pantes semua manggil dia penakut."]]}],
+  pr:[["这也难怪，__。","这也难怪，他第一次出国，什么都不习惯。"],
+   ["你一点儿也不理解他的想法，__。（难怪）","……难怪他不愿意跟你说话。"],
+   ["A：李岩和我是小学同学，我们认识快20年了。\nB：__。（难怪）","B：难怪你们关系这么好。"]]},
+ {w:"与其",pos:"连词",uses:[
+  {t:"“与其”，连词，比较两种需要选择的情况时，“与其”用在放弃的一面，后面常与“不如”“宁可”等搭配使用。",ex:[
+   ["**与其**说是采访，不如说是向他学习。","Daripada dibilang wawancara, lebih pas dibilang belajar dari dia."],
+   ["**与其**找个不认真的小时工，我宁可自己打扫。","Daripada nyewa ART per jam yang gak becus, mending aku bersihin sendiri."],
+   ["这也难怪，**与其**堵在路上浪费时间和汽油，污染环境，倒不如改乘公交出行。","Ya wajar, daripada kejebak macet buang waktu dan bensin plus ngotorin udara, mending naik bus."]]}],
+  pr:[["那些赶时髦的消费者，__，不如说是买牌子。（与其）","那些赶时髦的消费者，与其说是买衣服，不如说是买牌子。"],
+   ["__，我宁可相信是他运气好。（与其）","与其说他考得好是因为努力，我宁可相信是他运气好。"],
+   ["A：我们在这儿等公交车吧，下站就是物美超市。\nB：这么近，__。（与其）","B：这么近，与其在这儿等车，不如走过去。"]]}],
+ cmp:{a:"表现",b:"体现",same:["都是动词，都有显示出来的意思。",["这部电影**表现**/**体现**出鲜明的时代特点。","Film ini nunjukin ciri khas zamannya dengan jelas."]],
+  diff:[["侧重反映人或事物的某种风格、感情、态度等。",["他总是乐呵呵的，对什么事都**表现**得很乐观。","Dia selalu ketawa-ketiwi, ngadepin apa aja keliatan optimis."],"强调某种现象、性质或思想、精神等通过某人或事物具体表现出来。",["不同文化的差异在语言特别是词语上**体现**得最突出。","Perbedaan budaya paling keliatan di bahasa, terutama kosakatanya."]],
+   ["还有故意显示自己的优点、长处的意思，多含贬义。",["为了得到领导的欣赏，他拼命地**表现**自己。","Biar dilirik atasan, dia mati-matian pamer kemampuan."],"没有这个意思。",null],
+   ["还可做名词，指言语行动的状况。",["我们对你的**表现**很满意，你下周一能来上班吗？","Kita puas sama performa kamu, Senin depan bisa mulai kerja?"],"没有这个用法。",null]],
+  quiz:[["用表格来说明问题是一种有条理的思考方法的____。","b","Buku: 表现 ×, 体现 ✓. Cara berpikir yang terwujud konkret → 体现."],
+   ["人们一直认为，哭是胆小、软弱的____。","a","Kata benda “tanda/perilaku” → 表现."],
+   ["丽丽是不会错过这个在大家面前____自己的机会的。","a","Pamer diri → 表现."],
+   ["人生的价值不____在你口袋里有多少钱，而在于你为社会做出了多少贡献。","b","Nilai (hal abstrak) terwujud → 体现."]]}},
+
+{no:34,title:"鸟儿的护肤术",points:[
+ {w:"总之",pos:"连词",uses:[
+  {t:"“总之”，连词，概括前面的内容，总的来说。",ex:[
+   ["暑假我可能去上海、南京，还有杭州，**总之**，想去南方几个城市转转。","Liburan musim panas mungkin aku ke Shanghai, Nanjing, sama Hangzhou. Intinya pengen keliling beberapa kota di selatan."],
+   ["**总之**，网络的确带给我们以前无法想象的方便，但同时它也带来了一定的危害。","Intinya, internet emang ngasih kemudahan yang dulu gak kebayang, tapi juga bawa bahaya."],
+   ["**总之**，在鸟儿的生活中，羽毛充当着十分重要的角色。","Pokoknya, di kehidupan burung, bulu punya peran penting banget."]]}],
+  pr:[["不管你去不去，__。（总之）","不管你去不去，总之我是一定要去的。"],
+   ["A：你怎么能把汉语学得这么好？\nB：__。（总之）","B：多听、多说、多看中国电影，总之要多练习。"],
+   ["__，总之，中国菜有很多做法。","炒、煮、蒸、炸……总之，中国菜有很多做法。"]]},
+ {w:"动词 + 过",pos:"结构",uses:[
+  {t:"表示通过动作，人或物体改变方向。",ex:[
+   ["他转**过**身，一句话也不说。","Dia balik badan, gak ngomong sepatah kata pun."],
+   ["……它们只要有时间，就会情不自禁地背**过**头去，反复地啄着羽毛。","…begitu ada waktu, mereka langsung refleks nengok ke belakang dan matuk-matukin bulunya berkali-kali."]]},
+  {t:"表示通过动作，人或物体移动位置。",ex:[
+   ["接**过**书的那一刻，老王突然明白了自己失败的原因。","Begitu nerima buku itu, Lao Wang langsung sadar kenapa dia gagal."],
+   ["短短的几分钟里，我的脑子里闪**过**了很多想法。","Dalam beberapa menit aja, banyak banget pikiran yang lewat di kepalaku."]]}],
+  type:"给“过”选择适当的位置",
+  pr:[["你回 A 头 B 就可以看见 C 我 D 了。","A（你回过头就可以看见我了。）"],
+   ["他递 A 一块毛巾 B 给 C 我擦 D 汗。","A（他递过一块毛巾给我擦汗。）"],
+   ["青年走 A 到 B 门口，转 C 身 D 说：“我们会再见的。”","C（……转过身说：……）"]]},
+ {w:"动词 + 开",pos:"结构",uses:[
+  {t:"表示舒展。",ex:[
+   ["猴子突然站了起来，张**开**手臂，抱住了管理员。","Monyetnya tiba-tiba berdiri, ngebuka tangan lebar, terus meluk penjaganya."],
+   ["《清明上河图》在我们的面前慢慢展**开**。","Lukisan “Sepanjang Sungai saat Festival Qingming” pelan-pelan kebuka di depan kita."],
+   ["而老鹰的洗澡方式更是直接，它们会在雨中张**开**双翅痛快地迎接洗礼！","Cara elang mandi lebih langsung lagi: mereka ngebentangin sayap di bawah hujan, mandi sepuasnya!"]]}],
+  type:"给“开”选择适当的位置",
+  pr:[["A 回家时，妈妈 B 张 C 双臂 D 迎接我。","C（妈妈张开双臂迎接我。）"],
+   ["他把纸铺 A，笔拿 B 好，准备 C 练习 D 书法。","A（他把纸铺开，笔拿好……）"],
+   ["那件事情已经都 A 传 B 了 C，大家都知道 D 了。","B（那件事情已经都传开了。）"]]}],
+ cmp:{a:"反复",b:"重复",same:["都有不止一次的意思。",["这件事情你已经**反复**/**重复**说过好几遍了。","Hal ini udah kamu omongin berkali-kali."]],
+  diff:[["副词，一遍一遍地。",["它们只要一有时间，就会情不自禁地背过头去，**反复**地啄着羽毛。","Begitu ada waktu, mereka refleks nengok ke belakang matukin bulu terus-terusan."],"动词，指又一次做同样的事情。",["我没听清，请你再**重复**一遍。","Aku gak denger jelas, tolong ulangin sekali lagi."]],
+   ["动词，不利的情况重新出现。",["这种病容易**反复**。","Penyakit ini gampang kambuh."],"动词，同样的东西再次出现。",["这两个练习题**重复**了。","Dua soal latihan ini dobel."]],
+   ["名词，重复出现的不好的情况。",["对这个问题，他思想上可能还有**反复**。","Soal ini, pikirannya mungkin masih bolak-balik."],"没有这个用法。",null]],
+  quiz:[["我已经____讲了多少次，你竟然还是忘了！","ab","Buku: 反复 ✓, 重复 ✓. Dua-duanya bisa."],
+   ["这个实验我已经____过两次了。","b","Ngelakuin hal yang sama lagi (+过) → 重复."],
+   ["经过____实验，他们终于成功了。","a","Berkali-kali (adverbia) → 反复."],
+   ["他的病情出现了____，情况不太乐观。","a","Kata benda: kondisi buruk muncul lagi → 反复."]]}},
+
+{no:35,title:"植物会出汗",points:[
+ {w:"赶快",pos:"副词",uses:[
+  {t:"“赶快”，副词，意思是“抓紧时间、加快速度”。",ex:[
+   ["我下个月要搬家，得**赶快**找房子。","Bulan depan aku pindahan, harus cepet-cepet nyari rumah."],
+   ["这份材料下午开会要用，你**赶快**把它复印一下。","Berkas ini dipake rapat sore, cepetan difotokopi ya."],
+   ["……一旦温度上升，大脑就会指挥我们的身体**赶快**出汗，……","…begitu suhu naik, otak langsung nyuruh badan kita cepet-cepet keringetan…"]]}],
+  pr:[["__，要不该赶上堵车了。（赶快）","我们赶快走吧，要不该赶上堵车了。"],
+   ["A：__。（赶快）\nB：好，我马上就收拾好了。","A：你赶快收拾一下，客人马上就到了。"],
+   ["A：你怎么还在玩儿游戏？火车票预订了吗？\nB：__。（赶快）","B：还没呢，我这就赶快订。"]]},
+ {w:"片",pos:"名词 / 量词",uses:[
+  {t:"“片”，名词，平而薄的东西，一般不是太大。",ex:[
+   ["瓶子里装着满满的石头、玻璃碎**片**和沙子。","Botolnya penuh batu, pecahan kaca, sama pasir."],
+   ["大树出的“汗”，通常是从叶**片**的气孔里冒出来的。","“Keringet” pohon biasanya keluar dari pori-pori daunnya."]]},
+  {t:"“片”还是量词，用于成片的东西；也用于声音、景色等。",ex:[
+   ["窗外有一棵大树，秋风中，叶子一**片片**地掉落下来。","Di luar jendela ada pohon gede, ditiup angin musim gugur, daunnya jatuh selembar demi selembar."],
+   ["同学们听了，发出一**片**热烈的欢呼声。","Temen-temen denger itu langsung pada sorak-sorai."]]}],
+  pr:[["A：我来切菜吧，土豆怎么切？\nB：__。（片-名词）","B：切成薄片吧。"],
+   ["今天早上我吃了__。（片-量词）","今天早上我吃了两片面包，喝了一杯牛奶。"],
+   ["A：这药怎么吃？\nB：__。（片-量词）","B：一天三次，一次两片。"]]},
+ {w:"根本",pos:"名词 / 形容词 / 副词",uses:[
+  {t:"“根本”，名词，事物最重要的部分。",ex:[
+   ["教育是国家的**根本**。","Pendidikan itu fondasi negara."],
+   ["这个办法只能救急，不能从**根本**上解决问题。","Cara ini cuma buat darurat, gak nyelesaiin masalah dari akarnya."]]},
+  {t:"“根本”还是形容词，意思是“主要的、最重要的、起决定作用的”。",ex:[
+   ["谈判还算顺利，一些**根本**的问题都谈好了。","Negosiasinya lumayan lancar, masalah-masalah pokoknya udah beres dibahas."],
+   ["政府工作应从人民的**根本**利益出发。","Kerja pemerintah harus berangkat dari kepentingan dasar rakyat."]]},
+  {t:"“根本”也是副词，表示从头到尾、始终，多用于否定句中。",ex:[
+   ["有时候我会梦见参加考试，可是却发现自己**根本**读不懂考试的题目。","Kadang aku mimpi lagi ujian, tapi ternyata aku sama sekali gak ngerti soalnya."],
+   ["可是，经过测验计算发现，以大树输送管道的尺寸产生的毛细作用，**根本**无法把水分送到几十米高的地方。","Tapi abis diukur dan dihitung, gaya kapiler dari ukuran pembuluh pohon sama sekali gak bisa ngangkut air sampe puluhan meter ke atas."]]},
+  {t:"“根本”做副词时还表示彻底、完全。",ex:[
+   ["事情已经**根本**解决了。","Masalahnya udah beres tuntas."],
+   ["他**根本**就是在故意找我们的麻烦。","Dia tuh emang sengaja nyari gara-gara sama kita."]]}],
+  pr:[["A：你觉得他说的话有道理吗？\nB：__。（根本）","B：我觉得他根本就是在胡说。"],
+   ["搬家要整理的东西太多了，__。（根本）","……我一个人根本忙不过来。"],
+   ["秦国人在赵国四处散布谣言，说秦军最怕赵括，__。（根本）","……其实秦军根本不怕赵括。"]]}],
+ cmp:{a:"特殊",b:"特别",same:["做形容词时，都有和一般不一样的意思。",["对我来说，他是一个**特殊**/**特别**的人。","Buat aku, dia orang yang spesial."]],
+  diff:[["多用于书面语。",["因为跟蒸腾作用有关，这种**特殊**的提升力就被称为“蒸腾拉力”。","Karena berhubungan sama transpirasi, daya angkat khusus ini disebut “tarikan transpirasi”."],"口语和书面语均可使用。",["她穿衣服总是很**特别**。","Gaya bajunya selalu unik."]],
+   ["没有这个用法。",null,"还可做副词，意思是“格外”。",["我**特别**喜欢学中文，尤其是汉字。","Aku suka banget belajar Mandarin, apalagi Hanzi."]]],
+  quiz:[["治疗这种病需要一种____的药。","ab","Buku: 特殊 ✓, 特别 ✓. Dua-duanya bisa."],
+   ["这种情况比较____，我原来没见过。","ab","Kata sifat “gak biasa” → dua-duanya bisa."],
+   ["我喜欢北京，____是北京的秋天。","b","“Terutama” (adverbia) → cuma 特别."],
+   ["夏天运动后在大树下坐一会儿，喝口凉开水，____舒服。","b","“Banget” (adverbia) → cuma 特别."]]}},
+
+{no:36,title:"老舍与养花",points:[
+ {w:"除非",pos:"连词 / 介词",uses:[
+  {t:"“除非”，连词，表示唯一的条件，相当于“只有”，后面常跟“才、否则、不然”搭配使用。",ex:[
+   ["可**除非**是那些好种易活、自己会奋斗的花草，否则他是不养的。","Kecuali bunga yang gampang ditanem dan bisa bertahan sendiri, selain itu dia gak mau melihara."],
+   ["**除非**急需一大笔钱，我才会考虑卖了这房子。","Cuma kalau lagi butuh duit gede banget, baru aku kepikiran jual rumah ini."]]},
+  {t:"“除非”还是介词，表示不计算在内，相当于“除了”。",ex:[
+   ["这种机器，**除非**李阳，没人修得好。","Mesin kayak gini, selain Li Yang, gak ada yang bisa benerin."],
+   ["日常工作他从来不过问，**除非**极特殊的问题。","Kerjaan sehari-hari dia gak pernah ikut campur, kecuali masalah yang khusus banget."]]}],
+  pr:[["他工作时不喜欢别人打扰，__，别人的电话他都不接。（除非）","……除非是急事，别人的电话他都不接。"],
+   ["__，我平时一般都不看电视。（除非）","除非有足球比赛，我平时一般都不看电视。"],
+   ["A：这个周末你陪我去看场电影，行吗？\nB：想让我答应你，__。（除非）","B：想让我答应你，除非你先帮我把作业做完。"]]},
+ {w:"直",pos:"副词",uses:[
+  {t:"“直”，做副词可以表示一直、径直、直接，后接单音节动词。",ex:[
+   ["这趟车可以**直**达北京，非常方便。","Kereta ini langsung nyampe Beijing tanpa transit, praktis banget."],
+   ["**直**到今天，我也不明白他当时为什么发那么大脾气。","Sampai hari ini pun aku gak ngerti kenapa dia dulu marah segitunya."]]},
+  {t:"“直”，还可以表示（动作、行为）连续不停地、不断地。",ex:[
+   ["父亲听说儿子卖了房子，气得**直**发抖。","Bokap denger anaknya jual rumah, marah sampe gemeteran terus."],
+   ["几百盆花，要很快地抢到屋里去，累得腰酸腿疼，热汗**直**流。","Ratusan pot bunga harus buru-buru dimasukin ke rumah, sampe pinggang pegel, kaki sakit, keringet ngucur terus."]]}],
+  type:"指出下列句中的“直”是哪种用法（A. 直接　B.（动作）连续不停地）",
+  pr:[["他朝我直摇头，我故意装作没看见。","B（连续不停地）"],
+   ["参观者乘电梯可以直达大楼顶层的观光餐厅。","A（直接）"],
+   ["早晨6点，闹钟在我头上直响，我真不想起床。","B（连续不停地）"],
+   ["司机师傅，前边路口直走，别拐弯。","A（直接）"]]},
+ {w:"反正",pos:"副词",uses:[
+  {t:"“反正”，副词，表示情况虽然不同但结果并无区别。",ex:[
+   ["不管你们谁去，**反正**我不会去。","Siapa pun dari kalian yang pergi, pokoknya aku gak ikut."],
+   ["我不知道花草们受我的照顾，感谢我不感谢，**反正**我要感谢它们。","Aku gak tau bunga-bunga yang aku rawat makasih atau nggak ke aku, yang jelas aku makasih sama mereka."]]},
+  {t:"“反正”还表示坚决肯定的语气。",ex:[
+   ["你别再说了，**反正**我是不会考虑的。","Udah deh jangan ngomong lagi, pokoknya aku gak bakal mikirin itu."],
+   ["算了，**反正**不是什么要紧事，还是别打扰他们了。","Udahlah, toh bukan hal penting, gak usah ganggu mereka."]]}],
+  pr:[["你别问那么多了，反正你也__。","你别问那么多了，反正你也帮不上忙。"],
+   ["__，信不信你随便吧。（反正）","反正我说的都是真的，信不信你随便吧。"],
+   ["A：这是今年最流行的颜色，你真没眼光。\nB：__。（反正）","B：流行不流行我不管，反正我不喜欢。"]]}],
+ cmp:{a:"应付",b:"处理",same:["都是动词，都有对人、对事采取措施、办法的意思。",["依我看，以他现有的经验**应付**/**处理**不了目前的工作。","Menurutku, dengan pengalamannya sekarang dia belum bisa nanganin kerjaan ini."]],
+  diff:[["侧重表示采取适当的办法来对待人或事。",["他们会想方设法说服你，你准备好怎么**应付**他们了吗？","Mereka bakal cari segala cara buat ngebujuk kamu, udah siap ngadepin mereka belum?"],"侧重强调解决问题。",["严重的环境污染使人们深思该如何**处理**好人与自然的关系。","Polusi parah bikin orang mikir dalem soal gimana ngatur hubungan manusia sama alam."]],
+   ["还有办事不认真、不负责，只求表面过得去的意思。",["小林学习不认真，完全是在**应付**父母和老师。","Xiao Lin belajarnya gak serius, cuma asal-asalan biar ortu dan guru gak ngomel."],"没有这个意思。",null],
+   ["没有这个意思。",null,"还有安排、处置事物的意思。",["洗衣机的包装纸箱，既占地方又没什么用，快**处理**了吧。","Kardus mesin cuci itu makan tempat dan gak guna, cepet dibuang aja."]],
+   ["没有这个意思。",null,"还有减价出售的意思。",["这批过季的衣服尽快减价**处理**吧。","Baju-baju yang udah lewat musim ini cepet diobral aja."]]],
+  quiz:[["一个星期的迎来送往，她已经有点儿____不了了。","a","Buku: 应付 ✓, 处理 ×. Kewalahan ngadepin orang → 应付."],
+   ["他实在说不出什么，只好随口说：“不怎么习惯。”总算____过去了。","a","Asal biar lewat aja → 应付."],
+   ["放心吧，海关手续的事我一个人能____。","b","Nyelesaiin urusan → 处理."],
+   ["我非常尊敬他，但同时也觉得他是个不好____的人。","a","Orang yang susah dihadapin → 应付."]]}}
+);
+
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const mark=s=>esc(s).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>");
+const rich=s=>s.replace(/<p>(.*?)<\/p>/g,'<span class="pattern">$1</span>');
+const blanks=s=>esc(s).replace(/__/g,'<span class="blank"></span>');
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const app=document.getElementById("app"), chips=document.getElementById("chips");
+let cur=1;
+
+DATA.forEach(L=>{if(L.no===1||L.no===19){const s=document.createElement("span");s.className="book";s.textContent=L.no===1?"上":"下";chips.appendChild(s);}const b=document.createElement("button");b.className="chip";b.setAttribute("role","tab");b.textContent=L.no;b.title=L.title;b.dataset.l=L.no;b.onclick=()=>go(L.no);chips.appendChild(b);});
+
+function eg(e){return e?`<span class="eg" tabindex="0">如：${mark(e[0])}<span class="id">${esc(e[1])}</span></span>`:"";}
+
+function render(no){
+  const L=DATA.find(d=>d.no===no);
+  let h=`<div class="lesson-head"><span class="num">${L.no}</span><div><div class="sub">第${L.no}课</div><h2 class="lt">${L.title}</h2></div></div>
+  <div class="idx">${L.points.map((p,i)=>`<a href="#p${i+1}" data-j="p${i+1}">${i+1}. ${p.w}</a>`).join("")}<a href="#cmp" data-j="cmp">辨析：${L.cmp.a}—${L.cmp.b}</a></div>
+  <div class="sec">（一）词语例释</div>`;
+  L.points.forEach((p,i)=>{
+    let k=0;
+    h+=`<article class="point" id="p${i+1}"><h3><span class="n">${i+1}</span>${p.w}<span class="pos">${p.pos}</span></h3>`;
+    p.uses.forEach(u=>{h+=`<p class="use">${rich(u.t)}例如：</p><ol class="ex">${u.ex.map(([zh,id])=>{k++;return `<li tabindex="0"><span class="k">(${k})</span><span class="zh">${mark(zh)}</span><span class="id">${esc(id)}</span><span class="hint">ketuk buat lihat arti</span></li>`}).join("")}</ol>`;});
+    h+=`<section class="practice"><div class="ph"><b>练一练</b><span>${p.type||"完成句子或对话"}</span></div><ol class="items">`;
+    p.pr.forEach((q,j)=>{const id=`a-${L.no}-${i+1}-${j+1}`;
+      h+=`<li class="item"><span class="k">(${j+1})</span><span class="q-text">${blanks(q[0])}</span>
+      <textarea id="${id}" rows="1" placeholder="Tulis jawabanmu di sini…">${esc(store.get(id)||"")}</textarea>
+      <div class="act"><button class="reveal" aria-expanded="false" aria-controls="${id}-ans">Lihat jawaban</button><span class="ans" id="${id}-ans" hidden>${esc(q[1])}</span></div></li>`;});
+    h+=`</ol></section></article>`;
+  });
+  const c=L.cmp;
+  h+=`<div class="sec">（三）词语辨析</div><article class="point" id="cmp"><h3>${c.a}<span class="vs">—</span>${c.b}</h3>
+  <div class="cmp"><table><thead><tr><th></th><th>${c.a}</th><th>${c.b}</th></tr></thead><tbody>
+  ${c.same?`<tr><th>共同点</th><td colspan="2">${c.same[0]}${eg(c.same[1])}</td></tr>`:""}
+  ${c.diff.map((r,i)=>`<tr>${i===0?`<th rowspan="${c.diff.length}">不同点</th>`:""}<td>${c.diff.length>1?(i+1)+". ":""}${r[0]}${eg(r[1])}</td><td>${c.diff.length>1?(i+1)+". ":""}${r[2]}${eg(r[3])}</td></tr>`).join("")}
+  </tbody></table></div>
+  <p class="tip">Ketuk contoh “如：…” di tabel buat lihat artinya.</p>
+  <section class="practice"><div class="ph"><b>做一做</b><span>选词填空 · pilih kata yang pas</span></div>
+  <div class="quiz">${c.quiz.map((q,i)=>`<div class="q" data-a="${q[1]}"><span class="qs">(${i+1}) ${esc(q[0])}</span>
+    <span class="opts"><button data-v="a">${c.a}</button><button data-v="b">${c.b}</button><button data-v="ab">都可以</button></span><span class="fb" hidden data-why="${esc(q[2])}"></span></div>`).join("")}</div></section></article>`;
+  app.innerHTML=h;
+  app.querySelectorAll("textarea").forEach(fit);
+}
+function fit(t){t.style.height="auto";t.style.height=Math.max(42,t.scrollHeight+2)+"px";}
+
+function go(no,keepScroll){
+  cur=no;render(no);
+  chips.querySelectorAll(".chip").forEach(c=>{const on=+c.dataset.l===no;c.setAttribute("aria-selected",on);if(on)c.scrollIntoView({block:"nearest",inline:"center"});});
+  document.getElementById("prev").disabled=no===1;document.getElementById("next").disabled=no===DATA.length;
+  store.set("hsk5-lesson",no);
+  if(!keepScroll)window.scrollTo({top:0});
+}
+
+app.addEventListener("click",e=>{
+  const a=e.target.closest(".idx a");if(a){e.preventDefault();document.getElementById(a.dataset.j).scrollIntoView({behavior:"smooth",block:"start"});return;}
+  const li=e.target.closest(".ex li");if(li){li.classList.toggle("open");return;}
+  const g=e.target.closest(".eg");if(g){g.classList.toggle("open");return;}
+  const r=e.target.closest(".reveal");if(r){const s=document.getElementById(r.getAttribute("aria-controls"));const open=s.hidden;s.hidden=!open;r.setAttribute("aria-expanded",open);r.textContent=open?"Sembunyikan":"Lihat jawaban";return;}
+  const b=e.target.closest(".q button");if(b){const q=b.closest(".q");q.querySelectorAll("button").forEach(x=>x.className="");
+    const right=b.dataset.v===q.dataset.a;b.className=right?"ok":"no";if(!right)q.querySelector(`[data-v="${q.dataset.a}"]`).className="ok";
+    const fb=q.querySelector(".fb");fb.hidden=false;fb.textContent=(right?"✓ Bener! ":"✗ Belum tepat. ")+fb.dataset.why;}
+});
+app.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches(".ex li,.eg")){e.preventDefault();e.target.classList.toggle("open");}});
+app.addEventListener("input",e=>{if(e.target.matches("textarea")){store.set(e.target.id,e.target.value);fit(e.target);}});
+document.getElementById("showId").addEventListener("change",e=>app.classList.toggle("hide-id",!e.target.checked));
+document.getElementById("prev").onclick=()=>cur>1&&go(cur-1);
+document.getElementById("next").onclick=()=>cur<DATA.length&&go(cur+1);
+
+const fromHash=+(location.hash.match(/^#L(\d+)$/)||[])[1];
+const saved=+store.get("hsk5-lesson");
+go(fromHash>=1&&fromHash<=DATA.length?fromHash:(saved>=1&&saved<=DATA.length?saved:1),true);
+</script>
+
+</body>
+</html>
